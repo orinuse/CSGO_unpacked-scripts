@@ -1,0 +1,12 @@
+// HLTV overview description file for ar_baggage.bsp
+
+"ar_baggage"
+{
+	"material"	"overviews/ar_baggage"	// texture file
+	"pos_x"		"-2150"	// upper left world coordinate
+	"pos_y"		"2280"
+	"scale"		"4.0" 
+	"rotate"	"1"
+	"zoom"		"1.3"
+}
+

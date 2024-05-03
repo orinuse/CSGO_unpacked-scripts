@@ -1,0 +1,12 @@
+// HLTV overview description file for de_aztec_se.bsp
+
+"de_aztec_se"
+{
+	"material"	"overviews/de_aztec_se"	// texture file
+	"pos_x"		"-3200"	// upper left world coordinate
+	"pos_y"		"2841"
+	"scale"		"6"
+	"rotate"	"0"
+	"zoom"		"0"
+}
+

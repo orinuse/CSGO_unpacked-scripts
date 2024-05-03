@@ -36,16 +36,7 @@
 //	"10"		"Impact.Puddle"
 	"11"		"Impact.Mud"
 	"12"		"Impact.Metal"
-	"13"		"Impact.Wood"
-	"14"		"Impact.MetalShield"
-}
 
-"Impact.MetalShield"
-{
-	"decals/metal/steel01" "2"
-	"decals/metal/steel02" "2"
-	"decals/metal/steel03" "1"
-	"decals/metal/steel04" "1"
 }
 
 "Impact.Snow"
@@ -275,11 +266,6 @@
 	"decals/dirt/dirt2_subrect" "1"
 	"decals/dirt/dirt3_subrect" "1"
 	"decals/dirt/dirt4_subrect" "1"
-}
-
-"Spray.BombSiteX"
-{
-	"decals/bombsite_x_spray_small" "1"
 }
 
 "Models"

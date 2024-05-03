@@ -1,0 +1,9 @@
+// HLTV overview description file for de_vertigo.bsp
+
+"de_vertigo"
+{
+	"material"	"overviews/de_vertigo_radar"	// texture file
+	"pos_x"		"-3168"	// upper left world coordinate
+	"pos_y"		"1762"
+	"scale"		"4.0" 
+}

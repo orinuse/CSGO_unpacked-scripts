@@ -21,8 +21,7 @@
 			"import_stack" "CS_update_footsteps"
 			"speakers_spatialize"
 			{
-				"input_radius_max"  "75"
-				"input_radius_min"  "35"
+				"input_radius"  "75"
 				"input_distance"  "350"
 				"input_position[0]"  "0"
 				"input_position[1]"  "378.002045"
@@ -54,9 +53,7 @@
 			"import_stack" "CS_update_footsteps"
 			"speakers_spatialize"
 			{
-				"input_radius_max"  "75"
-				"input_radius_min"  "35"
-
+				"input_radius"  "75"
 				"input_distance"  "350"
 				"input_position[0]"  "0"
 				"input_position[1]"  "378.002045"
@@ -89,9 +86,7 @@
 			"import_stack" "CS_update_footsteps"
 			"speakers_spatialize"
 			{
-				"input_radius_max"  "75"
-				"input_radius_min"  "35"
-
+				"input_radius"  "75"
 				"input_distance"  "350"
 				"input_position[0]"  "184"
 				"input_position[1]"  "184"
@@ -123,10 +118,7 @@
 			"import_stack" "CS_update_footsteps"
 			"speakers_spatialize"
 			{
-
-				"input_radius_max"  "75"
-				"input_radius_min"  "35"
-
+				"input_radius"  "75"
 				"input_distance"  "350"
 				"input_position[0]"  "184"
 				"input_position[1]"  "184"
@@ -160,10 +152,7 @@
 			"import_stack" "CS_update_footsteps"
 			"speakers_spatialize"
 			{
-
-				"input_radius_max"  "75"
-				"input_radius_min"  "35"
-
+				"input_radius"  "75"
 				"input_distance"  "350"
 				"input_position[1]"  "0"
 				"input_position[0]"  "378.002045"

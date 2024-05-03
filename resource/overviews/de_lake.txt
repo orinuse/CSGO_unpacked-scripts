@@ -1,0 +1,12 @@
+// HLTV overview description file for de_lake.bsp
+
+"de_lake"
+{
+	"material"	"overviews/de_lake"	// texture file
+	"pos_x"		"1200"	// upper left world coordinate
+	"pos_y"		"-700"
+	"scale"		"5.2"
+	"rotate"	"0"
+	"zoom"		"0"
+}
+

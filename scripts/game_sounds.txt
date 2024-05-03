@@ -75,23 +75,6 @@
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"			"PITCH_NORM"
 	"wave"			"weapons/ClipEmpty_Rifle.wav"
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		}
-	}
 }
 
 "BuyPreset.CantBuy"
@@ -101,30 +84,12 @@
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"			"PITCH_NORM"
 	"wave"			"weapons/ClipEmpty_Rifle.wav"
-
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		}
-	}
 }
 
 "BuyPreset.Updated"
 {
 	"channel"		"CHAN_VOICE"
-	"volume"		"0.3"
+	"volume"		"1"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"			"PITCH_NORM"
 	"wave"			"buttons/weapon_confirm.wav"
@@ -206,71 +171,35 @@
 
 "BaseCombatCharacter.AmmoPickup"
 {
-	"channel"	"CHAN_STATIC"
-	"volume"	"0.2"
+	"channel"	"CHAN_ITEM"
+	"volume"	"1"
+	"CompatibilityAttenuation"	"1.0"
 
-	"wave"	"~items/pickup_ammo_02.wav"
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
+	"wave"	"items/itempickup.wav"
+}
 
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"execute_once" "true"
-				"input_active" "1.0"	
-				"input_duration" "0.03" 
-				"match_substring" "false" 			
-				"match_entry" "BaseCombatCharacter.AmmoPickup"
-				//"match_sound" "common/null.wav"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		
-		}
-	}
+"BaseCombatCharacter.ItemPickup2"
+{
+	"channel"	"CHAN_ITEM"
+	"volume"	".35"
+	"CompatibilityAttenuation"	"1.0"
+
+	"wave"	"items/ammopickup.wav"
 }
 
 
 
 "Player.Swim"
 {
-	"volume"	"0.4, 0.7"
+	"volume"	"1"
 	"CompatibilityAttenuation"	"1.0"
 	"pitch"	"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~player/footsteps/slosh1.wav"
-		"wave"	"~player/footsteps/slosh2.wav"
-		"wave"	"~player/footsteps/slosh3.wav"
-		"wave"	"~player/footsteps/slosh4.wav"
-	}
-}
-
-"Player.Wade"
-{
-	"channel"	"CHAN_BODY"
-	"volume"	"0.2"
-	"CompatibilityAttenuation"	"1.0"
-
-	"rndwave"
-	{
-		"wave"	"~player/footsteps/wade1.wav"
-		"wave"	"~player/footsteps/wade2.wav"
-		"wave"	"~player/footsteps/wade3.wav"
-		"wave"	"~player/footsteps/wade4.wav"
+		"wave"	"player/footsteps/slosh1.wav"
+		"wave"	"player/footsteps/slosh2.wav"
+		"wave"	"player/footsteps/slosh3.wav"
+		"wave"	"player/footsteps/slosh4.wav"
 	}
 }
 
@@ -279,649 +208,119 @@
 	"channel"	"CHAN_VOICE"
 	"volume"	"0.5"
 	"CompatibilityAttenuation"	"1.0"
+	// "rndwave"
+	// {
+		// "wave"	"player/pl_swim3.wav"
+		// "wave"	"player/pl_swim1.wav"
+		// "wave"	"player/pl_pain4.wav"
+	// }
 	"wave" "common/null.wav"	
 }
 
 "Player.Death"
 {
 	"channel"		"CHAN_VOICE"
-	"volume"		"0.7"
+	"volume"		"1"
 	"CompatibilityAttenuation"	"1.0"
 
 	"rndwave"
 	{
-		"wave"	"~player/death1.wav"
-		"wave"	"~player/death2.wav"
-		"wave"	"~player/death3.wav"
-		"wave"	"~player/death4.wav"
-		"wave"	"~player/death5.wav"
-		"wave"	"~player/death6.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-	
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"execute_once" "true"
-				"input_active" "1.0"	
-				"input_duration" "0.03" 
-				"match_substring" "false" 			
-				"match_entry" "Player.Death"
-				//"match_sound" "common/null.wav"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-			"volume_falloff"
-			{
-				"input_min" "32"
-				"input_max" "900" //weapondraw
-			}
-		
-		}
+		"wave"	"player/death1.wav"
+		"wave"	"player/death2.wav"
+		"wave"	"player/death3.wav"
+		"wave"	"player/death4.wav"
+		"wave"	"player/death5.wav"
+		"wave"	"player/death6.wav"
 	}
 	
 }
 
-
-"Player.DeathFem"
+"Player.UseDeny"
 {
-	"channel"		"CHAN_VOICE"
-	"volume"		"0.4"
-	"CompatibilityAttenuation"	"1.0"
+	"channel"		"CHAN_BODY"
+	"volume"		"1"
+	"soundlevel"	"SNDLVL_NORM"
 
-	"rndwave"
-	{
-		"wave"	"~player/death_fem_01.wav"
-		"wave"	"~player/death_fem_02.wav"
-		"wave"	"~player/death_fem_03.wav"
-		"wave"	"~player/death_fem_04.wav"
-		"wave"	"~player/death_fem_05.wav"
-		"wave"	"~player/death_fem_06.wav"
-		"wave"	"~player/death_fem_07.wav"
-		"wave"	"~player/death_fem_08.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-	
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"execute_once" "true"
-				"input_active" "1.0"	
-				"input_duration" "0.03" 
-				"match_substring" "false" 			
-				"match_entry" "Player.DeathFem"
-				//"match_sound" "common/null.wav"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-			"volume_falloff"
-			{
-				"input_min" "32"
-				"input_max" "900" //weapondraw
-			}
-		
-		}
-	}
-	
+	"wave"	"common/use_deny.wav"
 }
 
 "Player.PickupWeapon"
 {
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.5"
-
-	"wave"	"~items/pickup_weapon_02.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-	
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"execute_once" "true"
-				"input_active" "1.0"	
-				"input_duration" "0.03" 
-				"match_substring" "false" 			
-				"match_entry" "Player.PickupWeapon"
-				//"match_sound" "common/null.wav"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		
-		}
-	}
-	
-	
-}
-
-"Player.PickupGrenade"
-{
-	"channel"		"CHAN_ITEM"
-	"volume"		"0.5"
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1"
 	"CompatibilityAttenuation"	"1.0"
 
-	"wave"	"~items/pickup_grenade_03.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-	
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"execute_once" "true"
-				"input_active" "1.0"	
-				"input_duration" "0.03" 
-				"match_substring" "false" 			
-				"match_entry" "Player.PickupGrenade"
-				//"match_sound" "common/null.wav"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-			"volume_falloff"
-			{
-				"input_min" "32"
-				"input_max" "1100" //weaponpickup
-			}
-		
-		}
-	}
-	
-	
+	"wave"	"items/itempickup.wav"
 }
 
-"Player.PickupWeaponSilent"
-{
-	"channel"		"CHAN_ITEM"
-	"volume"		"1.0"
-	"CompatibilityAttenuation"	"1.0"
-
-	"wave"			"~items/pickup_quiet_01.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		}
-	}
-}
-
-"Player.WeaponSelected_CT"
+"Player.WeaponSelected"
 {
 	"channel"	"CHAN_ITEM"
-	"volume"	"0.05, 0.1"
-	"soundlevel"  "SNDLVL_NORM"
-	"pitch"	"98, 102"
+	"volume"	"1"
+	"soundlevel"  "SNDLVL_NONE"
+	"pitch"	"PITCH_NORM"
 
-	"rndwave"
-	{
-		"wave"		"player/footsteps/new/suit_ct_01.wav"
-		"wave"		"player/footsteps/new/suit_ct_02.wav"
-		"wave"		"player/footsteps/new/suit_ct_03.wav"
-		"wave"		"player/footsteps/new/suit_ct_04.wav"
-		"wave"		"player/footsteps/new/suit_ct_05.wav"
-		"wave"		"player/footsteps/new/suit_ct_06.wav"
-		"wave"		"player/footsteps/new/suit_ct_07.wav"
-		"wave"		"player/footsteps/new/suit_ct_08.wav"
-		"wave"		"player/footsteps/new/suit_ct_09.wav"
-		"wave"		"player/footsteps/new/suit_ct_11.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-	
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-	
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"execute_once" "true"
-				"input_active" "1.0"	
-				"input_duration" "0.03" 
-				"match_substring" "false" 			
-				"match_entry" "Player.WeaponSelected_CT"
-				//"match_sound" "common/null.wav"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		
-		}
-	}
+	"wave"	"common/wpn_hudoff.wav"
 }
 
-"Player.WeaponSelected_T"
+"Player.WeaponSelectionOpen"
 {
 	"channel"	"CHAN_ITEM"
-	"volume"	"0.05, 0.1"
-	"soundlevel"  "SNDLVL_NORM"
-	"pitch"	"98, 102"
+	"volume"	"1"
+	"soundlevel"  "SNDLVL_NONE"
+	"pitch"	"PITCH_NORM"
 
-	"rndwave"
-	{
-		"wave"		"player/footsteps/new/suit_t_01.wav"
-		"wave"		"player/footsteps/new/suit_t_02.wav"
-		"wave"		"player/footsteps/new/suit_t_03.wav"
-		"wave"		"player/footsteps/new/suit_t_04.wav"
-		"wave"		"player/footsteps/new/suit_t_05.wav"
-		"wave"		"player/footsteps/new/suit_t_06.wav"
-		"wave"		"player/footsteps/new/suit_t_07.wav"
-		"wave"		"player/footsteps/new/suit_t_08.wav"
-		"wave"		"player/footsteps/new/suit_t_09.wav"
-		"wave"		"player/footsteps/new/suit_t_10.wav"
-		"wave"		"player/footsteps/new/suit_t_11.wav"
-		"wave"		"player/footsteps/new/suit_t_12.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-	
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-	
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"execute_once" "true"
-				"input_active" "1.0"	
-				"input_duration" "0.03" 
-				"match_substring" "false" 			
-				"match_entry" "Player.WeaponSelected_T"
-				//"match_sound" "common/null.wav"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		
-		}
-	}
+	"wave"	"common/wpn_hudoff.wav"
 }
 
-/////
-"Player.EquipArmor_CT"
+"Player.WeaponSelectionClose"
 {
 	"channel"	"CHAN_ITEM"
-	"volume"	"0.1, 0.3"
-	"soundlevel"  "SNDLVL_NORM"
-	"pitch"	"98, 102"
+	"volume"	"1"
+	"soundlevel"  "SNDLVL_NONE"
+	"pitch"	"PITCH_NORM"
 
-	"rndwave"
-	{
-		"wave"		"~player/footsteps/new/suit_ct_01.wav"
-		"wave"		"~player/footsteps/new/suit_ct_02.wav"
-		"wave"		"~player/footsteps/new/suit_ct_03.wav"
-		"wave"		"~player/footsteps/new/suit_ct_04.wav"
-		"wave"		"~player/footsteps/new/suit_ct_05.wav"
-		"wave"		"~player/footsteps/new/suit_ct_06.wav"
-		"wave"		"~player/footsteps/new/suit_ct_07.wav"
-		"wave"		"~player/footsteps/new/suit_ct_08.wav"
-		"wave"		"~player/footsteps/new/suit_ct_09.wav"
-		"wave"		"~player/footsteps/new/suit_ct_11.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-	
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-	
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"execute_once" "true"
-				"input_active" "1.0"	
-				"input_duration" "0.03" 
-				"match_substring" "false" 			
-				"match_entry" "Player.EquipArmor_CT"
-				//"match_sound" "common/null.wav"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		
-		}
-	}
-}
-
-"Player.EquipArmor_T"
-{
-	"channel"	"CHAN_ITEM"
-	"volume"	"0.1, 0.3"
-	"soundlevel"  "SNDLVL_NORM"
-	"pitch"	"98, 102"
-
-	"rndwave"
-	{
-		"wave"		"~player/footsteps/new/suit_t_01.wav"
-		"wave"		"~player/footsteps/new/suit_t_02.wav"
-		"wave"		"~player/footsteps/new/suit_t_03.wav"
-		"wave"		"~player/footsteps/new/suit_t_04.wav"
-		"wave"		"~player/footsteps/new/suit_t_05.wav"
-		"wave"		"~player/footsteps/new/suit_t_06.wav"
-		"wave"		"~player/footsteps/new/suit_t_07.wav"
-		"wave"		"~player/footsteps/new/suit_t_08.wav"
-		"wave"		"~player/footsteps/new/suit_t_09.wav"
-		"wave"		"~player/footsteps/new/suit_t_10.wav"
-		"wave"		"~player/footsteps/new/suit_t_11.wav"
-		"wave"		"~player/footsteps/new/suit_t_12.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-	
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-	
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"execute_once" "true"
-				"input_active" "1.0"	
-				"input_duration" "0.03" 
-				"match_substring" "false" 			
-				"match_entry" "Player.EquipArmor_T"
-				//"match_sound" "common/null.wav"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		
-		}
-	}
-}
-
-"Player.WeaponSelectionOpen_CT"
-{
-	"channel"	"CHAN_ITEM"
-	"volume"	"0.2"
-	"soundlevel"  "SNDLVL_NORM"
-	"pitch"	"98, 102"
-
-	"rndwave"
-	{
-		"wave"		"player/footsteps/new/suit_ct_01.wav"
-		"wave"		"player/footsteps/new/suit_ct_02.wav"
-		"wave"		"player/footsteps/new/suit_ct_03.wav"
-		"wave"		"player/footsteps/new/suit_ct_04.wav"
-		"wave"		"player/footsteps/new/suit_ct_05.wav"
-		"wave"		"player/footsteps/new/suit_ct_06.wav"
-		"wave"		"player/footsteps/new/suit_ct_07.wav"
-		"wave"		"player/footsteps/new/suit_ct_08.wav"
-		"wave"		"player/footsteps/new/suit_ct_09.wav"
-		"wave"		"player/footsteps/new/suit_ct_11.wav"
-	}
-}
-
-"Player.WeaponSelectionOpen_T"
-{
-	"channel"	"CHAN_ITEM"
-	"volume"	"0.2"
-	"soundlevel"  "SNDLVL_NORM"
-	"pitch"	"98, 102"
-
-	"rndwave"
-	{
-		"wave"		")player/footsteps/new/suit_t_01.wav"
-		"wave"		")player/footsteps/new/suit_t_02.wav"
-		"wave"		")player/footsteps/new/suit_t_03.wav"
-		"wave"		")player/footsteps/new/suit_t_04.wav"
-		"wave"		")player/footsteps/new/suit_t_05.wav"
-		"wave"		")player/footsteps/new/suit_t_06.wav"
-		"wave"		")player/footsteps/new/suit_t_07.wav"
-		"wave"		")player/footsteps/new/suit_t_08.wav"
-		"wave"		")player/footsteps/new/suit_t_09.wav"
-		"wave"		")player/footsteps/new/suit_t_10.wav"
-		"wave"		")player/footsteps/new/suit_t_11.wav"
-		"wave"		")player/footsteps/new/suit_t_12.wav"
-	}
-}
-
-
-"Player.WeaponSelectionClose_T"
-{
-	"channel"	"CHAN_ITEM"
-	"volume"	"0.2"
-	"soundlevel"  "SNDLVL_NORM"
-	"pitch"	"98, 102"
-
-	"rndwave"
-	{
-		"wave"		")player/footsteps/new/suit_t_01.wav"
-		"wave"		")player/footsteps/new/suit_t_02.wav"
-		"wave"		")player/footsteps/new/suit_t_03.wav"
-		"wave"		")player/footsteps/new/suit_t_04.wav"
-		"wave"		")player/footsteps/new/suit_t_05.wav"
-		"wave"		")player/footsteps/new/suit_t_06.wav"
-		"wave"		")player/footsteps/new/suit_t_07.wav"
-		"wave"		")player/footsteps/new/suit_t_08.wav"
-		"wave"		")player/footsteps/new/suit_t_09.wav"
-		"wave"		")player/footsteps/new/suit_t_10.wav"
-		"wave"		")player/footsteps/new/suit_t_11.wav"
-		"wave"		")player/footsteps/new/suit_t_12.wav"
-	}
-}
-
-"Player.WeaponSelectionClose_CT"
-{
-	"channel"	"CHAN_ITEM"
-	"volume"	"0.2"
-	"soundlevel"  "SNDLVL_NORM"
-	"pitch"	"98, 102"
-
-	"rndwave"
-	{
-		"wave"		"player/footsteps/new/suit_ct_01.wav"
-		"wave"		"player/footsteps/new/suit_ct_02.wav"
-		"wave"		"player/footsteps/new/suit_ct_03.wav"
-		"wave"		"player/footsteps/new/suit_ct_04.wav"
-		"wave"		"player/footsteps/new/suit_ct_05.wav"
-		"wave"		"player/footsteps/new/suit_ct_06.wav"
-		"wave"		"player/footsteps/new/suit_ct_07.wav"
-		"wave"		"player/footsteps/new/suit_ct_08.wav"
-		"wave"		"player/footsteps/new/suit_ct_09.wav"
-		"wave"		"player/footsteps/new/suit_ct_11.wav"
-	}
+	"wave"	"common/wpn_hudoff.wav"
 }
 
 "Player.DamageHeadShot"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"1.0"
+	"volume"	".75"
 	"soundlevel"  "SNDLVL_64dB"
 	"pitch"		"PITCH_NORM"
 
 	"rndwave"
 	{
-		"wave"		"~)player/headshot1.wav"
-		"wave"		"~)player/headshot2.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		}
+		"wave"		")player/headshot1.wav"
+		"wave"		")player/headshot2.wav"
 	}
 }
 
-"Player.DamageHeadShotFeedback"
+"Player.DamageHeadShotOtherFar"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"0.7"
+	"volume"	".19"
 	"soundlevel"  "SNDLVL_NONE"
-	"pitch"		"PITCH_NORM"
 
 	"rndwave"
 	{
-		"wave"		"~)player/headshot1.wav"
-		"wave"		"~)player/headshot2.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-			"volume_falloff"
-			{
-				"input_min" "120.0"	
-				"input_max" "4000.0"
-			}
-		}
+		"wave"		"player/headshot1.wav"
+		"wave"		"player/headshot2.wav"
 	}
 }
-
-
 
 "Player.DeathHeadShot"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"1.0"
+	"volume"	".75"
 	"soundlevel"  "SNDLVL_64dB"
 	"pitch"		"PITCH_NORM"
 
 	"rndwave"
 	{
-		"wave"		"~)player/headshot1.wav"
-		"wave"		"~)player/headshot2.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		}
+		"wave"		")player/headshot1.wav"
+		"wave"		")player/headshot2.wav"
 	}
 }
 
@@ -934,87 +333,28 @@
 
 	"rndwave"
 	{
-		"wave"		"~hostage/hpain/hpain1.wav"
-	}
-}
-
-"Player.HitByThrownWeapon"
-{
-	"channel"	"CHAN_VOICE"
-	"volume"	"1"
-	"CompatibilityAttenuation"	"1.0"
-	"pitch"		"PITCH_NORM"
-
-	"rndwave"
-	{
-		"wave"		"~hostage/hpain/hpain1.wav"
+		"wave"		"hostage/hpain/hpain1.wav"
 	}
 }
 
 "Player.DamageHelmet"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"0.7"
+	"volume"	"1"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
 
-	"wave"	"~)player/bhit_helmet-1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-			"volume_falloff"
-			{
-				"input_min" "120.0"	
-				"input_max" "1400.0"
-			}
-		}
-	}
+	"wave"	")player/bhit_helmet-1.wav"
 }
 
-"Player.DamageHelmetFeedback"
+"Player.DamageHelmetOtherFar"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"0.7"
+	"volume"	"0.22"
 	"soundlevel"  	"SNDLVL_NONE"
 	"pitch"		"PITCH_NORM"
 
-	"wave"	"~)player/bhit_helmet-1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-			"volume_falloff"
-			{
-				"input_min" "120.0"	
-				"input_max" "4000.0"
-			}
-		}
-	}
+	"wave"	"player/bhit_helmet-1.wav"
 }
 
 "Player.DamageKevlar"
@@ -1026,55 +366,34 @@
 
 	"rndwave"
 	{
-		"wave"		"~player/kevlar1.wav"
-		"wave"		"~player/kevlar2.wav"
-		"wave"		"~player/kevlar3.wav"
-		"wave"		"~player/kevlar4.wav"
-		"wave"		"~player/kevlar5.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		}
+		"wave"		"player/kevlar1.wav"
+		"wave"		"player/kevlar2.wav"
+		"wave"		"player/kevlar3.wav"
+		"wave"		"player/kevlar4.wav"
+		"wave"		"player/kevlar5.wav"
 	}
 }
 
 "Player.BurnDamageKevlar"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"0.7"
+	"volume"	"1"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
 
 	"rndwave"
 	{
-		"wave"		"~player/kevlar1.wav"
-		"wave"		"~player/kevlar2.wav"
-		"wave"		"~player/kevlar3.wav"
-		"wave"		"~player/kevlar4.wav"
-		"wave"		"~player/kevlar5.wav"
+		"wave"		"player/kevlar1.wav"
+		"wave"		"player/kevlar2.wav"
+		"wave"		"player/kevlar3.wav"
+		"wave"		"player/kevlar4.wav"
+		"wave"		"player/kevlar5.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
-	
-		"start_stack"
+		"start_stack" //replaces null.wav
 		{
-			"import_stack" "CS_limit_start"
-			
 			"block_entries"
 			{
 				"operator" "sys_block_entries"
@@ -1086,41 +405,29 @@
 				"match_entity" "false"
 			}
 		}
-		
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		}
 	}
 }
 
 "Player.BurnDamage"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"0.7"
+	"volume"	"1"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
 
 	"rndwave"
 	{
-		"wave"		"~player/kevlar1.wav"
-		"wave"		"~player/kevlar2.wav"
-		"wave"		"~player/kevlar3.wav"
-		"wave"		"~player/kevlar4.wav"
-		"wave"		"~player/kevlar5.wav"
+		"wave"		"player/kevlar1.wav"
+		"wave"		"player/kevlar2.wav"
+		"wave"		"player/kevlar3.wav"
+		"wave"		"player/kevlar4.wav"
+		"wave"		"player/kevlar5.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack" //replaces null.wav
 		{
-		
-			"import_stack" "CS_limit_start"
-		
 			"block_entries"
 			{
 				"operator" "sys_block_entries"
@@ -1132,164 +439,79 @@
 				"match_entity" "false"
 			}
 		}
-		
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		}
 	}
 }
 
 "Player.FallDamage"
 {
-	"volume"	"0.3"
-	"pitch"		"PITCH_NORM"
-
-	"rndwave"
-	{
-		"wave"		"~player/damage1.wav"
-		"wave"		"~player/damage2.wav"
-		"wave"		"~player/damage3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack" //replaces null.wav
-		{
-		
-			"import_stack" "CS_limit_start"
-		
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"input_active" "1.0"
-				"input_duration" "1.0"
-				"match_substring" "false"
-				"match_entry" "Player.FallDamage"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-		}
-		
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-			"volume_falloff"
-			{
-				"input_min" "100"
-				"input_max" "900" //playerdamage
-			}
-		}
-	}
-}
-
-"Player.PunchDamage"
-{
 	"channel"	"CHAN_BODY"
-	"volume"	"0.3"
+	"volume"	"1"
 	"pitch"		"PITCH_NORM"
 
 	"rndwave"
 	{
-		"wave"		"~player/damage1.wav"
-		"wave"		"~player/damage2.wav"
-		"wave"		"~player/damage3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack" //replaces null.wav
-		{
-		
-			"import_stack" "CS_limit_start"
-		
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"input_active" "1.0"
-				"input_duration" "1.0"
-				"match_substring" "false"
-				"match_entry" "Player.PunchDamage"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-		}
-		
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-			"volume_falloff"
-			{
-				"input_min" "100"
-				"input_max" "900" //playerdamage
-			}
-		}
+		"wave"		"player/damage1.wav"
+		"wave"		"player/damage2.wav"
+		"wave"		"player/damage3.wav"
 	}
 }
 
-"Player.PunchDisarm"
+// "Player.NightVisionOn"
+// {
+	// "channel"	"CHAN_ITEM"
+	// "volume"	"1"
+	// "CompatibilityAttenuation"	"1.0"
+	// "pitch"		"PITCH_NORM"
+
+	// "wave"		"items/nvg_on.wav"
+// }
+
+// "Player.NightVisionOff"
+// {
+	// "channel"	"CHAN_ITEM"
+	// "volume"	"1"
+	// "CompatibilityAttenuation"	"1.0"
+	// "pitch"		"PITCH_NORM"
+
+	// "wave"		"items/nvg_off.wav"
+// }
+
+// "Player.NightVisionEquip"	//Player has bought night vision
+// {
+	// "channel"	"CHAN_ITEM"
+	// "volume"	"1"
+	// "CompatibilityAttenuation"	"1.0"
+
+	// "wave"	")items/equip_nvg.wav"
+// }
+
+// "Player.FlashlightOn"
+// {
+	// "channel"	"CHAN_ITEM"
+	// "volume"	"1"
+	// "CompatibilityAttenuation"	"1.0"
+
+	// "wave"	"items/flashlight1.wav"
+// }
+
+// "Player.FlashlightOff"
+// {
+	// "channel"	"CHAN_ITEM"
+	// "volume"	"1"
+	// "CompatibilityAttenuation"	"1.0"
+	
+	// "wave"	"items/flashlight1.wav"
+// }
+
+"SprayCan.Paint"
 {
-	"channel"	"CHAN_BODY"
-	"volume"	"0.3"
-	"pitch"		"PITCH_NORM"
-
-	"rndwave"
-	{
-		"wave"		"~player/damage1.wav"
-		"wave"		"~player/damage2.wav"
-		"wave"		"~player/damage3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack" //replaces null.wav
-		{
-		
-			"import_stack" "CS_limit_start"
-		
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"input_active" "1.0"
-				"input_duration" "1.0"
-				"match_substring" "false"
-				"match_entry" "Player.PunchDamage"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-		}
-		
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-			"volume_falloff"
-			{
-				"input_min" "100"
-				"input_max" "900" //playerdamage
-			}
-		}
-	}
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"CompatibilityAttenuation"	"1.0"
+	"pitch"			"PITCH_NORM"
+	"wave" "common/null.wav"	
+	// "wave"			"player/sprayer.wav"
 }
-
 
 "Fire.Plasma"
 {
@@ -1300,6 +522,16 @@
 	"wave"	"ambient/nature/fire/fire_small1.wav"
 }
 
+// "fire_large"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"1"
+	// "pitch"			"PITCH_NORM"
+
+	// "soundlevel"	"SNDLVL_NORM"
+
+	// "wave"			"ambient/fire/fire_big_loop1.wav"
+// }
 
 "fire_medium"
 {
@@ -1315,113 +547,21 @@
 "Player.DenyWeaponSelection"
 {
 	"channel"	"CHAN_ITEM"
-	"volume"	"0.2"
+	"volume"	"0.5"
 	"soundlevel"  "SNDLVL_NONE"
-	"pitch"	"98, 102"
+	"pitch"	"PITCH_NORM"
 
-	"rndwave"
-	{
-		"wave"		"player/footsteps/new/suit_ct_01.wav"
-		"wave"		"player/footsteps/new/suit_ct_02.wav"
-		"wave"		"player/footsteps/new/suit_ct_03.wav"
-		"wave"		"player/footsteps/new/suit_ct_04.wav"
-		"wave"		"player/footsteps/new/suit_ct_05.wav"
-		"wave"		"player/footsteps/new/suit_ct_06.wav"
-		"wave"		"player/footsteps/new/suit_ct_07.wav"
-		"wave"		"player/footsteps/new/suit_ct_08.wav"
-		"wave"		"player/footsteps/new/suit_ct_09.wav"
-		"wave"		"player/footsteps/new/suit_ct_11.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack" //replaces null.wav
-		{
-			"import_stack" "CS_limit_start"
-			
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"input_active" "1.0"
-				"input_duration" "1.0"
-				"match_substring" "false"
-				"match_entry" "Player.DenyWeaponSelection"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-		}
-		
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-			"volume_falloff"
-			{
-				"input_min" "32"
-				"input_max" "250" //weapondraw
-			}
-		}
-	}
+	"wave"	"common/wpn_hudoff.wav"
 }
 
 "Player.WeaponSelectionMoveSlot"
 {
 	"channel"	"CHAN_ITEM"
-	"volume"	"0.3"
+	"volume"	"0.5"
 	"soundlevel"  "SNDLVL_NONE"
-	"pitch"	"98, 102"
+	"pitch"	"PITCH_NORM"
 
-	"rndwave"
-	{
-		"wave"		"player/footsteps/new/suit_ct_01.wav"
-		"wave"		"player/footsteps/new/suit_ct_02.wav"
-		"wave"		"player/footsteps/new/suit_ct_03.wav"
-		"wave"		"player/footsteps/new/suit_ct_04.wav"
-		"wave"		"player/footsteps/new/suit_ct_05.wav"
-		"wave"		"player/footsteps/new/suit_ct_06.wav"
-		"wave"		"player/footsteps/new/suit_ct_07.wav"
-		"wave"		"player/footsteps/new/suit_ct_08.wav"
-		"wave"		"player/footsteps/new/suit_ct_09.wav"
-		"wave"		"player/footsteps/new/suit_ct_11.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack" //replaces null.wav
-		{
-			"import_stack" "CS_limit_start"
-			
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"input_active" "1.0"
-				"input_duration" "1.0"
-				"match_substring" "false"
-				"match_entry" "Player.WeaponSelectionMoveSlot"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-		}
-		
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-			"volume_falloff"
-			{
-				"input_min" "32"
-				"input_max" "250" //weapondraw
-			}
-		}
-	}
+	"wave"	"common/wpn_hudoff.wav"
 }
 
 "General.BurningFlesh"
@@ -1431,8 +571,8 @@
 	"pitch"		"PITCH_NORM"
 
 	"soundlevel"	"SNDLVL_NORM"
-	"wave" 		"common/null.wav"	
-
+	"wave" "common/null.wav"	
+	// "wave"		 "npc/headcrab/headcrab_burning_loop2.wav" 
 }
 
 "General.BurningObject"
@@ -1440,8 +580,11 @@
 	"channel"		"CHAN_WEAPON"
 	"volume"		"1"
 	"pitch"		"PITCH_NORM"
+
 	"soundlevel"	"SNDLVL_NORM"
-	"wave" 		"common/null.wav"	
+
+	// "wave"		 "ambient/fire/fire_small_loop2.wav" 
+	"wave" "common/null.wav"	
 }
 
 "General.StopBurning"
@@ -1449,9 +592,14 @@
 	"channel"		"CHAN_WEAPON"
 	"volume"		"1"
 	"pitch"		"PITCH_NORM"
+
 	"soundlevel"	"SNDLVL_NORM"
+
 	"wave"		 "common/null.wav" 
 }
+
+
+
 
 "Splash.SplashSound"
 {
@@ -1466,40 +614,6 @@
 		"wave"	"ambient/water/water_spray2.wav"
 		"wave"	"ambient/water/water_spray3.wav"
 	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack" //replaces null.wav
-		{
-			"import_stack" "CS_limit_start"
-			
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"input_active" "1.0"
-				"input_duration" "1.0"
-				"match_substring" "false"
-				"match_entry" "Splash.SplashSound"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-		}
-		
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-			"volume_falloff"
-			{
-				"input_min" "32"
-				"input_max" "900" //physics
-			}
-		}
-	}
 }
 
 
@@ -1510,41 +624,7 @@
 	"CompatibilityAttenuation"	"1.0"
 	"rndwave"
 	{
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard2.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack" //replaces null.wav
-		{
-			"import_stack" "CS_limit_start"
-			
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"input_active" "1.0"
-				"input_duration" "1.0"
-				"match_substring" "false"
-				"match_entry" "Splash.SplashSound"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-		}
-		
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-			"volume_falloff"
-			{
-				"input_min" "32"
-				"input_max" "900" //physics
-			}
-		}
+		"wave"	"physics/flesh/flesh_squishy_impact_hard2.wav"
 	}
 }
 
@@ -1554,6 +634,11 @@
 	"volume"	"1"
 	"pitch"		"PITCH_NORM"
 	"CompatibilityAttenuation"	"1.0"
+
+	// "rndwave"
+	// {
+		// "wave"		"physics/flesh/flesh_break1.wav"
+	// }
 	"wave" "common/null.wav"	
 }
 
@@ -1585,6 +670,21 @@
 	"wave"	"player/pl_wade1.wav"
 }
 
+"Player.Wade"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"0.2"
+	"CompatibilityAttenuation"	"1.0"
+
+	"rndwave"
+	{
+		"wave"	"player/footsteps/wade1.wav"
+		"wave"	"player/footsteps/wade2.wav"
+		"wave"	"player/footsteps/wade3.wav"
+		"wave"	"player/footsteps/wade4.wav"
+	}
+}
+
 "Player.AmbientUnderWater"
 {
 	"channel"	"CHAN_STATIC"
@@ -1599,7 +699,12 @@
 	"pitch"		"PITCH_NORM"
 	"volume"	"0.8"
 	"CompatibilityAttenuation"	"1.0"
-
+	// "rndwave"
+	// {
+		// "wave" "player/pl_shell1.wav"
+		// "wave" "player/pl_shell2.wav"
+		// "wave" "player/pl_shell3.wav"
+	// }
 	"wave" "common/null.wav"	
 }
 
@@ -1610,9 +715,9 @@
 	"CompatibilityAttenuation"	"1.0"
 	"rndwave"
 	{
-		"~wave" "player/pl_shell1.wav"
-		"~wave" "player/pl_shell2.wav"
-		"~wave" "player/pl_shell3.wav"
+		"wave" "player/pl_shell1.wav"
+		"wave" "player/pl_shell2.wav"
+		"wave" "player/pl_shell3.wav"
 	}
 }
 
@@ -1737,20 +842,11 @@
 	"wave"			"radio/YouHaveDefuseKit02.wav"
 }
 
-"Player.Respawn"
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	"0.3"
-	"soundlevel"  "SNDLVL_90dB"
-
-	"wave"	"~player/pl_respawn.wav"
-}
-
 // Chicken --------------------------------------------
 "Chicken.Idle"
 {
 	"channel"		"CHAN_BODY"
-	"volume"		"0.9"
+	"volume"		"1"
 	"soundlevel"  	"SNDLVL_65dB"
 	"pitch"			"90, 110"
 	"rndwave"
@@ -1758,8 +854,6 @@
 		"wave"		"ambient/creatures/chicken_idle_01.wav"
 		"wave"		"ambient/creatures/chicken_idle_02.wav"
 		"wave"		"ambient/creatures/chicken_idle_03.wav"
-		"wave"		"ambient/creatures/chicken_idle_04.wav"
-		"wave"		"ambient/creatures/chicken_idle_05.wav"
 	}
 	"soundentry_version" "2"
 
@@ -1784,8 +878,8 @@
 "Chicken.Panic"
 {
 	"channel"		"CHAN_BODY"
-	"volume"		".9"
-	"soundlevel"  	"SNDLVL_65dB"
+	"volume"		".8"
+	"soundlevel"  	"SNDLVL_70dB"
 	"pitch"			"90, 110"
 	"rndwave"
 	{
@@ -1817,28 +911,18 @@
 "Chicken.Fly"
 {
 	"channel"		"CHAN_BODY"
-	"volume"		"0.5"
-	"soundlevel"  	"SNDLVL_55dB"
+	"volume"		"1"
+	"soundlevel"  	"SNDLVL_65dB"
 	"pitch"			"90, 110"
 
 	"wave"			"ambient/creatures/chicken_fly_long.wav"
-}
-
-"Chicken.FlapWings"
-{
-	"channel"		"CHAN_BODY"
-	"volume"		"1.0"
-	"soundlevel"  	"SNDLVL_55dB"
-	"pitch"			"90, 110"
-
-	"wave"			"ambient/animal/bird_flapping_3.wav"
 }
 
 "Chicken.Death"
 {
 	"channel"		"CHAN_BODY"
 	"volume"		"1"
-	"soundlevel"  	"SNDLVL_70dB"
+	"soundlevel"  	"SNDLVL_80dB"
 	"pitch"			"95, 105"
 	"rndwave"
 	{
@@ -1846,15 +930,6 @@
 		"wave"		"ambient/creatures/chicken_death_02.wav"
 		"wave"		"ambient/creatures/chicken_death_03.wav"
 	}
-}
-
-"Chicken.ZombieRez"
-{
-	"channel"	"CHAN_BODY"
-	"volume"	"0.95"
-	"pitch"		"150"
-	"soundlevel"	"SNDLVL_55dB"
-	"wave"		"physics/destruction/smash_rockcollapse1.wav"
 }
 
 "swat_blank"
@@ -1868,353 +943,3 @@
 	"wave" "common/null.wav"
 }
 
-"SprayCan.Shake"
-{
-	"channel"		"CHAN_ITEM"
-	"volume"		"0.5"
-	"soundlevel"	"SNDLVL_75dB"
-	"pitch"			"PITCH_NORM"
-	"wave"			"~)items/spraycan_shake.wav"
-}
-
-"SprayCan.Paint"
-{
-	"channel"		"CHAN_ITEM"
-	"volume"		"0.5"
-	"soundlevel"	"SNDLVL_75dB"
-	"pitch"			"PITCH_NORM"
-	"wave"			"~items/spraycan_spray.wav"
-}
-
-"SprayCan.ShakeGhost"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.5"
-	"soundlevel"	"SNDLVL_75dB"
-	"pitch"			"PITCH_NORM"
-	"rndwave"
-	{
-		"wave"		"~)player/halloween/shake_01.wav"
-		"wave"		"~)player/halloween/shake_02.wav"
-		"wave"		"~)player/halloween/shake_03.wav"
-		"wave"		"~)player/halloween/shake_04.wav"
-	}
-}
-
-"SprayCan.PaintGhost"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.9"
-	"soundlevel"	"SNDLVL_75dB"
-	"pitch"			"PITCH_NORM"
-	"rndwave"
-	{
-		"wave"		"~)player/halloween/spray_01.wav"
-		"wave"		"~)player/halloween/spray_02.wav"
-		"wave"		"~)player/halloween/spray_03.wav"
-		"wave"		"~)player/halloween/spray_04.wav"
-	}
-}
-
-"Player.BecomeGhost"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.25"
-	"soundlevel"	"SNDLVL_75dB"
-	"pitch"			"95, 105"
-	"wave"			"~)player/halloween/ghostmode_on.wav"
-}
-
-"Player.GhostIdle"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.07"
-	"soundlevel"	"SNDLVL_75dB"
-	"pitch"			"PITCH_NORM"
-	"wave"			"player/halloween/ghostmode_loop.wav"
-}
-
-"Player.GhostKnifeSwish"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.1, 0.4"
-	"soundlevel"	"SNDLVL_55dB"
-	"pitch"			"98, 102"
-	"rndwave"
-	{
-		"wave"		"~)player/halloween/ghost_swish_c_01.wav"
-		"wave"		"~)player/halloween/ghost_swish_c_02.wav"
-		"wave"		"~)player/halloween/ghost_swish_c_03.wav"
-		"wave"		"~)player/halloween/ghost_swish_c_04.wav"
-	}
-}
-
-"Player.GhostKnifeHit"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.05, 0.15"
-	"soundlevel"	"SNDLVL_55dB"
-	"pitch"			"98, 102"
-	"rndwave"
-	{
-		"wave"		"~player/halloween/ghost_impact_c_01.wav"
-		"wave"		"~player/halloween/ghost_impact_c_02.wav"
-		"wave"		"~player/halloween/ghost_impact_c_03.wav"
-		"wave"		"~player/halloween/ghost_impact_c_04.wav"
-	}
-}
-
-"Player.GhostTaserShoot"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.65, 0.75"
-	"soundlevel"	"SNDLVL_75dB"
-	"pitch"			"98, 102"
-	"rndwave"
-	{
-		"wave"		"~player/halloween/ghost_impact_c_01.wav"
-		"wave"		"~player/halloween/ghost_impact_c_02.wav"
-		"wave"		"~player/halloween/ghost_impact_c_03.wav"
-		"wave"		"~player/halloween/ghost_impact_c_04.wav"
-	}
-}
-
-"Player.SnowballEquip"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.2"
-	"soundlevel"	"SNDLVL_75dB"
-	"pitch"			"98, 102"
-	"rndwave"
-	{
-		"wave"		"player/winter/snowball_equip_01.wav"
-		"wave"		"player/winter/snowball_equip_02.wav"
-		"wave"		"player/winter/snowball_equip_03.wav"
-	}
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		}
-	}
-}
-
-"Player.SnowballHit"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.2, 0.2"
-	"soundlevel"	"SNDLVL_87dB"
-	"pitch"			"98, 102"
-	"rndwave"
-	{
-		"wave"		"player/winter/snowball_hit_01.wav"
-		"wave"		"player/winter/snowball_hit_02.wav"
-		"wave"		"player/winter/snowball_hit_03.wav"
-		"wave"		"player/winter/snowball_hit_04.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"execute_once" "true"
-				"input_active" "1.0"	
-				"input_duration" "0.03" 
-				"match_substring" "false" 			
-				"match_entry" "Player.SnowballHit"
-				//"match_sound" "common/null.wav"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-			"mixer"
-			{
-				"mixgroup" "Physics"
-			}
-		
-		}
-	}
-	
-	
-	
-}
-
-"Player.SnowballPickup"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.5, 1"
-	"soundlevel"	"SNDLVL_75dB"
-	"pitch"			"95, 110"
-	"rndwave"
-	{
-		"wave"		"player/winter/snowball_pickup_01.wav"
-		"wave"		"player/winter/snowball_pickup_02.wav"
-		"wave"		"player/winter/snowball_pickup_03.wav"
-	}
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_foley"
-			
-			"block_entries"
-			{
-				"operator" "sys_block_entries"
-				"execute_once" "true"
-				"input_active" "1.0"	
-				"input_duration" "0.03" 
-				"match_substring" "false" 			
-				"match_entry" "Player.SnowballPickup"
-				//"match_sound" "common/null.wav"
-				"match_channel" "false"
-				"match_entity" "false"
-			}
-			"mixer"
-			{
-				"mixgroup" "FoleyWeapons"
-			}
-		
-		}
-	}
-}
-
-"Player.SnowballThrow"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.5, 0.5"
-	"soundlevel"	"SNDLVL_75dB"
-	"pitch"			"98, 102"
-	"rndwave"
-	{
-		//"wave"		"~)player/winter/snowball_throw_01.wav"
-		"wave"		"~)player/winter/snowball_throw_02.wav"
-		"wave"		"~)player/winter/snowball_throw_03.wav"
-		"wave"		"~)player/winter/snowball_throw_04.wav"
-	}
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			
-			"import_stack" "CS_limit_start"
-			
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_weapon"
-			
-			"volume_xfade_end_dist"
-			{
-				"input2" "1500"
-			}
-			
-			"mixer"
-			{
-				"mixgroup" "Weapons1"
-			}
-			// 35m 
-			"volume_falloff"
-			{
-				"input_max" "800"
-				"input_curve_amount" "0.9"
-			}
-			"volume_distance_xfade"
-			{
-				"input_map_min" "0.0"
-				"input_map_max" "1.0"
-			}
-		}
-	}
-}
-
-"Player.FinalFight"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.5"
-	"pitch"		"100"
-	"wave" 	"music/finalfight.wav"
-}
-
-/// NPCs
-"AI_BaseNPC.BodyDrop_Heavy"
-{
-	"channel"	"CHAN_BODY"
-	"volume"	"1"
-	"soundlevel"	"SNDLVL_75dB"
-	"pitch"	"90"
-
-	"rndwave"
-	{
-		"wave"	"physics/flesh/flesh_impact_hard1.wav"
-		"wave"	"physics/flesh/flesh_impact_hard2.wav"
-		"wave"	"physics/flesh/flesh_impact_hard3.wav"
-		"wave"	"physics/flesh/flesh_impact_hard4.wav"
-		"wave"	"physics/flesh/flesh_impact_hard5.wav"
-		"wave"	"physics/flesh/flesh_impact_hard6.wav"
-	}
-}
-
-"AI_BaseNPC.BodyDrop_Light"
-{
-	"channel"	"CHAN_BODY"
-	"volume"	"0.9"
-	"soundlevel"  "SNDLVL_75dB"
-	"pitch"	"105"
-
-	"rndwave"
-	{
-		"wave"	"physics/flesh/flesh_impact_hard1.wav"
-		"wave"	"physics/flesh/flesh_impact_hard2.wav"
-		"wave"	"physics/flesh/flesh_impact_hard3.wav"
-		"wave"	"physics/flesh/flesh_impact_hard4.wav"
-		"wave"	"physics/flesh/flesh_impact_hard5.wav"
-		"wave"	"physics/flesh/flesh_impact_hard6.wav"
-	}
-}
-
-"AI_BaseNPC.SwishSound"
-{
-	"channel"	"CHAN_BODY"
-	"volume"	"1"
-	"soundlevel"  "SNDLVL_75dB"
-
-	"wave"	"npc/zombie/claw_miss2.wav"
-}
-
-"AI_BaseNPC.SentenceStop"
-{
-	"channel"	"CHAN_VOICE"
-	"volume"	"1.0"
-	"soundlevel"  "SNDLVL_60dB"
-
-	"wave"	"common/null.wav"
-}

@@ -38,8 +38,6 @@
 // CHAR_TEX_PUDDLE			10	// L4D addition
 // CHAR_TEX_MUD				11	// L4D addition
 // CHAR_TEX_SANDBARREL		12	// CSGO addition (no penetration)
-// CHAR_TEX_SANDBARREL		13	// CSGO addition
-// CHAR_TEX_METALSHIELD		14	// CSGO addition
 
 // "surface group" 
 // { 
@@ -71,11 +69,6 @@
 // gamematerial: game material index (can be a single letter or a number)
 // penetrationmodifier: How easy it is for a bullet to go through the material (0.001 to 1.0).
 // damagemodifier: How much of the damaging power of the bullet is preserved while going through the material (0.001 to 1.0).
-// occlusion effects: 
-// "lowPitchOcclusion" "1.0" - a value betweeen 0 and 100 where 0 is not occluded at all and 100 is silent (except for any additional reflected sound)
-// "midPitchOcclusion" "4.0" - a value betweeen 0 and 100 where 0 is not occluded at all and 100 is silent (except for any additional reflected sound)
-// "highPitchOcclusion" "6.0" - a value betweeen 0 and 100 where 0 is not occluded at all and 100 is silent (except for any additional reflected sound)
-// To preview occlusion effects in realtime, in console: snd_occlusion_material_override "100.0 100.0 100.0"
 
 // NOTE: The properties of "default" will get copied into EVERY material who does not
 // 	 override them!!!
@@ -111,13 +104,6 @@
 	"scrapeRoughThreshold" "0.5"
 	"impactHardThreshold" "0.5"
 
-	//Occlusion properties reduce sound of that pitch level by a certain
-	//percentage for every game unit (inch) of the material the sound
-	//passes through.
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "15.0"
-	"highPitchOcclusion" "1.0"
-
 	"gamematerial"	"C"
 	
 	"jumpfactor" "1.0"
@@ -126,7 +112,6 @@
 	
 	"penetrationmodifier" "1.0"
 	"damagemodifier" "0.5"
-	
 }
 
 // NOTE: Almost nothing is solid metal - so "metal" is sheet metal
@@ -136,11 +121,6 @@
 	"elasticity"	"0.1"
 	"audioreflectivity" "0.83"
 	"friction"	"0.8"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "15.0"
-	"highPitchOcclusion" "1.0"
-	
 	"stepleft"          "SolidMetal.StepLeft"
 	"stepright"         "SolidMetal.StepRight"
 
@@ -153,11 +133,8 @@
 	// "strain"		"SolidMetal.Strain"
 
 	"gamematerial"	"M"
-
+	"penetrationmodifier" "0.5"
 	"damagemodifier" "0.3"
-
-	"penetrationmodifier" "0.27"
-
 }
 
 
@@ -170,70 +147,8 @@
 	"base"		"solidmetal"
 	"elasticity"	"0.25"
 	"thickness"	"0.1"
-	
-	"stepleft"          "SolidMetal.StepLeft"
-	"stepright"         "SolidMetal.StepRight"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "15.0"
-	"highPitchOcclusion" "1.0"
-
-	"penetrationmodifier" "0.4"
 }
 
-"metal_barrelSoundOverride"
-{
-	"base"		"metal"
-	
-	"stepleft"	"MetalBarrel.StepLeft"
-	"stepright"	"MetalBarrel.StepRight"
-	"bulletimpact"	"MetalBarrel.BulletImpact"
-
-}
-
-"metal_vehicleSoundOverride"
-{
-	"base"		"metal"
-	
-	"stepleft"          "MetalVehicle.StepLeft"
-	"stepright"         "MetalVehicle.StepRight"
-	"bulletimpact"	"MetalVehicle.BulletImpact"
-
-}
-
-"metal_survivalCase"
-{
-	"base"		"metal"
-	"bulletimpact"	"Survival.ContainerDamage"
-	"impacthard"	"Survival.ContainerDamage"
-	"impactsoft"	"Survival.ContainerDamage"
-	"stepleft"      "silent.StepLeft"
-	"stepright"     "silent.StepRight"
-	"scraperough"	"Silent.ScrapeRough"
-	"scrapesmooth"	"Silent.ScrapeSmooth"
-	"break"		"Silent.Breakable"
-}
-
-"metal_survivalCase_unpunchable"
-{
-	"base"		"metal_survivalCase"
-	"impactsoft"	"Survival.ContainerDamageUnpunchable"
-}
-
-"metaldogtags"
-{
-	"base"		"solidmetal"
-	"elasticity"	"0.25"
-	"thickness"	"0.1"
-	
-	"impacthard"	"DogTags.Impact"
-	"impactsoft"	"DogTags.Impact"
-	"scraperough"	"DogTags.Impact"
-	"scrapesmooth"	"DogTags.Impact"
-	"bulletimpact"	"DogTags.Impact"
-
-	"penetrationmodifier" "0.4"
-}
 
 
 // metal grating, used for decking
@@ -247,11 +162,6 @@
 
 	"stepleft"	"MetalGrate.StepLeft"
 	"stepright"	"MetalGrate.StepRight"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "2.0"
-	"highPitchOcclusion" "1.0"
-	
 	"impacthard"	"MetalGrate.ImpactHard"
 	"impactsoft"	"MetalGrate.ImpactSoft"
 	"scraperough"	"MetalGrate.ScrapeRough"
@@ -263,9 +173,8 @@
 	// "strain"		"Metal_Box.Strain"
 
 	"gamematerial"	"G"
+	"penetrationmodifier" "1.0"
 	"damagemodifier" "0.99"
-
-	"penetrationmodifier" "0.95"
 }
 
 // metal box - smaller metal box (< 2' width/height/depth)
@@ -287,8 +196,6 @@
 
 	"break"		"Metal_Box.Break"
 	// "strain"		"Metal_Box.Strain"
-
-	"penetrationmodifier" "0.5"
 }
 
 // Assume that everything we are building
@@ -339,10 +246,8 @@
 	"audioroughnessfactor" "0.1"
 
 	"gamematerial"	"V"
-
+	"penetrationmodifier" "0.5"
 	"damagemodifier" "0.45"
-
-	"penetrationmodifier" "0.6"
 }
 
 // thick solid steel panel - used for solid wall, floor, machine construction
@@ -354,19 +259,13 @@
 	"density"	"2700"
 	"elasticity"	"0.2"
 	"friction"	"0.8"
-	
-	"stepleft"          "MetalVehicle.StepLeft"
-	"stepright"         "MetalVehicle.StepRight"
-	"bulletimpact"	"MetalVehicle.BulletImpact"
 
 	"audioreflectivity" "0.33"
 	"audioroughnessfactor" "0.1"
 
 	"gamematerial"	"V"
-
-	"damagemodifier" "0.45"
-
 	"penetrationmodifier" "0.5"
+	"damagemodifier" "0.45"
 }
 
 "dirt"
@@ -374,10 +273,6 @@
 	"density"	"1600"
 	"elasticity"	"0.01"
 	"friction"	"0.8"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "19.0"
-	"highPitchOcclusion" "1.0"
 	
 	"stepleft"          "Dirt.StepLeft"
 	"stepright"         "Dirt.StepRight"
@@ -390,10 +285,8 @@
 	"audiohardnessfactor" "0.25"
 
 	"gamematerial"	"D"
-
+	"penetrationmodifier" "0.5"
 	"damagemodifier" "0.3"
-
-	"penetrationmodifier" "0.6"
 }
 
 "mud"
@@ -401,10 +294,6 @@
 	"base"		 "dirt"
 	"friction"	 "0.6"
 	"dampening"	 "6.0"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "15.0"
-	"highPitchOcclusion" "1.0"
 
 	"stepleft"          "Mud.StepLeft"
 	"stepright"         "Mud.StepRight"
@@ -432,30 +321,12 @@
 "grass"
 {
 	"base"		"dirt"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "15.0"
-	"highPitchOcclusion" "1.0"
 		
 	"stepleft"          "grass.StepLeft"
 	"stepright"         "grass.StepRight"
 
 
 	"gamematerial"	"J"	// L4D: new gamematerial
-}
-
-"slowgrass"
-{
-	"base"		"dirt"
-		
-	"stepleft"          "grass.StepLeft"
-	"stepright"         "grass.StepRight"
-
-	"maxSpeedFactor"	"1.0"
-
-	"gamematerial"	"J"	// L4D: new gamematerial
-	
-	"hidetargetid" "1"
 }
 
 "sugarcane"
@@ -475,10 +346,6 @@
 	"density"	"2700"
 	"elasticity"	"0.3"
 	"friction"	"0.8"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "15.0"
-	"highPitchOcclusion" "1.0"
 		
 	"stepleft"          "tile.StepLeft"
 	"stepright"         "tile.StepRight"
@@ -489,40 +356,8 @@
 
 	"bulletimpact"	"Tile.BulletImpact"
 	"gamematerial"	"T"
-
+	"penetrationmodifier" "0.65"
 	"damagemodifier" "0.3"
-
-	"penetrationmodifier" "0.7"
-
-
-}
-
-"tile_survivalCase"
-{
-	"base"		"tile"
-	"stepleft"      "silent.StepLeft"
-	"stepright"     "silent.StepRight"
-	"scraperough"	"Silent.ScrapeRough"
-	"scrapesmooth"	"Silent.ScrapeSmooth"
-	"bulletimpact"	"Survival.ContainerDamage"
-	"impacthard"	"Survival.ContainerDamage"
-	"impactsoft"	"Survival.ContainerDamage"
- 	"break"		"Survival.ContainerDeath"
-}
-
-"tile_survivalCase_GIB"
-{
-	"base"		"tile"
-	"stepleft"      "Silent.StepLeft"
-	"stepright"     "Silent.StepRight"
-	"scraperough"	"Silent.ScrapeRough"
-	"scrapesmooth"	"Silent.ScrapeSmooth"
-	"bulletimpact"	"Silent.BulletImpact"
-	"impacthard"	"Silent.ImpactHard"
-	"impactsoft"	"Silent.ImpactSoft"
- 	"break"		"Silent.Breakable"
-
-
 }
 
 // generic wood (NOTE: materials should use wood_box, wood_crate, wood_plank, wood_panel etc)
@@ -532,10 +367,6 @@
 	"density"	"700"
 	"elasticity"	"0.1"
 	"friction"	"0.8"
-	
-	"lowPitchOcclusion" "1.0"
-	"midPitchOcclusion" "4.0"
-	"highPitchOcclusion" "6.0"
 		
 	"stepleft"          "Wood.StepLeft"
 	"stepright"         "Wood.StepRight"
@@ -553,10 +384,8 @@
 	"audiohardnessfactor" "0.25"
 
 	"gamematerial"	"W"
-
+	"penetrationmodifier" "1.0"
 	"damagemodifier" "0.6"
-
-	"penetrationmodifier" "0.9"
 }
 
 "Wood_lowdensity"
@@ -583,26 +412,6 @@
 //	"strain"		"Wood_Box.Strain"
 	"break"			"Wood_Box.Break"
 
-	"penetrationmodifier" "0.9"
-}
-
-"Wood_Basket"
-{
-	"base"	"Wood"
-	
-	"stepleft"          "Wood_Basket.StepLeft"
-	"stepright"         "Wood_Basket.StepRight"
-
-	"bulletimpact"	"Wood_Box.BulletImpact"
-	"scraperough"	"Wood_Box.ScrapeRough"
-	"scrapesmooth"	"Wood_Box.ScrapeSmooth"
-	"impacthard"	"Wood_Box.ImpactHard"
-	"impactsoft"	"Wood_Box.ImpactSoft"
-
-//	"strain"		"Wood_Box.Strain"
-	"break"			"Wood_Box.Break"
-
-	"penetrationmodifier" "0.9"
 }
 
 // large crate, large wood furniture (bookcases, tables)
@@ -622,7 +431,6 @@
 //	"strain"		"Wood_Crate.Strain"
 	"break"			"Wood_Crate.Break"
 
-	"penetrationmodifier" "0.9"
 }
 
 // wood board, floorboard, plank
@@ -640,7 +448,6 @@
 //	"strain"		"Wood_Plank.Strain"
 	"break"			"Wood_Plank.Break"
 
-	"penetrationmodifier" "0.85"
 }
 
 // solid 6x6 or greater block, post or tree
@@ -658,7 +465,6 @@
 //	"strain"		"Wood_Solid.Strain"
 	"break"			"Wood_Solid.Break"
 
-	"penetrationmodifier" "0.8"
 }
 
 // small wood furniture - chairs, small tables
@@ -695,30 +501,6 @@
 
 }
 
-"Wood_Dense"
-{
-	"density"				"2700"
-	"elasticity"			"0.25"
-	"audioreflectivity" 	"0.83"
-	"friction"				"0.8"
-	"penetrationmodifier" 	"0.5"
-	"thickness"	"0.1"
-	
-	"stepleft"          	"Wood_Solid.StepLeft"
-	"stepright"         	"Wood_Solid.StepRight"
-
-	"impacthard"			"Wood_Solid.ImpactHard"
-	"impactsoft"			"Wood_Solid.ImpactSoft"
-	"scraperough"			"Wood_Solid.ScrapeRough"
-	"scrapesmooth"			"Wood_Solid.ScrapeSmooth"
-	"bulletimpact"			"Wood_Solid.BulletImpact"
-
-	//"strain"				"Wood_Solid.Strain"
-
-	"gamematerial"	"13"
-	"damagemodifier" "0.3" 
-}
-
 
 "water"
 {
@@ -736,8 +518,6 @@
 	"audiohardnessfactor" "0.0"
 
 	"gamematerial"	"S"
-
-	"penetrationmodifier" "0.3"
 }
 
 "wet"
@@ -778,8 +558,6 @@
 	"audioreflectivity" "0.33"
 	"audiohardnessfactor" "0.0"
 	"audioroughnessfactor" "1.0"
-
-	"penetrationmodifier" "0.2"
 }
 
 // wade is a water material for walking in/on water at knee height
@@ -820,8 +598,6 @@
 	"audioreflectivity" "0.33"
 
 	"gamematerial" "X"
-
-	"penetrationmodifier" "0.9"
 }
 
 // pane of glass, computer screen, window, glass door
@@ -831,13 +607,8 @@
 	"thickness"	"0.5"
 	"density"	"2700"
 	"elasticity"	"0.2"
-
 	"friction"	"0.5"
 	
-	"lowPitchOcclusion" "1.0"
-	"midPitchOcclusion" "4.0"
-	"highPitchOcclusion" "6.0"
-
 	"stepleft"          "glass.StepLeft"
 	"stepright"         "glass.StepRight"
 
@@ -856,39 +627,6 @@
 
 	"audioroughnessfactor" "0.0"
 	"gamematerial"	"Y"
-
-	"penetrationmodifier" "0.99"
-}
-
-// glass that is specifically used on floors - this has a higher friction value than regular glass so that the player doesn't slide around undesirably
-
-"glassfloor"
-{
-	"thickness"	"0.5"
-	"density"	"2700"
-	"elasticity"	"0.2"
-
-	"friction"	"0.8"	
-	"stepleft"          "glass.StepLeft"
-	"stepright"         "glass.StepRight"
-
-	"scraperough"	"Glass.ScrapeRough"
-	"scrapesmooth"	"Glass.ScrapeSmooth"
-	"impacthard"	"Glass.ImpactHard"
-	"impactsoft"	"Glass.ImpactSoft"
-		
-	"bulletimpact"	"Glass.BulletImpact"
-	
-	// "strain"		"Glass.Strain"
-	"break"			"Glass.Break"
-
-	"audioreflectivity" "0.66"
-	"audiohardnessfactor" "1.0"
-
-	"audioroughnessfactor" "0.0"
-	"gamematerial"	"Y"
-
-	"penetrationmodifier" "0.99"
 }
 
 // computer case, tech equipment case
@@ -903,21 +641,8 @@
 	"break"			"radio_computer.break"
 
 	"gamematerial"	"P"
-
-	"damagemodifier" "0.45"
-
 	"penetrationmodifier" "0.4"
-}
-
-"weapon_magazine"
-{
-	"base"		"computer"
-
-	"bulletimpact"	"WeaponMagazine.BulletImpact"
-	"impacthard"	"WeaponMagazine.ImpactHard"
-	"impactsoft"	"WeaponMagazine.ImpactSoft"
-	
-	"gamematerial"	"M"
+	"damagemodifier" "0.45"
 }
 
 "concrete"
@@ -925,10 +650,6 @@
 	"density"	"2400"
 	"elasticity"	"0.2"
 	"friction"	"0.8"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "15.0"
-	"highPitchOcclusion" "1.0"
 	
 	"stepleft"          "Concrete.StepLeft"
 	"stepright"         "Concrete.StepRight"
@@ -942,22 +663,16 @@
 	"audioreflectivity" "0.66"
 
 	"gamematerial"	"C"
-
+	"penetrationmodifier" "0.4"
 	"damagemodifier" "0.25"
-
-	"penetrationmodifier" "0.5"
-
-	
 }
 
 "asphalt"
 {
 	"base"		"concrete"
 	"gamematerial"	"Q"
-
+	"penetrationmodifier" "0.65"
 	"damagemodifier" "0.3"
-
-	"penetrationmodifier" "0.55"
 }
 
 // Solid rock (small sounds)
@@ -978,8 +693,6 @@
 "porcelain"
 {
 	"base"		"rock"
-
-	"penetrationmodifier" "0.95"
 }
 
 // Large solid rock (large sounds)
@@ -996,14 +709,13 @@
 {
 	"base"		"rock"
 	"gamematerial"	"R"
-
-	"penetrationmodifier" "0.47"
 }
 
 // 9x12 prefabricated concrete cinder blocks
 
 "concrete_block"
 {
+	
 	"base"		"concrete"
 	"impacthard"	"Concrete_Block.ImpactHard"
 }
@@ -1024,11 +736,6 @@
 	"elasticity"	"0.25"
 	"friction"	"0.8"
 	
-	// no occlusion
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "0.0"
-	"highPitchOcclusion" "0.0"
-	
 	"stepleft"          "chainlink.StepLeft"
 	"stepright"         "chainlink.StepRight"
 
@@ -1038,11 +745,8 @@
 	"scrapesmooth"	"ChainLink.ScrapeSmooth"
 	"bulletimpact"	"ChainLink.BulletImpact"
 	"gamematerial"	"G"
-
+	"penetrationmodifier" "1.0"
 	"damagemodifier" "0.99"
-
-	"penetrationmodifier" "0.99"
-	
 }
 
 // metal chain
@@ -1075,8 +779,6 @@
 	"audioroughnessfactor" "0.1"
 
 	"gamematerial"	"F"
-
-	"penetrationmodifier" "0.9"
 }
 
 // gibs
@@ -1116,8 +818,6 @@
 	"elasticity"	"0.1"
 
 	"audioroughnessfactor" "0.1"
-
-	"penetrationmodifier" "0.75"
 }
 
 
@@ -1131,13 +831,6 @@
 	"elasticity"	"0.01"
 	"friction"	"0.8"
 	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "20.0"
-	"highPitchOcclusion" "1.0"
-	
-	"stepleft"          "Carpet.StepLeft"
-	"stepright"         "Carpet.StepRight"
-	
 	"impacthard"	"Carpet.Impact"
 	"bulletimpact"	"Carpet.BulletImpact"
 	"scraperough"	"Carpet.Scrape"
@@ -1147,23 +840,6 @@
 	"audioroughnessfactor" "0.1"
 
 	"gamematerial"	"7"
-
-	"penetrationmodifier" "0.75"
-}
-
-"dufflebag_survivalCase"
-{
-	"base"		"carpet"
-	"bulletimpact"	"Survival.BagDamage"
-	"impacthard"	"Survival.BagDamage"
-	"impactsoft"	"Survival.BagDamage"
-	
-	"stepleft"      "silent.StepLeft"
-	"stepright"     "silent.StepRight"
-	"scraperough"	"Silent.ScrapeRough"
-	"scrapesmooth"	"Silent.ScrapeSmooth"
-	"break"		"Survival.BagDeath"
-
 }
 
 // UNDONE: Do proper values for these - I made them up so I would have good
@@ -1185,21 +861,15 @@
 	"audioroughnessfactor" "0.1"
 
 	"gamematerial"	"9"
-
-	"penetrationmodifier" "0.75"
 }
 
-// drywall, office wall material, sheetrock - 
-// usually thick enough to have some stronger material behind it so the penetration mod is higher
+// drywall, office wall material, sheetrock
+
 "plaster"
 {
 	"base"		"dirt"
 	"audiohardnessfactor" "0.5"
 	"audioroughnessfactor" "0.1"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "17.0"
-	"highPitchOcclusion" "1.0"
 
 	"stepleft"          "drywall.StepLeft"
 	"stepright"         "drywall.StepRight"
@@ -1214,12 +884,9 @@
 	"break"			"Cardboard.Break"
 
 	"gamematerial"	"2"
-
+	"penetrationmodifier" "1.0"
 	"damagemodifier" "0.6"
 
-	"penetrationmodifier" "0.7"
-
-	
 }
 
 "sheetrock"
@@ -1227,10 +894,6 @@
 	"base"		"dirt"
 	"audiohardnessfactor" "0.5"
 	"audioroughnessfactor" "0.1"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "17.0"
-	"highPitchOcclusion" "1.0"
 
 	"stepleft"          "drywall.StepLeft"
 	"stepright"         "drywall.StepRight"
@@ -1245,10 +908,9 @@
 	"break"			"Cardboard.Break"
 
 	"gamematerial"	"5"
-
+	"penetrationmodifier" "1.0"
 	"damagemodifier" "0.6"
 
-	"penetrationmodifier" "0.85"
 }
 
 // carboard box
@@ -1275,10 +937,9 @@
 	"break"			"Cardboard.Break"
 
 	"gamematerial"	"U"
-
+	"penetrationmodifier" "1.0"
 	"damagemodifier" "0.99"
 
-	"penetrationmodifier" "0.95"
 }
 
 // larger plastic barrel, hollow, soft plastic
@@ -1308,8 +969,6 @@
 //	"roll"			"Plastic_Barrel.Roll"
 
 	"gamematerial"	"L"
-
-	"penetrationmodifier" "0.7"
 }
 
 // small - medium plastic box, hard plastic
@@ -1337,8 +996,6 @@
 	"break"			"Plastic_Box.Break"
 
 	"gamematerial"	"L"
-
-	"penetrationmodifier" "0.75"
 }
 
 // smaller generic hard plastic
@@ -1351,27 +1008,9 @@
 	"bulletimpact"	"Plastic_Box.ImpactHard"
 }
 
-"plastic_survivalCase"
-{
-	"base"		"plastic"
-	"bulletimpact"	"Survival.ContainerDamage"
-	"impacthard"	"Survival.ContainerDamage"
-	"impactsoft"	"Survival.ContainerDamage"
-	"scraperough"	"Silent.ScrapeRough"
-	"scrapesmooth"	"Silent.ScrapeSmooth"
-	"stepleft"      "Silent.StepLeft"
-	"stepright"     "Silent.StepRight"
-	"break"		"Survival.ContainerDeath"
-
-}
-
 "sand"
 {
 	"base"		"dirt"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "15.0"
-	"highPitchOcclusion" "1.0"
 	
 	"stepleft"          "sand.StepLeft"
 	"stepright"         "sand.StepRight"
@@ -1381,10 +1020,8 @@
 	"audioreflectivity" "0.03"
 
 	"gamematerial"	"N"
-	
+	"penetrationmodifier" "0.4"
 	"damagemodifier" "0.25"
-
-	"penetrationmodifier" "0.3"
 }
 
 // solid rubber floor mat, solid rubber tire
@@ -1394,10 +1031,6 @@
 	"base"			"dirt"
 	"elasticity"	"0.2"
 	"friction"		"0.8"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "19.0"
-	"highPitchOcclusion" "1.0"
 	
 	"stepleft"          "rubber.StepLeft"
 	"stepright"         "rubber.StepRight"
@@ -1410,10 +1043,8 @@
 	"audiohardnessfactor" "0.2"
 
 	"gamematerial"	"4"
-
+	"penetrationmodifier" "1.0"
 	"damagemodifier" "0.5"
-
-	"penetrationmodifier" "0.85"
 
 }
 
@@ -1492,8 +1123,6 @@
 	"bulletimpact"	"GlassBottle.BulletImpact"
 
 	"break"			"GlassBottle.Break"
-
-	"penetrationmodifier" "0.99"
 }
 
 // ceramic jug, mug
@@ -1511,20 +1140,16 @@
 	"break"			"Pottery.Break"
 
 	"gamematerial"	"1"
-
+	"penetrationmodifier" "1.0"
 	"damagemodifier" "0.6"
-
-	"penetrationmodifier" "0.95"
 }
 
 "clay"
 {
 	"base"		"tile"
 	"gamematerial"	"1"
-
+	"penetrationmodifier" "1.0"
 	"damagemodifier" "0.6"
-
-	"penetrationmodifier" "0.95"
 }
 
 // large oxygen tank, propane tank, welding tank
@@ -1547,18 +1172,6 @@
 	"impactsoft"	"Metal_Barrel.ImpactSoft"
 	"bulletimpact"	"Metal_Barrel.BulletImpact"
 	// "roll"		"Metal_Barrel.Roll"
-}
-
-"metal_barrel_explodingSurvival"
-{
-	"base"		"metal_barrel"
-	"stepleft"          "MetalVehicle.StepLeft"
-	"stepright"         "MetalVehicle.StepRight"
-	"bulletimpact"	"MetalVehicle.BulletImpact"
-	"impacthard"	"ExplodingBarrel.ImpactHard"
-	"impactsoft"	"ExplodingBarrel.ImpactSoft"
-	"scraperough"	"SolidMetal.ScrapeRough"
-	"scrapesmooth"	"SolidMetal.ScrapeSmooth"
 }
 
 "floating_metal_barrel"
@@ -1632,10 +1245,6 @@
 "ceiling_tile"
 {
 	"base"		"cardboard"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "17.0"
-	"highPitchOcclusion" "1.0"
 
 	"stepleft"          "ceiling_tile.StepLeft"
 	"stepright"         "ceiling_tile.StepRight"
@@ -1662,8 +1271,6 @@
 	"friction"	"0.8"
 
 	"gamematerial"	"O"
-
-	"penetrationmodifier" "0.95"
 }
 
 "slipperyslide"
@@ -1710,10 +1317,8 @@
 	"audiohardnessfactor" "0.25"
 	"audioroughnessfactor" "0.1"
 
-
+	"penetrationmodifier" "1.0"
 	"damagemodifier" "0.6"
-
-	"penetrationmodifier" "0.95"
 }
 
 "ice"
@@ -1723,8 +1328,6 @@
 	"elasticity"	"0.1"
 
 	"audioroughnessfactor" "0.1"
-
-	"penetrationmodifier" "0.75"
 }
 
 // small med kit, smaller tech items, battery
@@ -1787,19 +1390,6 @@
 	"impactsoft"	"weapon.ImpactSoft"
 }
 
-"metal_shield"
-{
-	"base"		"metal"
-	"stepleft"		"weapon.StepLeft"
-	"stepright"		"weapon.StepRight"
-	"bulletimpact"	"weapon.BulletImpact"
-	"scraperough"	"weapon.ScrapeRough"
-	"scrapesmooth"	"weapon.ScrapeSmooth"
-	"impacthard"	"weapon.ImpactHard"
-	"impactsoft"	"weapon.ImpactSoft"
-	"gamematerial"	"14"
-}
-
 // for invisible collision materials (like sky)
 "default_silent"
 {
@@ -1821,7 +1411,7 @@
 "player_control_clip"
 {
 	"gamematerial"	"I"
-
+	"penetrationmodifier" "1.0"
 	"damagemodifier" "1.0"
 }
 
@@ -1831,37 +1421,12 @@
 	"gamematerial" "-"
 }
 
-"soccerball"
-{
-	"density"	"900"
-	
-	"stepleft"          "rubber.StepLeft"
-	"stepright"         "rubber.StepRight"
-	
-	"bulletimpact"	"Ball.BulletImpact"
-
-	"impacthard"	"Ball.ImpactHard"
-	"impactsoft"	"Ball.ImpactSoft"
-	"scraperough"	"Silent.ScrapeRough"
-	"scrapesmooth"	"Silent.ScrapeSmooth"
-	
-	"gamematerial" "-"
-}
-
-
 "gravel"
 {
 	"base"		"rock"
 	"friction"	"0.8"
-	
-	"lowPitchOcclusion" "0.0"
-	"midPitchOcclusion" "15.0"
-	"highPitchOcclusion" "1.0"
-	
 	"stepleft"	"Gravel.StepLeft"
 	"stepright""Gravel.StepRight"
-
-	"penetrationmodifier" "0.4"
 }
 
 "snow"
@@ -1871,8 +1436,6 @@
 	"stepright"	"Snow.StepRight"
 
 	"gamematerial"	"K"
-
-	"penetrationmodifier" "0.85"
 }
 
 "metalvehicle"
@@ -1888,18 +1451,12 @@
 	"audioHardMinVelocity"	"500" // 500
 
 	"impactHardThreshold" "0.5"   
-	
-	"stepleft"          "MetalVehicle.StepLeft"
-	"stepright"         "MetalVehicle.StepRight"
-	
-	"bulletimpact"	"MetalVehicle.BulletImpact"
+  
 
 	"impacthard"	"SolidMetal.ImpactHard"
 	"impactsoft"	"SolidMetal.ImpactSoft"
 	"scraperough"	"SolidMetal.ScrapeRough"
 	"scrapesmooth"	"SolidMetal.ScrapeSmooth"
-
-	"penetrationmodifier" "0.5"
 }
 
 "brass_bell_large"
@@ -1930,42 +1487,17 @@
 	"elasticity"	"0.1"
 	"audioreflectivity" "0.83"
 	"friction"	"0.8"
-	"stepleft"	"MetalBarrel.StepLeft"
-	"stepright"	"MetalBarrel.StepRight"
+	"stepleft"	"MetalGrate.StepLeft"
+	"stepright"	"MetalGrate.StepRight"
 	"impacthard"	"SandBarrel.ImpactHard"
 	"impactsoft"	"SandBarrel.ImpactSoft"
 	"scraperough"	"SolidMetal.ScrapeRough"
 	"scrapesmooth"	"SolidMetal.ScrapeSmooth"
-	"bulletimpact"	"MetalBarrel.BulletImpact"
+	"bulletimpact"	"SandBarrel.BulletImpact"
 
 	"gamematerial"	"12"
-
+	"penetrationmodifier" "0.01"  // don't penetrate
 	"damagemodifier" "0.01"
-
-	"penetrationmodifier" "0.01"
-}
-
-"metal_barrel"
-{
-	"base"		"solidmetal"
-
-	"density"	"2700"
-	"elasticity"	"0.1"
-	"audioreflectivity" "0.83"
-	"friction"	"0.8"
-	"stepleft"	"MetalBarrel.StepLeft"
-	"stepright"	"MetalBarrel.StepRight"
-	"impacthard"	"SandBarrel.ImpactHard"
-	"impactsoft"	"SandBarrel.ImpactSoft"
-	"scraperough"	"SolidMetal.ScrapeRough"
-	"scrapesmooth"	"SolidMetal.ScrapeSmooth"
-	"bulletimpact"	"MetalBarrel.BulletImpact"
-
-	"gamematerial"	"12"
-
-	"damagemodifier" "0.01"
-
-	"penetrationmodifier" "0.01"
 }
 
 "blockbullets"
@@ -1973,33 +1505,6 @@
 	"thickness"	"1.0"
 	
 	"gamematerial"	"X"
-
+	"penetrationmodifier" "0.001"  // don't penetrate
 	"damagemodifier" "0.001"
-
-	"penetrationmodifier" "0.01"
-}
-
-"jalopytire"
-{
-	"base"			"jeeptire"
-	"elasticity"		"0.1"
-}
-
-"slidingrubbertire_jalopyfront"
-{
-	"base"			"jalopytire"
-	"friction"		"0.15"
-}
-
-"slidingrubbertire_jalopyrear"
-{
-	"base"			"jalopytire"
-	"friction"		"0.15"
-}
-
-"jalopy"
-{
-	"base"			"metal"
-	"impacthard"	"ATV_impact_medium"
-	"impactsoft"	"ATV_impact_medium"
 }

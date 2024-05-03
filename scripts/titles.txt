@@ -756,11 +756,6 @@ Not_Enough_Money
 #Cstrike_TitlesTXT_Not_Enough_Money
 }
 
-Not_Enough_Money_NextRound
-{
-#Cstrike_TitlesTXT_Not_Enough_Money_NextRound
-}
-
 Weapon_Not_Available
 {
 #Cstrike_TitlesTXT_Weapon_Not_Available
@@ -849,11 +844,6 @@ Ignore_Broadcast_Team_Messages
 Accept_All_Messages
 {
 #Cstrike_TitlesTXT_Accept_All_Messages
-}
-
-Ignore_All_Messages
-{
-#Cstrike_TitlesTXT_Ignore_All_Messages
 }
 
 Ignore_Radio

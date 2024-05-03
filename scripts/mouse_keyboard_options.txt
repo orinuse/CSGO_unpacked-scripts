@@ -59,7 +59,7 @@
 		"type"			"slider"
 		"customrange"	"1"
 		"minvalue"		"1"
-		"maxvalue"		"8"
+		"maxvalue"		"20"
 	}
 
 	"Zoom Sensitivity"
@@ -72,7 +72,7 @@
 		"type"			"slider"
 		"customrange"		"1"
 		"minvalue"		"0.1"
-		"maxvalue"		"1.5"
+		"maxvalue"		"1.0"
 	}
 	
 	"Raw Input"
@@ -118,20 +118,6 @@
 		"maxvalue"		"1.4"
 	}
 	
-	"CATEGORY GAP"
-	{
-		"name"			""
-		"convar"		""
-		"priority"		"2088"
-		"type"			"category"
-	}
-	"CATEGORY"
-	{
-		"name"			"#GameUI_Category_KeyBindings"
-		"convar"		""
-		"priority"		"2089"
-		"type"			"category"
-	}
 
 	"Show Loadout"
 	{
@@ -163,6 +149,16 @@
 		"type"			"bind"
 	}
 	
+	"Move Right"
+	{
+		"control"		"1"
+
+		"name"			"#SFUI_MoveRight"
+		"command"		"+moveright"
+		"priority"		"2103"
+		"type"			"bind"
+	}
+	
 	"Move Left"
 	{
 		"control"		"1"
@@ -173,134 +169,43 @@
 		"type"			"bind"
 	}
 	
-	"Move Right"
-	{
-		"control"		"1"
-
-		"name"			"#SFUI_MoveRight"
-		"command"		"+moveright"
-		"priority"		"2103"
-		"type"			"bind"
-	}
-
-	"Bind Jump"
-	{
-		"control"		"1"
-
-		"name"			"#SFUI_Jump"
-		"command"		"+jump"
-		"priority"		"2201"
-		"type"			"bind"
-	}
-
-	"Bind Duck"
-	{
-		"control"		"1"
-
-		"name"			"#SFUI_Duck"
-		"command"		"+duck"
-		"priority"		"2202"
-		"type"			"bind"
-	}
-
-	"Bind Fire"
-	{
-		"control"		"1"
-
-		"name"			"#SFUI_Fire"
-		"command"		"+attack"
-		"priority"		"2300"
-		"type"			"bind"
-	}
-
-	"Bind Weapon Special"
-	{
-		"control"		"1"
-
-		"name"			"#SFUI_WeaponSpecial"
-		"command"		"+attack2"
-		"priority"		"2301"
-		"type"			"bind"
-	}
-	
-	"Bind Reload"
-	{
-		"control"		"1"
-
-		"name"			"#SFUI_Reload_Weapon"
-		"command"		"+reload"
-		"priority"		"2302"
-		"type"			"bind"
-	}
-	
-	"Previous Weapon"
-	{
-		"control"		"1"
-
-		"name"			"#SFUI_PreviousWeapon"
-		"command"		"invprev"
-		"priority"		"2302"
-		"type"			"bind"
-	}
-	
-	"Next Weapon"
-	{
-		"control"		"1"
-
-		"name"			"#SFUI_NextWeapon"
-		"command"		"invnext"
-		"priority"		"2303"
-		"type"			"bind"
-	}
-
 	"Last Weapon Used"
 	{
 		"control"		"1"
 
 		"name"			"#SFUI_Previous"
 		"command"		"lastinv"
-		"priority"		"2304"
+		"priority"		"2303"
 		"type"			"bind"
 	}
 	
-	"Bind Drop Weapon"
+	 "Buy"
 	{
 		"control"		"1"
 
-		"name"			"#SFUI_Drop_Weapon"
-		"command"		"drop"
-		"priority"		"2400"
+		"name"			"#SFUI_Buy"
+		"command"		"buymenu"
+		"priority"		"2699"
 		"type"			"bind"
 	}
-
-	"Look At Weapon"
+	
+	"Autobuy"
 	{
 		"control"		"1"
 
-		"name"			"#SFUI_LookAtWeapon"
-		"command"		"+lookatweapon"
-		"priority"		"2500"
+		"name"			"#SFUI_Autobuy"
+		"command"		"autobuy"
+		"priority"		"2700"
 		"type"			"bind"
 	}
-
-	"Bind Spray Menu"
+	
+	"Rebuy"
 	{
 		"control"		"1"
 
-		"name"			"#SFUI_SprayMenu"
-		"command"		"+spray_menu"
-		"priority"		"2525"
-		"type"			"bind"
-		"devonly"		"0"
-	}
-
-	"Bind Use"
-	{
-		"control"		"1"
-
-		"name"			"#SFUI_Pickup_Use_Objects"
-		"command"		"+use"
-		"priority"		"2535"
+		"name"			"#SFUI_Rebuy"
+		"command"		"rebuy"
+		"priority"		"2701"
 		"type"			"bind"
 	}
 
@@ -364,33 +269,84 @@
 		"type"			"bind"
 	}
 
-	 "Buy"
+	"Bind Fire"
 	{
 		"control"		"1"
 
-		"name"			"#SFUI_Buy"
-		"command"		"buymenu"
-		"priority"		"2699"
+		"name"			"#SFUI_Fire"
+		"command"		"+attack"
+		"priority"		"2300"
+		"type"			"bind"
+	}
+
+	"Bind Weapon Special"
+	{
+		"control"		"1"
+
+		"name"			"#SFUI_WeaponSpecial"
+		"command"		"+attack2"
+		"priority"		"2301"
 		"type"			"bind"
 	}
 	
-	"Autobuy"
+	"Bind Reload"
 	{
 		"control"		"1"
 
-		"name"			"#SFUI_Autobuy"
-		"command"		"autobuy"
-		"priority"		"2700"
+		"name"			"#SFUI_Reload_Weapon"
+		"command"		"+reload"
+		"priority"		"2302"
 		"type"			"bind"
 	}
 	
-	"Rebuy"
+	"Previous Weapon"
 	{
 		"control"		"1"
 
-		"name"			"#SFUI_Rebuy"
-		"command"		"rebuy"
-		"priority"		"2701"
+		"name"			"#SFUI_PreviousWeapon"
+		"command"		"invprev"
+		"priority"		"2302"
+		"type"			"bind"
+	}
+	
+	"Next Weapon"
+	{
+		"control"		"1"
+
+		"name"			"#SFUI_NextWeapon"
+		"command"		"invnext"
+		"priority"		"2302"
+		"type"			"bind"
+	}
+
+
+	"Bind Jump"
+	{
+		"control"		"1"
+
+		"name"			"#SFUI_Jump"
+		"command"		"+jump"
+		"priority"		"2201"
+		"type"			"bind"
+	}
+
+	"Bind Duck"
+	{
+		"control"		"1"
+
+		"name"			"#SFUI_Duck"
+		"command"		"+duck"
+		"priority"		"2202"
+		"type"			"bind"
+	}
+
+	"Bind Use"
+	{
+		"control"		"1"
+
+		"name"			"#SFUI_Pickup_Use_Objects"
+		"command"		"+use"
+		"priority"		"2500"
 		"type"			"bind"
 	}
 
@@ -411,6 +367,16 @@
 		"name"			"#SFUI_Walk"
 		"command"		"+speed"
 		"priority"		"2200"
+		"type"			"bind"
+	}
+
+	"Bind Drop Weapon"
+	{
+		"control"		"1"
+
+		"name"			"#SFUI_Drop_Weapon"
+		"command"		"drop"
+		"priority"		"2400"
 		"type"			"bind"
 	}
 
@@ -556,16 +522,6 @@
 		"type"			"bind"
 	}
 
-		"Bind Team Show Equipment"
-	{
-		"control"		"1"
-
-		"name"			"#SFUI_TeamOverheadID"
-		"command"		"+cl_show_team_equipment"
-		"priority"		"2915"
-		"type"			"bind"
-	}
-
 	"Bind Console"
 	{
 		"control"		"1"
@@ -575,10 +531,5 @@
 		"priority"		"2920"
 		"type"			"bind"
 		"devonly"		"1"
-
-		"restrictions"
-		{
-			"-perfectworld"		     "1"
-		}
 	}
 }

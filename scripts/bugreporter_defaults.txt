@@ -1,3 +1,3 @@
 triage
-C
-Panorama
+medium
+360

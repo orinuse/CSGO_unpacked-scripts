@@ -1,3 +1,5 @@
+//SceneTable["mp_coop_startcoop_startboxcatch00"] <- {vcd=CreateSceneEntity("scenes/npc/glados/COOP_MISC10.vcd"),postdelay=0.00,next=null,char="glados",predelay=1,queue=1,queueforcesecs=5,queuetimeout=7,skipifbusy=1}
+
 //debug stuff
 debug <- false	//Set true to enable debug block during think function
 debugInterval <- 3.00
@@ -36,7 +38,15 @@ function printldebug(arg)
 // -------------------------------------------------------------------
 function Precache()
 {              
-
+	//Examples from Portal 2
+	//if (curMapName=="sp_a4_tb_trust_drop")
+	//{
+	//	self.PrecacheSoundScript( "World.WheatleyZap" )
+	//}
+	//if (curMapName=="sp_a1_wakeup")
+	//{
+	//	self.PrecacheSoundScript( "World.HackBuzzer" )
+	//}
 }
 
 // OnPostSpawn - this is all the initial setup stuff
@@ -1942,6 +1952,27 @@ function FailureAmmo( )
 {
 	// not sure where this is used yet, return from it until we figure it out
 	return
+
+	/*
+	if ( m_BurstBlockerTestStarted == 0 || m_BurstTestStarted == 0 )
+	{
+		return
+	}
+
+	if ( i_FailureAmmoCount == 0 )
+	{
+		PlayVcd(20)
+		i_FailureAmmoCount++
+	}
+	else
+	{
+		PlayVcd(22)
+	}
+
+ 	printl("===================FailureAmmo!")
+ 	printl("===================FailureAmmo!")
+ 	printl("===================FailureAmmo!")
+	*/
 }
 
 function FailureTime( )

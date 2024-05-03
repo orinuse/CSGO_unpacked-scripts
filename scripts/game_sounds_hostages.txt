@@ -6,31 +6,15 @@
 	"pitch"		"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~hostage/hpain/hpain1.wav"
-		"wave"	"~hostage/hpain/hpain2.wav"
-		"wave"	"~hostage/hpain/hpain3.wav"
-		"wave"	"~hostage/hpain/hpain4.wav"
-		"wave"	"~hostage/hpain/hpain5.wav"
-		"wave"	"~hostage/hpain/hpain6.wav"
+		"wave"	"hostage/hpain/hpain1.wav"
+		"wave"	"hostage/hpain/hpain2.wav"
+		"wave"	"hostage/hpain/hpain3.wav"
+		"wave"	"hostage/hpain/hpain4.wav"
+		"wave"	"hostage/hpain/hpain5.wav"
+		"wave"	"hostage/hpain/hpain6.wav"
 	}
 }
 
-
-"Hostage.StartFollowCTGuardian"
-{
-	"channel"	"CHAN_VOICE"
-	"volume"	"1.0"
-	"soundlevel"  "SNDLVL_75dB"
-	"pitch"		"PITCH_NORM"
-	"rndwave"
-	{
-		"wave"	"~hostage/huse/getouttahere.wav"
-		"wave"	"~hostage/huse/letsdoit.wav"
-		"wave"	"~hostage/huse/letshurry.wav"
-		"wave"	"~hostage/huse/letsmove.wav"
-		"wave"	"~hostage/huse/okletsgo.wav"
-	}
-}
 
 "Hostage.StartFollowCT"
 {
@@ -40,14 +24,14 @@
 	"pitch"		"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~hostage/huse/getouttahere.wav"
-		"wave"	"~hostage/huse/illfollow.wav"
-		"wave"	"~hostage/huse/letsdoit.wav"
-		"wave"	"~hostage/huse/letsgo.wav"
-		"wave"	"~hostage/huse/letshurry.wav"
-		"wave"	"~hostage/huse/letsmove.wav"
-		"wave"	"~hostage/huse/okletsgo.wav"
-		"wave"	"~hostage/huse/youlead.wav"
+		"wave"	"hostage/huse/getouttahere.wav"
+		"wave"	"hostage/huse/illfollow.wav"
+		"wave"	"hostage/huse/letsdoit.wav"
+		"wave"	"hostage/huse/letsgo.wav"
+		"wave"	"hostage//huse/letshurry.wav"
+		"wave"	"hostage/huse/letsmove.wav"
+		"wave"	"hostage/huse/okletsgo.wav"
+		"wave"	"hostage/huse/youlead.wav"
 	}
 }
 
@@ -59,11 +43,11 @@
 	"pitch"		"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~hostage/hunuse/comeback.wav"
-		"wave"	"~hostage/hunuse/dontleaveme.wav"
-		"wave"	"~hostage/hunuse/illstayhere.wav"
-		"wave"	"~hostage/hunuse/notleaveme.wav"
-		"wave"	"~hostage/hunuse/yeahillstay.wav"
+		"wave"	"hostage/hunuse/comeback.wav"
+		"wave"	"hostage/hunuse/dontleaveme.wav"
+		"wave"	"hostage/hunuse/illstayhere.wav"
+		"wave"	"hostage/hunuse/notleaveme.wav"
+		"wave"	"hostage/hunuse/yeahillstay.wav"
 	}
 }
 
@@ -74,6 +58,17 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"         
 	"pitch"		"PITCH_NORM"
+// 	"rndwave"
+// 	{
+// 		"wave"	"hostage/hseenbyct/areyousave.wav"
+// 		"wave"	"hostage/hseenbyct/finallyhere.wav"
+// 		"wave"	"hostage/hseenbyct/getmeoutta1.wav"
+// 		"wave"	"hostage/hseenbyct/getmeoutta2.wav"
+// 		"wave"	"hostage/hseenbyct/imahostage.wav"
+// 		"wave"	"hostage/hseenbyct/rescueme1.wav"
+// 		"wave"	"hostage/hseenbyct/rescueme2.wav"
+// 		"wave"	"hostage/hseenbyct/theyregonna.wav"
+// 	}
 	"wave" "common/null.wav"
 }
 "Hostage.Rescued"
@@ -82,6 +77,15 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+// 	"rndwave"
+// 	{
+// 		"wave"	"hostage/hrescued/finally.wav"
+// 		"wave"	"hostage/hrescued/finallysafe.wav"
+// 		"wave"	"hostage/hrescued/thankyou.wav"
+// 		"wave"	"hostage/hrescued/wemadeit1.wav"
+// 		"wave"	"hostage/hrescued/wemadeit2.wav"
+// 		"wave"	"hostage/hrescued/wemadeit3.wav"
+// 	}
 	"wave" "common/null.wav"
 }
 
@@ -91,6 +95,17 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"	
+// 	"rndwave"
+// 	{
+// 		"wave"	"hostage/hseenbyt/donthurtme1.wav"
+// 		"wave"	"hostage/hseenbyt/dontkill.wav"
+// 		"wave"	"hostage/hseenbyt/endpeace.wav"
+// 		"wave"	"hostage/hseenbyt/nevernegotiate.wav"
+// 		"wave"	"hostage/hseenbyt/nottellanything.wav"
+// 		"wave"	"hostage/hseenbyt/surrender.wav"
+// 		"wave"	"hostage/hseenbyt/whatdoyou.wav"
+// 		"wave"	"hostage/hseenbyt/whyareyou.wav"
+// 	}
 	"wave" "common/null.wav"
 
 }
@@ -101,6 +116,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hseenbyt/donthurtme1.wav"
 	"wave" "common/null.wav"
 
 }
@@ -111,6 +127,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hseenbyt/donthurtme2.wav"
 	"wave" "common/null.wav"
 
 }
@@ -121,6 +138,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hseenbyt/dontkill.wav"
 	"wave" "common/null.wav"
 
 }
@@ -131,6 +149,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hseenbyt/endpeace.wav"
 	"wave" "common/null.wav"
 
 }
@@ -141,6 +160,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hseenbyt/surrender.wav"
 	"wave" "common/null.wav"
 
 }
@@ -151,6 +171,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hseenbyt/whatdoyou.wav"
 	"wave" "common/null.wav"
 
 }
@@ -161,6 +182,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hseenbyt/whyareyou.wav"
 	"wave" "common/null.wav"
 
 }
@@ -171,6 +193,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hreactions/awwcrap1.wav"
 	"wave" "common/null.wav"
 
 }
@@ -181,6 +204,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hreactions/awwcrap2.wav"
 	"wave" "common/null.wav"
 
 }
@@ -191,6 +215,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hreactions/deargod1.wav"
 	"wave" "common/null.wav"
 
 }
@@ -201,6 +226,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hreactions/deargod2.wav"
 	"wave" "common/null.wav"
 
 }
@@ -211,6 +237,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hreactions/deargod3.wav"
 	"wave" "common/null.wav"
 
 }
@@ -221,7 +248,9 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hreactions/getdown1.wav"
 	"wave" "common/null.wav"
+
 }
 
 "Hostage.DamageReaction7"
@@ -230,6 +259,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hreactions/getdown2.wav"
 	"wave" "common/null.wav"
 
 }
@@ -240,6 +270,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hreactions/getdown3.wav"
 	"wave" "common/null.wav"
 
 }
@@ -250,6 +281,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hreactions/lookout1.wav"
 	"wave" "common/null.wav"
 
 }
@@ -260,6 +292,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hreactions/lookout2.wav"
 	"wave" "common/null.wav"
 
 }
@@ -270,6 +303,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hreactions/lookshooting1.wav"
 	"wave" "common/null.wav"
 
 }
@@ -280,6 +314,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hreactions/lookshooting2.wav"
 	"wave" "common/null.wav"
 
 }
@@ -290,6 +325,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hreactions/lookshooting3.wav"
 	"wave" "common/null.wav"
 
 }
@@ -300,7 +336,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
-
+//	"wave"		"hostage/hgrenade/grenade1.wav"
 	"wave" "common/null.wav"
 
 }
@@ -311,6 +347,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hgrenade/grenade2.wav"
 	"wave" "common/null.wav"
 
 }
@@ -321,6 +358,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hgrenade/run.wav"
 	"wave" "common/null.wav"
 
 }
@@ -330,7 +368,8 @@
 	"channel"	"CHAN_VOICE"
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
-	"pitch"		"PITCH_NORM"		
+	"pitch"		"PITCH_NORM"	
+//	"wave"		"hostage/hgrenade/watchout.wav"		
 	"wave" "common/null.wav"
 
 }
@@ -341,6 +380,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_80dB"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hsmoke/cough1.wav"
 	"wave" "common/null.wav"
 
 }
@@ -351,6 +391,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_80dB"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hsmoke/cough2.wav"
 	"wave" "common/null.wav"
 
 }
@@ -361,6 +402,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_80dB"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hsmoke/cough3.wav"
 	"wave" "common/null.wav"
 
 }
@@ -371,6 +413,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_80dB"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hsmoke/cough4.wav"
 	"wave" "common/null.wav"
 
 }
@@ -381,6 +424,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_80dB"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hsmoke/cough5.wav"
 	"wave" "common/null.wav"
 
 }
@@ -391,6 +435,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_80dB"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hsmoke/cough6.wav"
 	"wave" "common/null.wav"
 
 }
@@ -400,7 +445,8 @@
 	"channel"	"CHAN_VOICE"
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
-	"pitch"		"PITCH_NORM"		
+	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hflash/cantsee.wav"		
 	"wave" "common/null.wav"
 
 }
@@ -411,6 +457,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hflash/myeyes.wav"	
 	"wave" "common/null.wav"
 
 }
@@ -421,6 +468,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/htwin/doomed.wav"
 	"wave" "common/null.wav"
 
 }
@@ -431,6 +479,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/htwin/godno.wav"
 	"wave" "common/null.wav"
 
 }
@@ -441,6 +490,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/htwin/nowwhat.wav"
 	"wave" "common/null.wav"
 
 }
@@ -451,6 +501,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/htwin/ohman.wav"
 	"wave" "common/null.wav"
 
 }
@@ -461,6 +512,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/htwin/ohno.wav"
 	"wave" "common/null.wav"
 
 }
@@ -471,6 +523,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hctwin/alldead.wav"
 	"wave" "common/null.wav"
 
 }
@@ -481,6 +534,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hctwin/goodnews.wav"
 	"wave" "common/null.wav"
 
 }
@@ -491,6 +545,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hctwin/outtahere.wav"
 	"wave" "common/null.wav"
 
 }
@@ -501,6 +556,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hctwin/over1.wav"
 	"wave" "common/null.wav"
 
 }
@@ -511,6 +567,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hctwin/over2.wav"
 	"wave" "common/null.wav"
 
 }
@@ -521,6 +578,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hctwin/over3.wav"
 	"wave" "common/null.wav"
 
 }
@@ -531,6 +589,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hctwin/over4.wav"
 	"wave" "common/null.wav"
 
 }
@@ -541,6 +600,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hctwin/over5.wav"
 	"wave" "common/null.wav"
 
 }
@@ -551,6 +611,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"hostage/hctwin/relief.wav"
 	"wave" "common/null.wav"
 
 }
@@ -561,6 +622,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_80dB"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"#hostage/hseezone/almostouttahere.wav"
 	"wave" "common/null.wav"
 
 }
@@ -571,6 +633,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_80dB"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"#hostage/hseezone/almostthere.wav"
 	"wave" "common/null.wav"
 
 }
@@ -581,6 +644,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_80dB"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"#hostage/hseezone/keepgoing.wav"
 	"wave" "common/null.wav"
 
 }
@@ -591,6 +655,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_80dB"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"#hostage/hseezone/notfar.wav"
 	"wave" "common/null.wav"
 
 }
@@ -601,46 +666,7 @@
 	"volume"	"VOL_NORM"
 	"soundlevel"  	"SNDLVL_80dB"
 	"pitch"		"PITCH_NORM"
+//	"wave"		"#hostage/hseezone/thereitis.wav"
 	"wave" "common/null.wav"
 
-}
-
-"Hostage.CutFreeWithDefuser" 
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	"1"
-	"soundlevel"	"SNDLVL_80dB"
-	"wave"		"~hostage/huse/hostage_cut_free_with_defuser.wav"
-}
-
-"Hostage.CutFreeWithoutDefuser" 
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	"0.3"
-	"soundlevel"	"SNDLVL_75dB"
-	"wave"		"~hostage/huse/hostage_cut_free_without_defuser.wav"
-}
-
-"Hostage.PickUp" 
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	"0.3"
-	"soundlevel"	"SNDLVL_75dB"
-	"wave"		"~hostage/huse/hostage_pickup.wav"
-}
-
-"Hostage.Drop" 
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	"1"
-	"soundlevel"	"SNDLVL_80dB"
-	"wave"		"~)hostage/huse/hostage_drop.wav"
-}
-
-"Hostage.Breath" 
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	".18"
-	"soundlevel"	"SNDLVL_80dB"
-	"wave"		"~)hostage/huse/hostage_breath.wav"
 }

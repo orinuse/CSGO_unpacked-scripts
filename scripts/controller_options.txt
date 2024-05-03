@@ -9,7 +9,7 @@
 		"control"		"1"
 
 		"name"			"#SFUI_JoystickEnabled"
-		"convar"		"joystick_force_disabled_set_from_options"
+		"convar"		"joystick_force_disabled_set"
 		"priority"		"1100"
 		"type"			"choice"
 		"choices"
@@ -44,9 +44,8 @@
 		"type"			"choice"
 		"choices"
 		{
-			"#SFUI_Right_Handed"		"0"
-			"#SFUI_Left_Handed"			"1"
-			"#SFUI_Joystick_Legacy"		"2"
+			"#SFUI_Right_Handed"	"0"
+			"#SFUI_Left_Handed"	"1"
 		}
 	}
 
@@ -91,7 +90,7 @@
 		"priority"		"1500"
 		"type"			"slider"
 		"customrange"		"1"
-		"minvalue"		"-3.5"
+		"minvalue"		"-2.0"
 		"maxvalue"		"-0.1"
 	}
 
@@ -105,7 +104,7 @@
 		"type"			"slider"
 		"sliderhome"	"prev"
 		"customrange"		"1"
-		"minvalue"		"-3.5"
+		"minvalue"		"-2.0"
 		"maxvalue"		"-0.1"
 	}
 
@@ -163,21 +162,6 @@
 			"#SFUI_On"	"1"
 			"#SFUI_Off"	"0"
 		}
-	}
-
-	"CATEGORY GAP"
-	{
-		"name"			""
-		"convar"		""
-		"priority"		"1798"
-		"type"			"category"
-	}
-	"CATEGORY"
-	{
-		"name"			"#GameUI_Category_ControllerBindings"
-		"convar"		""
-		"priority"		"1799"
-		"type"			"category"
 	}
 
 	"Bind Primary"

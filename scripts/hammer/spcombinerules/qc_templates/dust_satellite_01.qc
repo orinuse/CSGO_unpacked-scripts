@@ -1,2 +1,0 @@
-$staticprop
-$surfaceprop "metal"

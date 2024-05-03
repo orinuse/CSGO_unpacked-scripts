@@ -1,29 +1,10 @@
 
-"separatist.vo_preview"
-{
-		"channel"		"CHAN_VOICE"
-		"volume"	"1"
-		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\affirmative01.wav"
-		"wave"		"+player\vo\separatist\affirmative02.wav"
-		"wave"		"+player\vo\separatist\affirmative03.wav"
-		"wave"		"+player\vo\separatist\agree01.wav"
-		"wave"		"+player\vo\separatist\agree02.wav"
-		"wave"		"+player\vo\separatist\agree03.wav"
-		"wave"		"+player\vo\separatist\agree04.wav"
-		"wave"		"+player\vo\separatist\agree05.wav"
-		"wave"		"+player\vo\separatist\onarollbrag07.wav"
-		"wave"		"+player\vo\separatist\onarollbrag08.wav"
-		"wave"		"+player\vo\separatist\waitinghere01.wav"
-		"wave"		"+player\vo\separatist\waitinghere02.wav"
-}
-
 "separatist.affirmative01"
 {
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\affirmative01.wav"
+		"wave"		"player\vo\separatist\affirmative01.wav"
 }
 
 "separatist.affirmative02"
@@ -31,7 +12,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\affirmative02.wav"
+		"wave"		"player\vo\separatist\affirmative02.wav"
 }
 
 "separatist.affirmative03"
@@ -39,7 +20,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\affirmative03.wav"
+		"wave"		"player\vo\separatist\affirmative03.wav"
 }
 
 "separatist.agree01"
@@ -47,7 +28,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\agree01.wav"
+		"wave"		"player\vo\separatist\agree01.wav"
 }
 
 "separatist.agree02"
@@ -55,7 +36,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\agree02.wav"
+		"wave"		"player\vo\separatist\agree02.wav"
 }
 
 "separatist.agree03"
@@ -63,7 +44,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\agree03.wav"
+		"wave"		"player\vo\separatist\agree03.wav"
 }
 
 "separatist.agree04"
@@ -71,7 +52,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\agree04.wav"
+		"wave"		"player\vo\separatist\agree04.wav"
 }
 
 "separatist.agree05"
@@ -79,7 +60,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\agree05.wav"
+		"wave"		"player\vo\separatist\agree05.wav"
 }
 
 "separatist.blinded01"
@@ -87,7 +68,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\blinded01.wav"
+		"wave"		"player\vo\separatist\blinded01.wav"
 }
 
 "separatist.blinded02"
@@ -95,7 +76,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\blinded02.wav"
+		"wave"		"player\vo\separatist\blinded02.wav"
 }
 
 "separatist.blinded03"
@@ -103,7 +84,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\blinded03.wav"
+		"wave"		"player\vo\separatist\blinded03.wav"
 }
 
 "separatist.blinded04"
@@ -111,7 +92,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\blinded04.wav"
+		"wave"		"player\vo\separatist\blinded04.wav"
 }
 
 "separatist.blinded06"
@@ -119,7 +100,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\blinded06.wav"
+		"wave"		"player\vo\separatist\blinded06.wav"
 }
 
 "separatist.blinded08"
@@ -127,7 +108,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\blinded08.wav"
+		"wave"		"player\vo\separatist\blinded08.wav"
 }
 
 "separatist.bombtickingdown01"
@@ -135,7 +116,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\bombtickingdown01.wav"
+		"wave"		"player\vo\separatist\bombtickingdown01.wav"
 }
 
 "separatist.bombtickingdown02"
@@ -143,7 +124,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\bombtickingdown02.wav"
+		"wave"		"player\vo\separatist\bombtickingdown02.wav"
 }
 
 "separatist.bombtickingdown03"
@@ -151,7 +132,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\bombtickingdown03.wav"
+		"wave"		"player\vo\separatist\bombtickingdown03.wav"
 }
 
 "separatist.bombtickingdown04"
@@ -159,7 +140,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\bombtickingdown04.wav"
+		"wave"		"player\vo\separatist\bombtickingdown04.wav"
 }
 
 "separatist.chickenhate01"
@@ -167,7 +148,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\chickenhate01.wav"
+		"wave"		"player\vo\separatist\chickenhate01.wav"
 }
 
 "separatist.chickenhate02"
@@ -175,7 +156,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\chickenhate02.wav"
+		"wave"		"player\vo\separatist\chickenhate02.wav"
 }
 
 "separatist.chickenhate03"
@@ -183,7 +164,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\chickenhate03.wav"
+		"wave"		"player\vo\separatist\chickenhate03.wav"
 }
 
 "separatist.chickenhate04"
@@ -191,7 +172,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\chickenhate04.wav"
+		"wave"		"player\vo\separatist\chickenhate04.wav"
 }
 
 "separatist.clear01"
@@ -199,7 +180,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\clear01.wav"
+		"wave"		"player\vo\separatist\clear01.wav"
 }
 
 "separatist.clear02"
@@ -207,7 +188,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\clear02.wav"
+		"wave"		"player\vo\separatist\clear02.wav"
 }
 
 "separatist.clearedarea01"
@@ -215,7 +196,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\clearedarea01.wav"
+		"wave"		"player\vo\separatist\clearedarea01.wav"
 }
 
 "separatist.clearedarea02"
@@ -223,7 +204,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\clearedarea02.wav"
+		"wave"		"player\vo\separatist\clearedarea02.wav"
 }
 
 "separatist.clearedarea03"
@@ -231,7 +212,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\clearedarea03.wav"
+		"wave"		"player\vo\separatist\clearedarea03.wav"
 }
 
 "separatist.clearedarea04"
@@ -239,7 +220,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\clearedarea04.wav"
+		"wave"		"player\vo\separatist\clearedarea04.wav"
 }
 
 "separatist.clearedarea05"
@@ -247,7 +228,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\clearedarea05.wav"
+		"wave"		"player\vo\separatist\clearedarea05.wav"
 }
 
 "separatist.coveringfriend01"
@@ -255,7 +236,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\coveringfriend01.wav"
+		"wave"		"player\vo\separatist\coveringfriend01.wav"
 }
 
 "separatist.coveringfriend02"
@@ -263,7 +244,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\coveringfriend02.wav"
+		"wave"		"player\vo\separatist\coveringfriend02.wav"
 }
 
 "separatist.coveringfriend03"
@@ -271,7 +252,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\coveringfriend03.wav"
+		"wave"		"player\vo\separatist\coveringfriend03.wav"
 }
 
 "separatist.coverme01"
@@ -279,7 +260,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\coverme01.wav"
+		"wave"		"player\vo\separatist\coverme01.wav"
 }
 
 "separatist.coverme02"
@@ -287,7 +268,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\coverme02.wav"
+		"wave"		"player\vo\separatist\coverme02.wav"
 }
 
 "separatist.coverme03"
@@ -295,7 +276,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\coverme03.wav"
+		"wave"		"player\vo\separatist\coverme03.wav"
 }
 
 "separatist.defendingbombsitea01"
@@ -303,7 +284,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\defendingbombsitea01.wav"
+		"wave"		"player\vo\separatist\defendingbombsitea01.wav"
 }
 
 "separatist.defendingbombsitea02"
@@ -311,7 +292,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\defendingbombsitea02.wav"
+		"wave"		"player\vo\separatist\defendingbombsitea02.wav"
 }
 
 "separatist.defendingbombsitea03"
@@ -319,7 +300,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\defendingbombsitea03.wav"
+		"wave"		"player\vo\separatist\defendingbombsitea03.wav"
 }
 
 "separatist.defendingbombsitea04"
@@ -327,7 +308,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\defendingbombsitea04.wav"
+		"wave"		"player\vo\separatist\defendingbombsitea04.wav"
 }
 
 "separatist.defendingbombsitea05"
@@ -335,7 +316,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\defendingbombsitea05.wav"
+		"wave"		"player\vo\separatist\defendingbombsitea05.wav"
 }
 
 "separatist.defendingbombsiteb01"
@@ -343,7 +324,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\defendingbombsiteb01.wav"
+		"wave"		"player\vo\separatist\defendingbombsiteb01.wav"
 }
 
 "separatist.defendingbombsiteb02"
@@ -351,7 +332,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\defendingbombsiteb02.wav"
+		"wave"		"player\vo\separatist\defendingbombsiteb02.wav"
 }
 
 "separatist.defendingbombsiteb03"
@@ -359,7 +340,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\defendingbombsiteb03.wav"
+		"wave"		"player\vo\separatist\defendingbombsiteb03.wav"
 }
 
 "separatist.disagree01"
@@ -367,7 +348,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\disagree01.wav"
+		"wave"		"player\vo\separatist\disagree01.wav"
 }
 
 "separatist.disagree02"
@@ -375,7 +356,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\disagree02.wav"
+		"wave"		"player\vo\separatist\disagree02.wav"
 }
 
 "separatist.disagree04"
@@ -383,7 +364,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\disagree04.wav"
+		"wave"		"player\vo\separatist\disagree04.wav"
 }
 
 "separatist.enemydown01"
@@ -391,7 +372,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\enemydown01.wav"
+		"wave"		"player\vo\separatist\enemydown01.wav"
 }
 
 "separatist.enemydown02"
@@ -399,7 +380,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\enemydown02.wav"
+		"wave"		"player\vo\separatist\enemydown02.wav"
 }
 
 "separatist.enemydown03"
@@ -407,7 +388,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\enemydown03.wav"
+		"wave"		"player\vo\separatist\enemydown03.wav"
 }
 
 "separatist.enemydown04"
@@ -415,7 +396,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\enemydown04.wav"
+		"wave"		"player\vo\separatist\enemydown04.wav"
 }
 
 "separatist.enemydown05"
@@ -423,7 +404,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\enemydown05.wav"
+		"wave"		"player\vo\separatist\enemydown05.wav"
 }
 
 "separatist.enemydown06"
@@ -431,7 +412,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\enemydown06.wav"
+		"wave"		"player\vo\separatist\enemydown06.wav"
 }
 
 "separatist.enemydown07"
@@ -439,7 +420,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\enemydown07.wav"
+		"wave"		"player\vo\separatist\enemydown07.wav"
 }
 
 "separatist.followingfriend01"
@@ -447,7 +428,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\followingfriend01.wav"
+		"wave"		"player\vo\separatist\followingfriend01.wav"
 }
 
 "separatist.followingfriend03"
@@ -455,7 +436,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\followingfriend03.wav"
+		"wave"		"player\vo\separatist\followingfriend03.wav"
 }
 
 "separatist.followingfriend04"
@@ -463,7 +444,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\followingfriend04.wav"
+		"wave"		"player\vo\separatist\followingfriend04.wav"
 }
 
 "separatist.friendlyfire01"
@@ -471,7 +452,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\friendlyfire01.wav"
+		"wave"		"player\vo\separatist\friendlyfire01.wav"
 }
 
 "separatist.friendlyfire02"
@@ -479,7 +460,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\friendlyfire02.wav"
+		"wave"		"player\vo\separatist\friendlyfire02.wav"
 }
 
 "separatist.friendlyfire03"
@@ -487,7 +468,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\friendlyfire03.wav"
+		"wave"		"player\vo\separatist\friendlyfire03.wav"
 }
 
 "separatist.friendlyfire04"
@@ -495,7 +476,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\friendlyfire04.wav"
+		"wave"		"player\vo\separatist\friendlyfire04.wav"
 }
 
 "separatist.friendlyfire05"
@@ -503,7 +484,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\friendlyfire05.wav"
+		"wave"		"player\vo\separatist\friendlyfire05.wav"
 }
 
 "separatist.friendlyfire06"
@@ -511,7 +492,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\friendlyfire06.wav"
+		"wave"		"player\vo\separatist\friendlyfire06.wav"
 }
 
 "separatist.friendlyfire07"
@@ -519,7 +500,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\friendlyfire07.wav"
+		"wave"		"player\vo\separatist\friendlyfire07.wav"
 }
 
 "separatist.friendlyfire08"
@@ -527,7 +508,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\friendlyfire08.wav"
+		"wave"		"player\vo\separatist\friendlyfire08.wav"
 }
 
 "separatist.goingtodefendbombsite01"
@@ -535,7 +516,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtodefendbombsite01.wav"
+		"wave"		"player\vo\separatist\goingtodefendbombsite01.wav"
 }
 
 "separatist.goingtodefendbombsite02"
@@ -543,7 +524,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtodefendbombsite02.wav"
+		"wave"		"player\vo\separatist\goingtodefendbombsite02.wav"
 }
 
 "separatist.goingtodefendbombsite03"
@@ -551,7 +532,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtodefendbombsite03.wav"
+		"wave"		"player\vo\separatist\goingtodefendbombsite03.wav"
 }
 
 "separatist.goingtoguardhostageescapezone01"
@@ -559,7 +540,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoguardhostageescapezone01.wav"
+		"wave"		"player\vo\separatist\goingtoguardhostageescapezone01.wav"
 }
 
 "separatist.goingtoguardhostageescapezone02"
@@ -567,7 +548,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoguardhostageescapezone02.wav"
+		"wave"		"player\vo\separatist\goingtoguardhostageescapezone02.wav"
 }
 
 "separatist.goingtoguardhostageescapezone03"
@@ -575,7 +556,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoguardhostageescapezone03.wav"
+		"wave"		"player\vo\separatist\goingtoguardhostageescapezone03.wav"
 }
 
 "separatist.goingtoguardhostages01"
@@ -583,7 +564,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoguardhostages01.wav"
+		"wave"		"player\vo\separatist\goingtoguardhostages01.wav"
 }
 
 "separatist.goingtoguardhostages02"
@@ -591,7 +572,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoguardhostages02.wav"
+		"wave"		"player\vo\separatist\goingtoguardhostages02.wav"
 }
 
 "separatist.goingtoguardhostages03"
@@ -599,7 +580,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoguardhostages03.wav"
+		"wave"		"player\vo\separatist\goingtoguardhostages03.wav"
 }
 
 "separatist.goingtoguardhostages04"
@@ -607,7 +588,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoguardhostages04.wav"
+		"wave"		"player\vo\separatist\goingtoguardhostages04.wav"
 }
 
 "separatist.goingtoplantbomb01"
@@ -615,7 +596,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoplantbomb01.wav"
+		"wave"		"player\vo\separatist\goingtoplantbomb01.wav"
 }
 
 "separatist.goingtoplantbomb02"
@@ -623,7 +604,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoplantbomb02.wav"
+		"wave"		"player\vo\separatist\goingtoplantbomb02.wav"
 }
 
 "separatist.goingtoplantbomb03"
@@ -631,7 +612,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoplantbomb03.wav"
+		"wave"		"player\vo\separatist\goingtoplantbomb03.wav"
 }
 
 "separatist.goingtoplantbomba01"
@@ -639,7 +620,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoplantbomba01.wav"
+		"wave"		"player\vo\separatist\goingtoplantbomba01.wav"
 }
 
 "separatist.goingtoplantbomba02"
@@ -647,7 +628,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoplantbomba02.wav"
+		"wave"		"player\vo\separatist\goingtoplantbomba02.wav"
 }
 
 "separatist.goingtoplantbomba03"
@@ -655,7 +636,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoplantbomba03.wav"
+		"wave"		"player\vo\separatist\goingtoplantbomba03.wav"
 }
 
 "separatist.goingtoplantbombb01"
@@ -663,7 +644,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoplantbombb01.wav"
+		"wave"		"player\vo\separatist\goingtoplantbombb01.wav"
 }
 
 "separatist.goingtoplantbombb02"
@@ -671,7 +652,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoplantbombb02.wav"
+		"wave"		"player\vo\separatist\goingtoplantbombb02.wav"
 }
 
 "separatist.goingtoplantbombc01"
@@ -679,7 +660,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoplantbombc01.wav"
+		"wave"		"player\vo\separatist\goingtoplantbombc01.wav"
 }
 
 "separatist.goingtoplantbombc02"
@@ -687,7 +668,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoplantbombc02.wav"
+		"wave"		"player\vo\separatist\goingtoplantbombc02.wav"
 }
 
 "separatist.goingtoplantbombc03"
@@ -695,7 +676,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\goingtoplantbombc03.wav"
+		"wave"		"player\vo\separatist\goingtoplantbombc03.wav"
 }
 
 "separatist.guardinghostageescapezone02"
@@ -703,7 +684,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\guardinghostageescapezone02.wav"
+		"wave"		"player\vo\separatist\guardinghostageescapezone02.wav"
 }
 
 "separatist.guardinghostageescapezone03"
@@ -711,7 +692,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\guardinghostageescapezone03.wav"
+		"wave"		"player\vo\separatist\guardinghostageescapezone03.wav"
 }
 
 "separatist.guardinghostages01"
@@ -719,7 +700,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\guardinghostages01.wav"
+		"wave"		"player\vo\separatist\guardinghostages01.wav"
 }
 
 "separatist.guardinghostages02"
@@ -727,7 +708,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\guardinghostages02.wav"
+		"wave"		"player\vo\separatist\guardinghostages02.wav"
 }
 
 "separatist.guardinghostages03"
@@ -735,7 +716,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\guardinghostages03.wav"
+		"wave"		"player\vo\separatist\guardinghostages03.wav"
 }
 
 "separatist.guardinghostages04"
@@ -743,7 +724,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\guardinghostages04.wav"
+		"wave"		"player\vo\separatist\guardinghostages04.wav"
 }
 
 "separatist.guardinghostages05"
@@ -751,7 +732,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\guardinghostages05.wav"
+		"wave"		"player\vo\separatist\guardinghostages05.wav"
 }
 
 "separatist.heardnoise01"
@@ -759,7 +740,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\heardnoise01.wav"
+		"wave"		"player\vo\separatist\heardnoise01.wav"
 }
 
 "separatist.heardnoise02"
@@ -767,7 +748,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\heardnoise02.wav"
+		"wave"		"player\vo\separatist\heardnoise02.wav"
 }
 
 "separatist.heardnoise03"
@@ -775,7 +756,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\heardnoise03.wav"
+		"wave"		"player\vo\separatist\heardnoise03.wav"
 }
 
 "separatist.help01"
@@ -783,7 +764,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\help01.wav"
+		"wave"		"player\vo\separatist\help01.wav"
 }
 
 "separatist.help02"
@@ -791,7 +772,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\help02.wav"
+		"wave"		"player\vo\separatist\help02.wav"
 }
 
 "separatist.help03"
@@ -799,7 +780,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\help03.wav"
+		"wave"		"player\vo\separatist\help03.wav"
 }
 
 "separatist.help04"
@@ -807,7 +788,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\help04.wav"
+		"wave"		"player\vo\separatist\help04.wav"
 }
 
 "separatist.hostagedown01"
@@ -815,7 +796,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\hostagedown01.wav"
+		"wave"		"player\vo\separatist\hostagedown01.wav"
 }
 
 "separatist.hostagedown02"
@@ -823,7 +804,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\hostagedown02.wav"
+		"wave"		"player\vo\separatist\hostagedown02.wav"
 }
 
 "separatist.hostagedown03"
@@ -831,7 +812,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\hostagedown03.wav"
+		"wave"		"player\vo\separatist\hostagedown03.wav"
 }
 
 "separatist.hostagedown04"
@@ -839,7 +820,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\hostagedown04.wav"
+		"wave"		"player\vo\separatist\hostagedown04.wav"
 }
 
 "separatist.hostagesbeingtaken01"
@@ -847,7 +828,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\hostagesbeingtaken01.wav"
+		"wave"		"player\vo\separatist\hostagesbeingtaken01.wav"
 }
 
 "separatist.hostagesbeingtaken02"
@@ -855,7 +836,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\hostagesbeingtaken02.wav"
+		"wave"		"player\vo\separatist\hostagesbeingtaken02.wav"
 }
 
 "separatist.hostagestaken01"
@@ -863,7 +844,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\hostagestaken01.wav"
+		"wave"		"player\vo\separatist\hostagestaken01.wav"
 }
 
 "separatist.hostagestaken02"
@@ -871,7 +852,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\hostagestaken02.wav"
+		"wave"		"player\vo\separatist\hostagestaken02.wav"
 }
 
 "separatist.hostagestaken03"
@@ -879,7 +860,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\hostagestaken03.wav"
+		"wave"		"player\vo\separatist\hostagestaken03.wav"
 }
 
 "separatist.incombat01"
@@ -887,7 +868,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\incombat01.wav"
+		"wave"		"player\vo\separatist\incombat01.wav"
 }
 
 "separatist.incombat02"
@@ -895,7 +876,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\incombat02.wav"
+		"wave"		"player\vo\separatist\incombat02.wav"
 }
 
 "separatist.incombat03"
@@ -903,7 +884,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\incombat03.wav"
+		"wave"		"player\vo\separatist\incombat03.wav"
 }
 
 "separatist.incombat04"
@@ -911,7 +892,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\incombat04.wav"
+		"wave"		"player\vo\separatist\incombat04.wav"
 }
 
 "separatist.incombat05"
@@ -919,7 +900,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\incombat05.wav"
+		"wave"		"player\vo\separatist\incombat05.wav"
 }
 
 "separatist.inposition01"
@@ -927,7 +908,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\inposition01.wav"
+		"wave"		"player\vo\separatist\inposition01.wav"
 }
 
 "separatist.inposition02"
@@ -935,7 +916,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\inposition02.wav"
+		"wave"		"player\vo\separatist\inposition02.wav"
 }
 
 "separatist.inposition03"
@@ -943,7 +924,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\inposition03.wav"
+		"wave"		"player\vo\separatist\inposition03.wav"
 }
 
 "separatist.killedfriend01"
@@ -951,7 +932,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\killedfriend01.wav"
+		"wave"		"player\vo\separatist\killedfriend01.wav"
 }
 
 "separatist.killedfriend02"
@@ -959,7 +940,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\killedfriend02.wav"
+		"wave"		"player\vo\separatist\killedfriend02.wav"
 }
 
 "separatist.killedfriend03"
@@ -967,7 +948,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\killedfriend03.wav"
+		"wave"		"player\vo\separatist\killedfriend03.wav"
 }
 
 "separatist.lastmanstanding01"
@@ -975,7 +956,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\lastmanstanding01.wav"
+		"wave"		"player\vo\separatist\lastmanstanding01.wav"
 }
 
 "separatist.lastmanstanding02"
@@ -983,7 +964,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\lastmanstanding02.wav"
+		"wave"		"player\vo\separatist\lastmanstanding02.wav"
 }
 
 "separatist.lastmanstanding03"
@@ -991,7 +972,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\lastmanstanding03.wav"
+		"wave"		"player\vo\separatist\lastmanstanding03.wav"
 }
 
 "separatist.lastmanstanding04"
@@ -999,7 +980,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\lastmanstanding04.wav"
+		"wave"		"player\vo\separatist\lastmanstanding04.wav"
 }
 
 "separatist.lastmanstanding05"
@@ -1007,7 +988,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\lastmanstanding05.wav"
+		"wave"		"player\vo\separatist\lastmanstanding05.wav"
 }
 
 "separatist.lastmanstanding06"
@@ -1015,7 +996,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\lastmanstanding06.wav"
+		"wave"		"player\vo\separatist\lastmanstanding06.wav"
 }
 
 "separatist.lostenemy01"
@@ -1023,7 +1004,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\lostenemy01.wav"
+		"wave"		"player\vo\separatist\lostenemy01.wav"
 }
 
 "separatist.lostenemy02"
@@ -1031,7 +1012,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\lostenemy02.wav"
+		"wave"		"player\vo\separatist\lostenemy02.wav"
 }
 
 "separatist.lostenemy03"
@@ -1039,7 +1020,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\lostenemy03.wav"
+		"wave"		"player\vo\separatist\lostenemy03.wav"
 }
 
 "separatist.negative01"
@@ -1047,7 +1028,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\negative01.wav"
+		"wave"		"player\vo\separatist\negative01.wav"
 }
 
 "separatist.negative02"
@@ -1055,7 +1036,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\negative02.wav"
+		"wave"		"player\vo\separatist\negative02.wav"
 }
 
 "separatist.negative03"
@@ -1063,7 +1044,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\negative03.wav"
+		"wave"		"player\vo\separatist\negative03.wav"
 }
 
 "separatist.negative04"
@@ -1071,7 +1052,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\negative04.wav"
+		"wave"		"player\vo\separatist\negative04.wav"
 }
 
 "separatist.niceshot01"
@@ -1079,7 +1060,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\niceshot01.wav"
+		"wave"		"player\vo\separatist\niceshot01.wav"
 }
 
 "separatist.niceshot02"
@@ -1087,7 +1068,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\niceshot02.wav"
+		"wave"		"player\vo\separatist\niceshot02.wav"
 }
 
 "separatist.niceshot03"
@@ -1095,7 +1076,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\niceshot03.wav"
+		"wave"		"player\vo\separatist\niceshot03.wav"
 }
 
 "separatist.niceshot04"
@@ -1103,7 +1084,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\niceshot04.wav"
+		"wave"		"player\vo\separatist\niceshot04.wav"
 }
 
 "separatist.niceshot05"
@@ -1111,7 +1092,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\niceshot05.wav"
+		"wave"		"player\vo\separatist\niceshot05.wav"
 }
 
 "separatist.niceshot06"
@@ -1119,7 +1100,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\niceshot06.wav"
+		"wave"		"player\vo\separatist\niceshot06.wav"
 }
 
 "separatist.niceshot07"
@@ -1127,7 +1108,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\niceshot07.wav"
+		"wave"		"player\vo\separatist\niceshot07.wav"
 }
 
 "separatist.niceshot08"
@@ -1135,7 +1116,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\niceshot08.wav"
+		"wave"		"player\vo\separatist\niceshot08.wav"
 }
 
 "separatist.niceshot09"
@@ -1143,7 +1124,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\niceshot09.wav"
+		"wave"		"player\vo\separatist\niceshot09.wav"
 }
 
 "separatist.niceshot10"
@@ -1151,7 +1132,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\niceshot10.wav"
+		"wave"		"player\vo\separatist\niceshot10.wav"
 }
 
 "separatist.niceshot11"
@@ -1159,7 +1140,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\niceshot11.wav"
+		"wave"		"player\vo\separatist\niceshot11.wav"
 }
 
 "separatist.onarollbrag01"
@@ -1167,7 +1148,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\onarollbrag01.wav"
+		"wave"		"player\vo\separatist\onarollbrag01.wav"
 }
 
 "separatist.onarollbrag02"
@@ -1175,7 +1156,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\onarollbrag02.wav"
+		"wave"		"player\vo\separatist\onarollbrag02.wav"
 }
 
 "separatist.onarollbrag03"
@@ -1183,7 +1164,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\onarollbrag03.wav"
+		"wave"		"player\vo\separatist\onarollbrag03.wav"
 }
 
 "separatist.onarollbrag04"
@@ -1191,7 +1172,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\onarollbrag04.wav"
+		"wave"		"player\vo\separatist\onarollbrag04.wav"
 }
 
 "separatist.onarollbrag05"
@@ -1199,7 +1180,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\onarollbrag05.wav"
+		"wave"		"player\vo\separatist\onarollbrag05.wav"
 }
 
 "separatist.onarollbrag06"
@@ -1207,7 +1188,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\onarollbrag06.wav"
+		"wave"		"player\vo\separatist\onarollbrag06.wav"
 }
 
 "separatist.onarollbrag07"
@@ -1215,7 +1196,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\onarollbrag07.wav"
+		"wave"		"player\vo\separatist\onarollbrag07.wav"
 }
 
 "separatist.onarollbrag08"
@@ -1223,7 +1204,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\onarollbrag08.wav"
+		"wave"		"player\vo\separatist\onarollbrag08.wav"
 }
 
 "separatist.onarollbrag09"
@@ -1231,7 +1212,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\onarollbrag09.wav"
+		"wave"		"player\vo\separatist\onarollbrag09.wav"
 }
 
 "separatist.oneenemyleft01"
@@ -1239,7 +1220,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\oneenemyleft01.wav"
+		"wave"		"player\vo\separatist\oneenemyleft01.wav"
 }
 
 "separatist.oneenemyleft02"
@@ -1247,7 +1228,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\oneenemyleft02.wav"
+		"wave"		"player\vo\separatist\oneenemyleft02.wav"
 }
 
 "separatist.oneenemyleft03"
@@ -1255,7 +1236,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\oneenemyleft03.wav"
+		"wave"		"player\vo\separatist\oneenemyleft03.wav"
 }
 
 "separatist.oneenemyleft04"
@@ -1263,7 +1244,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\oneenemyleft04.wav"
+		"wave"		"player\vo\separatist\oneenemyleft04.wav"
 }
 
 "separatist.oneenemyleft05"
@@ -1271,7 +1252,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\oneenemyleft05.wav"
+		"wave"		"player\vo\separatist\oneenemyleft05.wav"
 }
 
 "separatist.oneenemyleft06"
@@ -1279,7 +1260,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\oneenemyleft06.wav"
+		"wave"		"player\vo\separatist\oneenemyleft06.wav"
 }
 
 "separatist.oneenemyleft08"
@@ -1287,7 +1268,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\oneenemyleft08.wav"
+		"wave"		"player\vo\separatist\oneenemyleft08.wav"
 }
 
 "separatist.oneenemyleft09"
@@ -1295,7 +1276,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\oneenemyleft09.wav"
+		"wave"		"player\vo\separatist\oneenemyleft09.wav"
 }
 
 "separatist.onmyway01"
@@ -1303,7 +1284,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\onmyway01.wav"
+		"wave"		"player\vo\separatist\onmyway01.wav"
 }
 
 "separatist.onmyway02"
@@ -1311,7 +1292,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\onmyway02.wav"
+		"wave"		"player\vo\separatist\onmyway02.wav"
 }
 
 "separatist.onmyway04"
@@ -1319,7 +1300,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\onmyway04.wav"
+		"wave"		"player\vo\separatist\onmyway04.wav"
 }
 
 "separatist.peptalk01"
@@ -1327,7 +1308,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\peptalk01.wav"
+		"wave"		"player\vo\separatist\peptalk01.wav"
 }
 
 "separatist.peptalk03"
@@ -1335,7 +1316,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\peptalk03.wav"
+		"wave"		"player\vo\separatist\peptalk03.wav"
 }
 
 "separatist.peptalk04"
@@ -1343,7 +1324,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\peptalk04.wav"
+		"wave"		"player\vo\separatist\peptalk04.wav"
 }
 
 "separatist.pinneddown01"
@@ -1351,7 +1332,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\pinneddown01.wav"
+		"wave"		"player\vo\separatist\pinneddown01.wav"
 }
 
 "separatist.pinneddown02"
@@ -1359,7 +1340,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\pinneddown02.wav"
+		"wave"		"player\vo\separatist\pinneddown02.wav"
 }
 
 "separatist.pinneddown03"
@@ -1367,7 +1348,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\pinneddown03.wav"
+		"wave"		"player\vo\separatist\pinneddown03.wav"
 }
 
 "separatist.plantingbomb01"
@@ -1375,7 +1356,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\plantingbomb01.wav"
+		"wave"		"player\vo\separatist\plantingbomb01.wav"
 }
 
 "separatist.plantingbomb02"
@@ -1383,7 +1364,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\plantingbomb02.wav"
+		"wave"		"player\vo\separatist\plantingbomb02.wav"
 }
 
 "separatist.plantingbomb05"
@@ -1391,7 +1372,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\plantingbomb05.wav"
+		"wave"		"player\vo\separatist\plantingbomb05.wav"
 }
 
 "separatist.preventescapebrag01"
@@ -1399,7 +1380,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\preventescapebrag01.wav"
+		"wave"		"player\vo\separatist\preventescapebrag01.wav"
 }
 
 "separatist.preventescapebrag03"
@@ -1407,7 +1388,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\preventescapebrag03.wav"
+		"wave"		"player\vo\separatist\preventescapebrag03.wav"
 }
 
 "separatist.preventescapebrag05"
@@ -1415,7 +1396,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\preventescapebrag05.wav"
+		"wave"		"player\vo\separatist\preventescapebrag05.wav"
 }
 
 "separatist.radio.enemyspotted01"
@@ -1423,7 +1404,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.enemyspotted01.wav"
+		"wave"		"player\vo\separatist\radio.enemyspotted01.wav"
 }
 
 "separatist.radio.enemyspotted02"
@@ -1431,7 +1412,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.enemyspotted02.wav"
+		"wave"		"player\vo\separatist\radio.enemyspotted02.wav"
 }
 
 "separatist.radio.enemyspotted03"
@@ -1439,7 +1420,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.enemyspotted03.wav"
+		"wave"		"player\vo\separatist\radio.enemyspotted03.wav"
 }
 
 "separatist.radio.enemyspotted04"
@@ -1447,7 +1428,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.enemyspotted04.wav"
+		"wave"		"player\vo\separatist\radio.enemyspotted04.wav"
 }
 
 "separatist.radio.enemyspotted05"
@@ -1455,7 +1436,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.enemyspotted05.wav"
+		"wave"		"player\vo\separatist\radio.enemyspotted05.wav"
 }
 
 "separatist.radio.followme01"
@@ -1463,7 +1444,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.followme01.wav"
+		"wave"		"player\vo\separatist\radio.followme01.wav"
 }
 
 "separatist.radio.followme02"
@@ -1471,7 +1452,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.followme02.wav"
+		"wave"		"player\vo\separatist\radio.followme02.wav"
 }
 
 "separatist.radio.followme03"
@@ -1479,7 +1460,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.followme03.wav"
+		"wave"		"player\vo\separatist\radio.followme03.wav"
 }
 
 "separatist.radio.followme04"
@@ -1487,7 +1468,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.followme04.wav"
+		"wave"		"player\vo\separatist\radio.followme04.wav"
 }
 
 "separatist.radio.letsgo01"
@@ -1495,7 +1476,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.letsgo01.wav"
+		"wave"		"player\vo\separatist\radio.letsgo01.wav"
 }
 
 "separatist.radio.letsgo02"
@@ -1503,7 +1484,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.letsgo02.wav"
+		"wave"		"player\vo\separatist\radio.letsgo02.wav"
 }
 
 "separatist.radio.letsgo03"
@@ -1511,7 +1492,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.letsgo03.wav"
+		"wave"		"player\vo\separatist\radio.letsgo03.wav"
 }
 
 "separatist.radio.letsgo04"
@@ -1519,7 +1500,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.letsgo04.wav"
+		"wave"		"player\vo\separatist\radio.letsgo04.wav"
 }
 
 "separatist.radio.letsgo05"
@@ -1527,7 +1508,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.letsgo05.wav"
+		"wave"		"player\vo\separatist\radio.letsgo05.wav"
 }
 
 "separatist.radio.letsgo06"
@@ -1535,7 +1516,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.letsgo06.wav"
+		"wave"		"player\vo\separatist\radio.letsgo06.wav"
 }
 
 "separatist.radio.letsgo08"
@@ -1543,7 +1524,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.letsgo08.wav"
+		"wave"		"player\vo\separatist\radio.letsgo08.wav"
 }
 
 "separatist.radio.letsgo09"
@@ -1551,7 +1532,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.letsgo09.wav"
+		"wave"		"player\vo\separatist\radio.letsgo09.wav"
 }
 
 "separatist.radio.letsgo10"
@@ -1559,7 +1540,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.letsgo10.wav"
+		"wave"		"player\vo\separatist\radio.letsgo10.wav"
 }
 
 "separatist.radio.letsgo11"
@@ -1567,7 +1548,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.letsgo11.wav"
+		"wave"		"player\vo\separatist\radio.letsgo11.wav"
 }
 
 "separatist.radio.letsgo12"
@@ -1575,7 +1556,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.letsgo12.wav"
+		"wave"		"player\vo\separatist\radio.letsgo12.wav"
 }
 
 "separatist.radio.locknload01"
@@ -1583,7 +1564,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.locknload01.wav"
+		"wave"		"player\vo\separatist\radio.locknload01.wav"
 }
 
 "separatist.radio.locknload02"
@@ -1591,7 +1572,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.locknload02.wav"
+		"wave"		"player\vo\separatist\radio.locknload02.wav"
 }
 
 "separatist.radio.locknload03"
@@ -1599,7 +1580,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.locknload03.wav"
+		"wave"		"player\vo\separatist\radio.locknload03.wav"
 }
 
 "separatist.radio.locknload04"
@@ -1607,7 +1588,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.locknload04.wav"
+		"wave"		"player\vo\separatist\radio.locknload04.wav"
 }
 
 "separatist.radio.locknload05"
@@ -1615,7 +1596,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.locknload05.wav"
+		"wave"		"player\vo\separatist\radio.locknload05.wav"
 }
 
 "separatist.radio.locknload06"
@@ -1623,7 +1604,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.locknload06.wav"
+		"wave"		"player\vo\separatist\radio.locknload06.wav"
 }
 
 "separatist.radio.locknload07"
@@ -1631,7 +1612,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.locknload07.wav"
+		"wave"		"player\vo\separatist\radio.locknload07.wav"
 }
 
 "separatist.radio.locknload10"
@@ -1639,7 +1620,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.locknload10.wav"
+		"wave"		"player\vo\separatist\radio.locknload10.wav"
 }
 
 "separatist.radio.needbackup01"
@@ -1647,7 +1628,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.needbackup01.wav"
+		"wave"		"player\vo\separatist\radio.needbackup01.wav"
 }
 
 "separatist.radio.needbackup02"
@@ -1655,7 +1636,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.needbackup02.wav"
+		"wave"		"player\vo\separatist\radio.needbackup02.wav"
 }
 
 "separatist.radio.needbackup03"
@@ -1663,7 +1644,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.needbackup03.wav"
+		"wave"		"player\vo\separatist\radio.needbackup03.wav"
 }
 
 "separatist.radio.takingfire01"
@@ -1671,7 +1652,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.takingfire01.wav"
+		"wave"		"player\vo\separatist\radio.takingfire01.wav"
 }
 
 "separatist.radio.takingfire02"
@@ -1679,7 +1660,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.takingfire02.wav"
+		"wave"		"player\vo\separatist\radio.takingfire02.wav"
 }
 
 "separatist.radio.takingfire03"
@@ -1687,7 +1668,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.takingfire03.wav"
+		"wave"		"player\vo\separatist\radio.takingfire03.wav"
 }
 
 "separatist.radio.takingfire04"
@@ -1695,7 +1676,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.takingfire04.wav"
+		"wave"		"player\vo\separatist\radio.takingfire04.wav"
 }
 
 "separatist.radio.takingfire05"
@@ -1703,7 +1684,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.takingfire05.wav"
+		"wave"		"player\vo\separatist\radio.takingfire05.wav"
 }
 
 "separatist.radio.takingfire06"
@@ -1711,7 +1692,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.takingfire06.wav"
+		"wave"		"player\vo\separatist\radio.takingfire06.wav"
 }
 
 "separatist.radio.takingfire07"
@@ -1719,7 +1700,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radio.takingfire07.wav"
+		"wave"		"player\vo\separatist\radio.takingfire07.wav"
 }
 
 "separatist.radiobotendclean01"
@@ -1727,7 +1708,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotendclean01.wav"
+		"wave"		"player\vo\separatist\radiobotendclean01.wav"
 }
 
 "separatist.radiobotendclean02"
@@ -1735,7 +1716,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotendclean02.wav"
+		"wave"		"player\vo\separatist\radiobotendclean02.wav"
 }
 
 "separatist.radiobotendclean03"
@@ -1743,7 +1724,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotendclean03.wav"
+		"wave"		"player\vo\separatist\radiobotendclean03.wav"
 }
 
 "separatist.radiobotendclean04"
@@ -1751,7 +1732,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotendclean04.wav"
+		"wave"		"player\vo\separatist\radiobotendclean04.wav"
 }
 
 "separatist.radiobotendclean05"
@@ -1759,7 +1740,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotendclean05.wav"
+		"wave"		"player\vo\separatist\radiobotendclean05.wav"
 }
 
 "separatist.radiobotendclean06"
@@ -1767,7 +1748,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotendclean06.wav"
+		"wave"		"player\vo\separatist\radiobotendclean06.wav"
 }
 
 "separatist.radiobotendsolid01"
@@ -1775,7 +1756,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotendsolid01.wav"
+		"wave"		"player\vo\separatist\radiobotendsolid01.wav"
 }
 
 "separatist.radiobotendsolid02"
@@ -1783,7 +1764,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotendsolid02.wav"
+		"wave"		"player\vo\separatist\radiobotendsolid02.wav"
 }
 
 "separatist.radiobotendsolid03"
@@ -1791,7 +1772,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotendsolid03.wav"
+		"wave"		"player\vo\separatist\radiobotendsolid03.wav"
 }
 
 "separatist.radiobotendsolid04"
@@ -1799,7 +1780,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotendsolid04.wav"
+		"wave"		"player\vo\separatist\radiobotendsolid04.wav"
 }
 
 "separatist.radiobotendsolid05"
@@ -1807,7 +1788,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotendsolid05.wav"
+		"wave"		"player\vo\separatist\radiobotendsolid05.wav"
 }
 
 "separatist.radiobotfallback01"
@@ -1815,7 +1796,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotfallback01.wav"
+		"wave"		"player\vo\separatist\radiobotfallback01.wav"
 }
 
 "separatist.radiobotfallback02"
@@ -1823,7 +1804,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotfallback02.wav"
+		"wave"		"player\vo\separatist\radiobotfallback02.wav"
 }
 
 "separatist.radiobotfallback05"
@@ -1831,7 +1812,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotfallback05.wav"
+		"wave"		"player\vo\separatist\radiobotfallback05.wav"
 }
 
 "separatist.radiobothold01"
@@ -1839,7 +1820,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobothold01.wav"
+		"wave"		"player\vo\separatist\radiobothold01.wav"
 }
 
 "separatist.radiobothold02"
@@ -1847,7 +1828,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobothold02.wav"
+		"wave"		"player\vo\separatist\radiobothold02.wav"
 }
 
 "separatist.radiobothold03"
@@ -1855,7 +1836,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobothold03.wav"
+		"wave"		"player\vo\separatist\radiobothold03.wav"
 }
 
 "separatist.radiobotquery01"
@@ -1863,7 +1844,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotquery01.wav"
+		"wave"		"player\vo\separatist\radiobotquery01.wav"
 }
 
 "separatist.radiobotquery04"
@@ -1871,7 +1852,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotquery04.wav"
+		"wave"		"player\vo\separatist\radiobotquery04.wav"
 }
 
 "separatist.radiobotquery05"
@@ -1879,7 +1860,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotquery05.wav"
+		"wave"		"player\vo\separatist\radiobotquery05.wav"
 }
 
 "separatist.radiobotregroup01"
@@ -1887,7 +1868,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotregroup01.wav"
+		"wave"		"player\vo\separatist\radiobotregroup01.wav"
 }
 
 "separatist.radiobotregroup02"
@@ -1895,7 +1876,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotregroup02.wav"
+		"wave"		"player\vo\separatist\radiobotregroup02.wav"
 }
 
 "separatist.radiobotregroup03"
@@ -1903,7 +1884,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\radiobotregroup03.wav"
+		"wave"		"player\vo\separatist\radiobotregroup03.wav"
 }
 
 "separatist.reportingin01"
@@ -1911,7 +1892,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\reportingin01.wav"
+		"wave"		"player\vo\separatist\reportingin01.wav"
 }
 
 "separatist.reportingin02"
@@ -1919,7 +1900,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\reportingin02.wav"
+		"wave"		"player\vo\separatist\reportingin02.wav"
 }
 
 "separatist.reportingin03"
@@ -1927,7 +1908,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\reportingin03.wav"
+		"wave"		"player\vo\separatist\reportingin03.wav"
 }
 
 "separatist.requestreport01"
@@ -1935,7 +1916,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\requestreport01.wav"
+		"wave"		"player\vo\separatist\requestreport01.wav"
 }
 
 "separatist.requestreport02"
@@ -1943,7 +1924,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\requestreport02.wav"
+		"wave"		"player\vo\separatist\requestreport02.wav"
 }
 
 "separatist.requestreport03"
@@ -1951,7 +1932,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\requestreport03.wav"
+		"wave"		"player\vo\separatist\requestreport03.wav"
 }
 
 "separatist.scaredemote01"
@@ -1959,7 +1940,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\scaredemote01.wav"
+		"wave"		"player\vo\separatist\scaredemote01.wav"
 }
 
 "separatist.scaredemote02"
@@ -1967,7 +1948,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\scaredemote02.wav"
+		"wave"		"player\vo\separatist\scaredemote02.wav"
 }
 
 "separatist.scaredemote03"
@@ -1975,7 +1956,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\scaredemote03.wav"
+		"wave"		"player\vo\separatist\scaredemote03.wav"
 }
 
 "separatist.scaredemote04"
@@ -1983,7 +1964,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\scaredemote04.wav"
+		"wave"		"player\vo\separatist\scaredemote04.wav"
 }
 
 "separatist.sniperkilled01"
@@ -1991,7 +1972,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\sniperkilled01.wav"
+		"wave"		"player\vo\separatist\sniperkilled01.wav"
 }
 
 "separatist.sniperkilled02"
@@ -1999,7 +1980,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\sniperkilled02.wav"
+		"wave"		"player\vo\separatist\sniperkilled02.wav"
 }
 
 "separatist.sniperkilled03"
@@ -2007,7 +1988,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\sniperkilled03.wav"
+		"wave"		"player\vo\separatist\sniperkilled03.wav"
 }
 
 "separatist.sniperkilled04"
@@ -2015,7 +1996,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\sniperkilled04.wav"
+		"wave"		"player\vo\separatist\sniperkilled04.wav"
 }
 
 "separatist.sniperwarning01"
@@ -2023,7 +2004,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\sniperwarning01.wav"
+		"wave"		"player\vo\separatist\sniperwarning01.wav"
 }
 
 "separatist.sniperwarning02"
@@ -2031,7 +2012,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\sniperwarning02.wav"
+		"wave"		"player\vo\separatist\sniperwarning02.wav"
 }
 
 "separatist.sniperwarning05"
@@ -2039,7 +2020,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\sniperwarning05.wav"
+		"wave"		"player\vo\separatist\sniperwarning05.wav"
 }
 
 "separatist.spottedloosebomb01"
@@ -2047,7 +2028,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\spottedloosebomb01.wav"
+		"wave"		"player\vo\separatist\spottedloosebomb01.wav"
 }
 
 "separatist.spottedloosebomb02"
@@ -2055,7 +2036,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\spottedloosebomb02.wav"
+		"wave"		"player\vo\separatist\spottedloosebomb02.wav"
 }
 
 "separatist.spottedloosebomb03"
@@ -2063,7 +2044,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\spottedloosebomb03.wav"
+		"wave"		"player\vo\separatist\spottedloosebomb03.wav"
 }
 
 "separatist.spottedloosebomb04"
@@ -2071,7 +2052,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\spottedloosebomb04.wav"
+		"wave"		"player\vo\separatist\spottedloosebomb04.wav"
 }
 
 "separatist.spottedloosebomb05"
@@ -2079,7 +2060,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\spottedloosebomb05.wav"
+		"wave"		"player\vo\separatist\spottedloosebomb05.wav"
 }
 
 "separatist.spottedloosebomb06"
@@ -2087,7 +2068,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\spottedloosebomb06.wav"
+		"wave"		"player\vo\separatist\spottedloosebomb06.wav"
 }
 
 "separatist.spottedloosebomb07"
@@ -2095,7 +2076,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\spottedloosebomb07.wav"
+		"wave"		"player\vo\separatist\spottedloosebomb07.wav"
 }
 
 "separatist.t_death01"
@@ -2103,7 +2084,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_death01.wav"
+		"wave"		"player\vo\separatist\t_death01.wav"
 }
 
 "separatist.t_death02"
@@ -2111,7 +2092,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_death02.wav"
+		"wave"		"player\vo\separatist\t_death02.wav"
 }
 
 "separatist.t_death03"
@@ -2119,7 +2100,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_death03.wav"
+		"wave"		"player\vo\separatist\t_death03.wav"
 }
 
 "separatist.t_death04"
@@ -2127,7 +2108,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_death04.wav"
+		"wave"		"player\vo\separatist\t_death04.wav"
 }
 
 "separatist.t_decoy01"
@@ -2135,7 +2116,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_decoy01.wav"
+		"wave"		"player\vo\separatist\t_decoy01.wav"
 }
 
 "separatist.t_decoy02"
@@ -2143,7 +2124,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_decoy02.wav"
+		"wave"		"player\vo\separatist\t_decoy02.wav"
 }
 
 "separatist.t_decoy03"
@@ -2151,7 +2132,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_decoy03.wav"
+		"wave"		"player\vo\separatist\t_decoy03.wav"
 }
 
 "separatist.t_flashbang01"
@@ -2159,7 +2140,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_flashbang01.wav"
+		"wave"		"player\vo\separatist\t_flashbang01.wav"
 }
 
 "separatist.t_flashbang02"
@@ -2167,7 +2148,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_flashbang02.wav"
+		"wave"		"player\vo\separatist\t_flashbang02.wav"
 }
 
 "separatist.t_flashbang03"
@@ -2175,7 +2156,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_flashbang03.wav"
+		"wave"		"player\vo\separatist\t_flashbang03.wav"
 }
 
 "separatist.t_grenade01"
@@ -2183,7 +2164,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_grenade01.wav"
+		"wave"		"player\vo\separatist\t_grenade01.wav"
 }
 
 "separatist.t_grenade02"
@@ -2191,7 +2172,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_grenade02.wav"
+		"wave"		"player\vo\separatist\t_grenade02.wav"
 }
 
 "separatist.t_grenade03"
@@ -2199,7 +2180,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_grenade03.wav"
+		"wave"		"player\vo\separatist\t_grenade03.wav"
 }
 
 "separatist.t_grenade04"
@@ -2207,7 +2188,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_grenade04.wav"
+		"wave"		"player\vo\separatist\t_grenade04.wav"
 }
 
 "separatist.t_molotov01"
@@ -2215,7 +2196,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_molotov01.wav"
+		"wave"		"player\vo\separatist\t_molotov01.wav"
 }
 
 "separatist.t_molotov02"
@@ -2223,7 +2204,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_molotov02.wav"
+		"wave"		"player\vo\separatist\t_molotov02.wav"
 }
 
 "separatist.t_molotov04"
@@ -2231,7 +2212,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_molotov04.wav"
+		"wave"		"player\vo\separatist\t_molotov04.wav"
 }
 
 "separatist.t_molotov05"
@@ -2239,7 +2220,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_molotov05.wav"
+		"wave"		"player\vo\separatist\t_molotov05.wav"
 }
 
 "separatist.t_smoke01"
@@ -2247,7 +2228,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_smoke01.wav"
+		"wave"		"player\vo\separatist\t_smoke01.wav"
 }
 
 "separatist.t_smoke02"
@@ -2255,7 +2236,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_smoke02.wav"
+		"wave"		"player\vo\separatist\t_smoke02.wav"
 }
 
 "separatist.t_smoke03"
@@ -2263,7 +2244,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\t_smoke03.wav"
+		"wave"		"player\vo\separatist\t_smoke03.wav"
 }
 
 "separatist.thanks01"
@@ -2271,7 +2252,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\thanks01.wav"
+		"wave"		"player\vo\separatist\thanks01.wav"
 }
 
 "separatist.thanks02"
@@ -2279,7 +2260,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\thanks02.wav"
+		"wave"		"player\vo\separatist\thanks02.wav"
 }
 
 "separatist.thanks03"
@@ -2287,7 +2268,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\thanks03.wav"
+		"wave"		"player\vo\separatist\thanks03.wav"
 }
 
 "separatist.threeenemiesleft01"
@@ -2295,7 +2276,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\threeenemiesleft01.wav"
+		"wave"		"player\vo\separatist\threeenemiesleft01.wav"
 }
 
 "separatist.threeenemiesleft02"
@@ -2303,7 +2284,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\threeenemiesleft02.wav"
+		"wave"		"player\vo\separatist\threeenemiesleft02.wav"
 }
 
 "separatist.threeenemiesleft03"
@@ -2311,7 +2292,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\threeenemiesleft03.wav"
+		"wave"		"player\vo\separatist\threeenemiesleft03.wav"
 }
 
 "separatist.threeenemiesleft04"
@@ -2319,7 +2300,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\threeenemiesleft04.wav"
+		"wave"		"player\vo\separatist\threeenemiesleft04.wav"
 }
 
 "separatist.threeenemiesleft05"
@@ -2327,7 +2308,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\threeenemiesleft05.wav"
+		"wave"		"player\vo\separatist\threeenemiesleft05.wav"
 }
 
 "separatist.threeenemiesleft07"
@@ -2335,7 +2316,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\threeenemiesleft07.wav"
+		"wave"		"player\vo\separatist\threeenemiesleft07.wav"
 }
 
 "separatist.tmap_cs_italy01"
@@ -2343,7 +2324,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy01.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy01.wav"
 }
 
 "separatist.tmap_cs_italy02"
@@ -2351,7 +2332,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy02.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy02.wav"
 }
 
 "separatist.tmap_cs_italy04"
@@ -2359,7 +2340,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy04.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy04.wav"
 }
 
 "separatist.tmap_cs_italy05"
@@ -2367,7 +2348,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy05.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy05.wav"
 }
 
 "separatist.tmap_cs_italy06"
@@ -2375,7 +2356,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy06.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy06.wav"
 }
 
 "separatist.tmap_cs_italy07"
@@ -2383,7 +2364,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy07.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy07.wav"
 }
 
 "separatist.tmap_cs_italy08"
@@ -2391,7 +2372,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy08.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy08.wav"
 }
 
 "separatist.tmap_cs_italy09"
@@ -2399,7 +2380,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy09.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy09.wav"
 }
 
 "separatist.tmap_cs_italy10"
@@ -2407,7 +2388,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy10.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy10.wav"
 }
 
 "separatist.tmap_cs_italy11"
@@ -2415,7 +2396,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy11.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy11.wav"
 }
 
 "separatist.tmap_cs_italy12"
@@ -2423,7 +2404,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy12.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy12.wav"
 }
 
 "separatist.tmap_cs_italy13"
@@ -2431,7 +2412,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy13.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy13.wav"
 }
 
 "separatist.tmap_cs_italy15"
@@ -2439,7 +2420,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy15.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy15.wav"
 }
 
 "separatist.tmap_cs_italy16"
@@ -2447,7 +2428,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy16.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy16.wav"
 }
 
 "separatist.tmap_cs_italy17"
@@ -2455,7 +2436,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy17.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy17.wav"
 }
 
 "separatist.tmap_cs_italy24"
@@ -2463,7 +2444,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy24.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy24.wav"
 }
 
 "separatist.tmap_cs_italy25"
@@ -2471,7 +2452,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy25.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy25.wav"
 }
 
 "separatist.tmap_cs_italy26"
@@ -2479,7 +2460,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy26.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy26.wav"
 }
 
 "separatist.tmap_cs_italy27"
@@ -2487,7 +2468,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy27.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy27.wav"
 }
 
 "separatist.tmap_cs_italy28"
@@ -2495,7 +2476,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy28.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy28.wav"
 }
 
 "separatist.tmap_cs_italy29"
@@ -2503,7 +2484,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy29.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy29.wav"
 }
 
 "separatist.tmap_cs_italy30"
@@ -2511,7 +2492,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy30.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy30.wav"
 }
 
 "separatist.tmap_cs_italy31"
@@ -2519,7 +2500,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy31.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy31.wav"
 }
 
 "separatist.tmap_cs_italy32"
@@ -2527,7 +2508,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy32.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy32.wav"
 }
 
 "separatist.tmap_cs_italy33"
@@ -2535,7 +2516,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy33.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy33.wav"
 }
 
 "separatist.tmap_cs_italy34"
@@ -2543,7 +2524,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy34.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy34.wav"
 }
 
 "separatist.tmap_cs_italy35"
@@ -2551,7 +2532,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy35.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy35.wav"
 }
 
 "separatist.tmap_cs_italy36"
@@ -2559,7 +2540,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy36.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy36.wav"
 }
 
 "separatist.tmap_cs_italy37"
@@ -2567,7 +2548,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy37.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy37.wav"
 }
 
 "separatist.tmap_cs_italy38"
@@ -2575,7 +2556,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy38.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy38.wav"
 }
 
 "separatist.tmap_cs_italy39"
@@ -2583,7 +2564,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy39.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy39.wav"
 }
 
 "separatist.tmap_cs_italy40"
@@ -2591,7 +2572,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy40.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy40.wav"
 }
 
 "separatist.tmap_cs_italy41"
@@ -2599,7 +2580,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy41.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy41.wav"
 }
 
 "separatist.tmap_cs_italy42"
@@ -2607,7 +2588,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy42.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy42.wav"
 }
 
 "separatist.tmap_cs_italy43"
@@ -2615,7 +2596,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy43.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy43.wav"
 }
 
 "separatist.tmap_cs_italy44"
@@ -2623,7 +2604,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy44.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy44.wav"
 }
 
 "separatist.tmap_cs_italy45"
@@ -2631,7 +2612,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy45.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy45.wav"
 }
 
 "separatist.tmap_cs_italy46"
@@ -2639,7 +2620,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy46.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy46.wav"
 }
 
 "separatist.tmap_cs_italy47"
@@ -2647,7 +2628,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy47.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy47.wav"
 }
 
 "separatist.tmap_cs_italy48"
@@ -2655,7 +2636,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy48.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy48.wav"
 }
 
 "separatist.tmap_cs_italy49"
@@ -2663,7 +2644,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy49.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy49.wav"
 }
 
 "separatist.tmap_cs_italy50"
@@ -2671,7 +2652,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy50.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy50.wav"
 }
 
 "separatist.tmap_cs_italy51"
@@ -2679,7 +2660,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy51.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy51.wav"
 }
 
 "separatist.tmap_cs_italy52"
@@ -2687,7 +2668,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy52.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy52.wav"
 }
 
 "separatist.tmap_cs_italy53"
@@ -2695,7 +2676,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy53.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy53.wav"
 }
 
 "separatist.tmap_cs_italy54"
@@ -2703,7 +2684,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy54.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy54.wav"
 }
 
 "separatist.tmap_cs_italy55"
@@ -2711,7 +2692,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy55.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy55.wav"
 }
 
 "separatist.tmap_cs_italy56"
@@ -2719,7 +2700,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy56.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy56.wav"
 }
 
 "separatist.tmap_cs_italy57"
@@ -2727,7 +2708,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_cs_italy57.wav"
+		"wave"		"player\vo\separatist\tmap_cs_italy57.wav"
 }
 
 "separatist.tmap_de_inferno01"
@@ -2735,7 +2716,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno01.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno01.wav"
 }
 
 "separatist.tmap_de_inferno02"
@@ -2743,7 +2724,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno02.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno02.wav"
 }
 
 "separatist.tmap_de_inferno03"
@@ -2751,7 +2732,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno03.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno03.wav"
 }
 
 "separatist.tmap_de_inferno04"
@@ -2759,7 +2740,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno04.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno04.wav"
 }
 
 "separatist.tmap_de_inferno05"
@@ -2767,7 +2748,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno05.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno05.wav"
 }
 
 "separatist.tmap_de_inferno06"
@@ -2775,7 +2756,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno06.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno06.wav"
 }
 
 "separatist.tmap_de_inferno07"
@@ -2783,7 +2764,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno07.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno07.wav"
 }
 
 "separatist.tmap_de_inferno08"
@@ -2791,7 +2772,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno08.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno08.wav"
 }
 
 "separatist.tmap_de_inferno09"
@@ -2799,7 +2780,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno09.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno09.wav"
 }
 
 "separatist.tmap_de_inferno10"
@@ -2807,7 +2788,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno10.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno10.wav"
 }
 
 "separatist.tmap_de_inferno11"
@@ -2815,7 +2796,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno11.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno11.wav"
 }
 
 "separatist.tmap_de_inferno12"
@@ -2823,7 +2804,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno12.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno12.wav"
 }
 
 "separatist.tmap_de_inferno15"
@@ -2831,7 +2812,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno15.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno15.wav"
 }
 
 "separatist.tmap_de_inferno17"
@@ -2839,7 +2820,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno17.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno17.wav"
 }
 
 "separatist.tmap_de_inferno18"
@@ -2847,7 +2828,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno18.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno18.wav"
 }
 
 "separatist.tmap_de_inferno19"
@@ -2855,7 +2836,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno19.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno19.wav"
 }
 
 "separatist.tmap_de_inferno20"
@@ -2863,7 +2844,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno20.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno20.wav"
 }
 
 "separatist.tmap_de_inferno21"
@@ -2871,7 +2852,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno21.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno21.wav"
 }
 
 "separatist.tmap_de_inferno22"
@@ -2879,7 +2860,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno22.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno22.wav"
 }
 
 "separatist.tmap_de_inferno23"
@@ -2887,7 +2868,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno23.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno23.wav"
 }
 
 "separatist.tmap_de_inferno24"
@@ -2895,7 +2876,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno24.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno24.wav"
 }
 
 "separatist.tmap_de_inferno25"
@@ -2903,7 +2884,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno25.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno25.wav"
 }
 
 "separatist.tmap_de_inferno26"
@@ -2911,7 +2892,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno26.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno26.wav"
 }
 
 "separatist.tmap_de_inferno27"
@@ -2919,7 +2900,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno27.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno27.wav"
 }
 
 "separatist.tmap_de_inferno28"
@@ -2927,7 +2908,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno28.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno28.wav"
 }
 
 "separatist.tmap_de_inferno32"
@@ -2935,7 +2916,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno32.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno32.wav"
 }
 
 "separatist.tmap_de_inferno33"
@@ -2943,7 +2924,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno33.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno33.wav"
 }
 
 "separatist.tmap_de_inferno34"
@@ -2951,7 +2932,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno34.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno34.wav"
 }
 
 "separatist.tmap_de_inferno35"
@@ -2959,7 +2940,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno35.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno35.wav"
 }
 
 "separatist.tmap_de_inferno36"
@@ -2967,7 +2948,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno36.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno36.wav"
 }
 
 "separatist.tmap_de_inferno37"
@@ -2975,7 +2956,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno37.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno37.wav"
 }
 
 "separatist.tmap_de_inferno38"
@@ -2983,7 +2964,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno38.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno38.wav"
 }
 
 "separatist.tmap_de_inferno39"
@@ -2991,7 +2972,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno39.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno39.wav"
 }
 
 "separatist.tmap_de_inferno40"
@@ -2999,7 +2980,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno40.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno40.wav"
 }
 
 "separatist.tmap_de_inferno46"
@@ -3007,7 +2988,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno46.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno46.wav"
 }
 
 "separatist.tmap_de_inferno47"
@@ -3015,7 +2996,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno47.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno47.wav"
 }
 
 "separatist.tmap_de_inferno48"
@@ -3023,7 +3004,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\tmap_de_inferno48.wav"
+		"wave"		"player\vo\separatist\tmap_de_inferno48.wav"
 }
 
 "separatist.twoenemiesleft01"
@@ -3031,7 +3012,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\twoenemiesleft01.wav"
+		"wave"		"player\vo\separatist\twoenemiesleft01.wav"
 }
 
 "separatist.twoenemiesleft02"
@@ -3039,7 +3020,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\twoenemiesleft02.wav"
+		"wave"		"player\vo\separatist\twoenemiesleft02.wav"
 }
 
 "separatist.twoenemiesleft03"
@@ -3047,7 +3028,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\twoenemiesleft03.wav"
+		"wave"		"player\vo\separatist\twoenemiesleft03.wav"
 }
 
 "separatist.twoenemiesleft04"
@@ -3055,7 +3036,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\twoenemiesleft04.wav"
+		"wave"		"player\vo\separatist\twoenemiesleft04.wav"
 }
 
 "separatist.twoenemiesleft05"
@@ -3063,7 +3044,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\twoenemiesleft05.wav"
+		"wave"		"player\vo\separatist\twoenemiesleft05.wav"
 }
 
 "separatist.twoenemiesleft06"
@@ -3071,7 +3052,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\twoenemiesleft06.wav"
+		"wave"		"player\vo\separatist\twoenemiesleft06.wav"
 }
 
 "separatist.waitinghere01"
@@ -3079,7 +3060,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\waitinghere01.wav"
+		"wave"		"player\vo\separatist\waitinghere01.wav"
 }
 
 "separatist.waitinghere02"
@@ -3087,7 +3068,7 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\waitinghere02.wav"
+		"wave"		"player\vo\separatist\waitinghere02.wav"
 }
 
 "separatist.waitinghere03"
@@ -3095,6 +3076,6 @@
 		"channel"		"CHAN_VOICE"
 		"volume"	"1"
 		"soundlevel" "0"
-		"wave"		"+player\vo\separatist\waitinghere03.wav"
+		"wave"		"player\vo\separatist\waitinghere03.wav"
 }
 

@@ -150,6 +150,24 @@
 	}
 }
 
+// "ExtinguisherJet.TurnOn"
+// {
+	// "channel"	"CHAN_WEAPON"
+	// "volume"	"VOL_NORM"
+	// "soundlevel"  "SNDLVL_75dB"
+
+	// "wave"	"weapons/extinguisher/fire1.wav"
+// }
+
+// "ExtinguisherJet.TurnOff"
+// {
+	// "channel"	"CHAN_WEAPON"
+	// "volume"	"VOL_NORM"
+	// "soundlevel"  "SNDLVL_75dB"
+
+	// "wave"	"weapons/extinguisher/release1.wav"
+// }
+
 
 "ambient.steam01"
 {
@@ -167,7 +185,7 @@
 	"volume"		"VOL_NORM"
 	"pitch"			"100"
 
-	"soundlevel"	"SNDLVL_90DB"
+	"soundlevel"	"SNDLVL_100DB"
 
 	"wave"			"ambient/gas/cannister_loop.wav"
 }
@@ -205,6 +223,17 @@
 
 	"wave"			"ambient/energy/zap3.wav"
 }
+
+// "ambient.electrical_zap_4"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"			"ambient/energy/zap4.wav"
+// }
 
 "ambient.electrical_zap_5"
 {
@@ -294,37 +323,224 @@
 	}
 }
 
-"Test.Footstep"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"VOL_NORM"
-	"pitch"			"100"
+// "ambient.whoosh_huge_incoming1"
+// {
 
-	"soundlevel"	"SNDLVL_90DB"
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
 
-	"wave"			"player/footsteps/concrete1_test.wav"
-}
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_huge1.wav"
+// }
+
+// "ambient.whoosh_huge_incoming2"
+// {
+
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_huge2.wav"
+// }
+
+// "ambient.whoosh_huge_incoming3"
+// {
+
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_huge3.wav"
+// }
+
+
+// "ambient.whoosh_huge_incoming4"
+// {
+
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_huge4.wav"
+// }
+
+
+// "ambient.whoosh_huge_incoming5"
+// {
+
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_huge5.wav"
+// }
 
 
 
-"Test.ThrusterLoop"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"VOL_NORM"
-	"pitch"			"100"
+// "ambient.whoosh_large_incoming1"
+// {
 
-	"soundlevel"	"SNDLVL_90DB"
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
 
-	"wave"			"ambient/gas/cannister_loop.wav"
-}
+	// "soundlevel"	"SNDLVL_100DB"
 
-"de_train.RadioLoop"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.5"
-	"pitch"			"100"
+	// "wave"	"physics/nearmiss/whoosh_large1.wav"
+// }
 
-	"soundlevel"	"SNDLVL_70DB"
+// "ambient.whoosh_large_incoming2"
+// {
 
-	"wave"			"*ambient/de_train_radio.wav"
-}
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_large2.wav"
+// }
+// "ambient.whoosh_large_incoming3"
+// {
+
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_large3.wav"
+// }
+// "ambient.whoosh_large_incoming4"
+// {
+
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_large4.wav"
+// }
+
+// "ambient.whoosh_medium_incoming1"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_medium1.wav"
+// }
+
+// "ambient.whoosh_medium_incoming2"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_medium2.wav"
+// }
+// "ambient.whoosh_medium_incoming3"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_medium3.wav"
+// }
+// "ambient.whoosh_medium_incoming4"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_medium4.wav"
+// }
+// "ambient.whoosh_medium_incoming5"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_medium5.wav"
+// }
+// "ambient.whoosh_medium_incoming6"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"physics/nearmiss/whoosh_medium6.wav"
+// }
+// "ambient.rock_slide1"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"ambient/materials/rock1.wav"
+// }
+// "ambient.rock_slide2"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"ambient/materials/rock2.wav"
+// }
+// "ambient.rock_slide3"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"ambient/materials/rock3.wav"
+// }
+// "ambient.rock_slide4"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"ambient/materials/rock4.wav"
+// }
+// "ambient.rock_slide5"
+// {
+	// "channel"		"CHAN_STATIC"
+	// "volume"		"VOL_NORM"
+	// "pitch"			"100"
+
+	// "soundlevel"	"SNDLVL_100DB"
+
+	// "wave"	"ambient/materials/rock5.wav"
+// }

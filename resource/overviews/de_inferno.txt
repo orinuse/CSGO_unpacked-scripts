@@ -1,0 +1,10 @@
+// HLTV overview description file for de_inferno.bsp
+
+"de_inferno"
+{
+	"material"	"overviews/de_inferno"	// texture file
+	"pos_x"		"-2200"	// upper left world coordinate
+	"pos_y"		"4400"
+	"scale"		"5.9" 
+}
+

@@ -26,48 +26,6 @@
 	}
 }
 
-"Music.StopNonMainMenuMusic"
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	"1.0"
-	"soundlevel"  	"SNDLVL_NONE"
-	"pitch"		"PITCH_NORM"
-
-	"wave"  "common/null.wav"
-
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack" //replaces null.wav
-		{
-			"stop_musix"
-			{
-				"operator" "sys_stop_entries"
-				"input_max_entries" "0.000000" //A sound will not stop itself from playing.
-				"match_entity" "false"	
-				"match_substring" "true"
-				"match_this_entry" "false"
-				"match_entry" "Musix"	
-			}
-			"stop_music"
-			{
-				"operator" "sys_stop_entries"
-				"input_max_entries" "0.000000" //A sound will not stop itself from playing.
-				"match_entity" "false"	
-				"match_substring" "true"
-				"match_this_entry" "false"
-				"match_entry" "Music"	
-			}
-			"block_this"
-			{
-				"operator" "sys_output"
-				"output" "block_start"
-					
-			}
-		}
-	}
-}
-
 "Music.StopAllMusic"
 {
 	"channel"	"CHAN_STATIC"
@@ -100,76 +58,6 @@
 		}
 	}
 }
-
-"Music.StopSpectateMusic"
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	"1.0"
-	"soundlevel"  	"SNDLVL_NONE"
-	"pitch"		"PITCH_NORM"
-
-	"wave"  "common/null.wav"
-
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack" //replaces null.wav
-		{
-			"stop_round"
-			{
-				"operator" "sys_stop_entries"
-				"input_max_entries" "0.000000" //A sound will not stop itself from playing.
-				"match_entity" "false"	
-				"match_substring" "true"
-				"match_this_entry" "false"
-				"match_entry" "Music.StartRound"	
-			}
-			"stop_action"
-			{
-				"operator" "sys_stop_entries"
-				"input_max_entries" "0.000000" //A sound will not stop itself from playing.
-				"match_entity" "false"	
-				"match_substring" "true"
-				"match_this_entry" "false"
-				"match_entry" "Music.StartAction"	
-			}
-			"stop_bombplanted"
-			{
-				"operator" "sys_stop_entries"
-				"input_max_entries" "0.000000" //A sound will not stop itself from playing.
-				"match_entity" "false"	
-				"match_substring" "true"
-				"match_this_entry" "false"
-				"match_entry" "Music.BombPlanted"	
-			}
-			"stop_bombten"
-			{
-				"operator" "sys_stop_entries"
-				"input_max_entries" "0.000000" //A sound will not stop itself from playing.
-				"match_entity" "false"	
-				"match_substring" "true"
-				"match_this_entry" "false"
-				"match_entry" "Music.BombTen"	
-			}
-			"stop_roundten"
-			{
-				"operator" "sys_stop_entries"
-				"input_max_entries" "0.000000" //A sound will not stop itself from playing.
-				"match_entity" "false"	
-				"match_substring" "true"
-				"match_this_entry" "false"
-				"match_entry" "Music.RoundTen"	
-			}
-
-			"block_this"
-			{
-				"operator" "sys_output"
-				"output" "block_start"
-					
-			}
-		}
-	}
-}
 "Music.StopAllExceptMusic"
 {
 	"channel"	"CHAN_STATIC"
@@ -191,10 +79,20 @@
 				"match_entity" "false"	
 				"match_substring" "true"
 				"match_this_entry" "false"
+//				"match_entry" "StartRound"	
 				"match_entry" "Music."	
 				"invert_match" "true"	
 			}
-
+// 			"stop_selected_music"
+// 			{
+// 				"operator" "sys_stop_entries"
+// 				"input_max_entries" "0.000000" //A sound will not stop itself from playing.
+// 				"match_entity" "false"	
+// 				"match_substring" "true"
+// 				"match_this_entry" "false"
+// 				"match_sound" "ct_selected"	
+// 				"invert_match" "false"	
+// 			}
 			"block_this"
 			{
 				"operator" "sys_output"
@@ -234,7 +132,7 @@
 "Music.Kill_01"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"1.0"
+	"volume"	"0.95"
 	"soundlevel"  	"SNDLVL_NONE"
 	"pitch"		"PITCH_NORM"
 
@@ -248,7 +146,7 @@
 			"import_stack"	"update_simple_quad"
 			"speaker_volume"
 			{
-				"input1" "0.5"
+				"input1" "0.7"
 			}
 		}
 	}
@@ -256,7 +154,7 @@
 "Music.Kill_02"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"1.0"
+	"volume"	"0.95"
 	"soundlevel"  	"SNDLVL_NONE"
 	"pitch"		"PITCH_NORM"
 
@@ -270,7 +168,7 @@
 			"import_stack"	"update_simple_quad"
 			"speaker_volume"
 			{
-				"input1" "0.5"
+				"input1" "0.7"
 			}
 		}
 	}
@@ -278,7 +176,7 @@
 "Music.Kill_03"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"1.0"
+	"volume"	"0.95"
 	"soundlevel" "SNDLVL_NONE"
 	"pitch"		 "PITCH_NORM"
 
@@ -292,7 +190,7 @@
 			"import_stack"	"update_simple_quad"
 			"speaker_volume"
 			{
-				"input1" "0.5"
+				"input1" "0.7"
 			}
 		}
 	}
@@ -302,7 +200,7 @@
 "Music.GG_DeathCam_01"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"0.4"
+	"volume"	"0.7"
 	"soundlevel"  	"SNDLVL_NONE"
 	"pitch"		"PITCH_NORM"
 
@@ -345,7 +243,7 @@
 "Music.GG_DeathCam_02"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"0.4"
+	"volume"	"0.8"
 	"soundlevel"  	"SNDLVL_NONE"
 	"pitch"		"PITCH_NORM"
 
@@ -388,7 +286,7 @@
 "Music.GG_DeathCam_03"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"0.4"
+	"volume"	"0.9"
 	"soundlevel"  	"SNDLVL_NONE"
 	"pitch"		"PITCH_NORM"
 
@@ -432,10 +330,11 @@
 "Music.Match_Start_Stinger"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"0.7"
+	"volume"	"1.0"
 	"soundlevel"  	"SNDLVL_NONE"
 	"pitch"		"PITCH_NORM"
 
+//	"wave"	"*music/cs_stinger.wav"
 	"wave"	"common/null.wav"
 
 	"soundentry_version" "2"
@@ -463,7 +362,7 @@
 "Music.Final_Round_Stinger"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"0.6"
+	"volume"	"1.0"
 	"soundlevel"  	"SNDLVL_NONE"
 	"pitch"		"PITCH_NORM"
 
@@ -495,7 +394,7 @@
 "Music.Match_Point_Stinger"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"0.6"
+	"volume"	"1.0"
 	"soundlevel"  	"SNDLVL_NONE"
 	"pitch"		"PITCH_NORM"
 
@@ -570,7 +469,7 @@
 "Music.GG_Revenge"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"0.6"
+	"volume"	"1.0"
 	"soundlevel"  	"SNDLVL_NONE"
 	"pitch"		"PITCH_NORM"
 
@@ -613,7 +512,7 @@
 "Music.GG_Dominating"
 {
 	"channel"	"CHAN_STATIC"
-	"volume"	"0.6"
+	"volume"	"1.0"
 	"soundlevel"  	"SNDLVL_NONE"
 	"pitch"		"PITCH_NORM"
 
@@ -654,73 +553,22 @@
 	}
 }
 
-"Music.CP_PointCaptured_CT"
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	"0.3"
-	"soundlevel"  	"SNDLVL_NONE"
-	"pitch"		"PITCH_NORM"
-
-	"wave"	"*music/point_captured_ct.wav"
-
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"update_stack"
-		{
-			"import_stack"	"CS_update_music_stereo"
-			"mixer"
-			{
-				"mixgroup" "DuckingMusix"
-				"set_mixgroup_to_channel" "true"	
-			}
-// 			"hold_mixlayer_time_calc"
-// 			{
-// 				"input1" "1.3"
-// 			}
-			"convar_total"
-			{
-				"input1" "0.7"
-			}
-		}
-	}
-}
-"Music.CP_PointCaptured_T"
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	"0.3"
-	"soundlevel"  	"SNDLVL_NONE"
-	"pitch"		"PITCH_NORM"
-
-	"wave"	"*music/point_captured_t.wav"
-
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"update_stack"
-		{
-			"import_stack"	"CS_update_music_stereo"
-			"mixer"
-			{
-				"mixgroup" "DuckingMusix"
-				"set_mixgroup_to_channel" "true"	
-			}
-// 			"hold_mixlayer_time_calc"
-// 			{
-// 				"input1" "1.3"
-// 			}
-			"convar_total"
-			{
-				"input1" "0.7"
-			}
-		}
-	}
-}
+// "GunGameWeapon.RevengeKill"
+// {
+// 	"channel"		"CHAN_VOICE"
+// 	"volume"		"1"
+// 	"soundlevel"		"SNDLVL_93dB"
+// 	"wave"			"UI/Revenge.wav"
+// }
 
 
-
-
-
+// "GunGameWeapon.Nemesis"
+// {
+// 	"channel"		"CHAN_VOICE"
+// 	"volume"		"1"
+// 	"soundlevel"		"SNDLVL_93dB"
+// 	"wave"			"bot/aw_hell.wav"
+// }
 
 // "Music.TEST_SYNCPOINTS"
 // {
@@ -838,7 +686,7 @@
 // 	"soundlevel"  	"SNDLVL_NONE"
 // 	"pitch"		"PITCH_NORM"
 
-// 	"wave"	"common/null.wav"
+// 	"wave"	"*music/cs_music_running_loop_edit.wav"
 
 // 	"soundentry_version" "4"
 // 	"operator_stacks"
@@ -889,7 +737,7 @@
 // 	"soundlevel"  	"SNDLVL_NONE"
 // 	"pitch"		"PITCH_NORM"
 
-// 	"wave"	"common/null.wav"
+// 	"wave"	"*music/CS_Music_Running_Loop_edit.wav"
 
 // 	"soundentry_version" "2"
 // 	"operator_stacks"
@@ -953,47 +801,3 @@
 // 		}
 // 	}
 // }
-
-"Music.FinalFight"
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	"0.5"
-	"soundlevel"  	"SNDLVL_NONE"
-	"pitch"		"PITCH_NORM"
-
-	"wave"	"*music/finalfight.wav"
-
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"stop_music"
-			{
-				"operator" "sys_stop_entries"
-				"input_max_entries" "0.000000" //A sound will not stop itself from playing.
-				"match_entity" "false"	
-				"match_substring" "true"
-				"match_this_entry" "false"
-				"match_entry" "Music."	
-			}
-		}
-		"update_stack"
-		{
-			"import_stack"	"CS_update_music_stereo"
-			"mixer"
-			{
-				"mixgroup" "DuckingMusix"
-				"set_mixgroup_to_channel" "true"	
-			}
-			"hold_mixlayer_time_calc"
-			{
-				"input1" "1.3"
-			}
-			"convar_total"
-			{
-				"input1" "0.7"
-			}
-		}
-	}
-}

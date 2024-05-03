@@ -8,22 +8,27 @@
 // *****************
 // SURFACE MATERIALS
 
-
-"Default.Land"
+"Default.StepLeft"
 {
-	"volume"		"1"
-	"pitch"			"98, 102"
-	"soundlevel"  	"SNDLVL_90dB"
+	"channel"       "CHAN_BODY"
 
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"			"1.0"
+	"pitch"			"95,105"
 	"rndwave"
 	{
-		"wave"			"~)player/land.wav"
-		"wave"			"~)player/land2.wav"
-		"wave"			"~)player/land3.wav"
+		"wave"		"player/footsteps/concrete1.wav"
+		"wave"		"player/footsteps/concrete3.wav"
+		"wave"		"player/footsteps/concrete5.wav"
 	}
-	"soundentry_version" "2"
+	"soundentry_version" "2"	
 	"operator_stacks"
 	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
 
 		"update_stack"
 		{
@@ -32,32 +37,46 @@
 	}
 }
 
-"Default.WalkJump"
+"Default.StepRight"
 {
+	"channel"       "CHAN_BODY"
+
 	"soundlevel"  		"SNDLVL_90dB"
-	"volume"		"0.15"
 	"pitch"			"95,105"
+	"volume"			"1.0"
 	"rndwave"
 	{
-		"wave"		"~player/footsteps/sand1.wav"
-		"wave"		"~player/footsteps/sand2.wav"
-		"wave"		"~player/footsteps/sand5.wav"
+		"wave"		"player/footsteps/concrete2.wav"
+		"wave"		"player/footsteps/concrete4.wav"
+		"wave"		"player/footsteps/concrete6.wav"
 	}
-	
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
 
 		"update_stack"
 		{
 			"import_stack" "CS_update_footsteps"
-			
-			"volume_falloff"
-			{
-				"input_min" "120.0"	
-				"input_max" "600.0"
-			}
 		}
+	}
+}
+
+"Default.Land"
+{
+	"volume"		"1"
+	"pitch"			"PITCH_NORM"
+	"soundlevel"  		"SNDLVL_80dB"
+	"rndwave"
+	{
+		"wave"			"player/land.wav"
+		"wave"			"player/land2.wav"
+		"wave"			"player/land3.wav"
+		"wave"			"player/land4.wav"
 	}
 }
 
@@ -68,10 +87,10 @@
 	"volume"		".5"
 	"rndwave"
 	{
-		"wave"		"~physics\surfaces\default_impact_bullet1.wav"
-		"wave"		"~physics\surfaces\default_impact_bullet2.wav"
-		"wave"		"~physics\surfaces\default_impact_bullet3.wav"
-		"wave"		"~physics\surfaces\default_impact_bullet4.wav"
+		"wave"		"physics\surfaces\default_impact_bullet1.wav"
+		"wave"		"physics\surfaces\default_impact_bullet2.wav"
+		"wave"		"physics\surfaces\default_impact_bullet3.wav"
+		"wave"		"physics\surfaces\default_impact_bullet4.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -93,14 +112,14 @@
 {
 	"soundlevel"  		"SNDLVL_NORM"
 	"pitch"			"PITCH_NORM"
-	"volume"		"0.7"
+	"volume"		".5"
 	"rndwave"
 	{
-		"wave"		"~physics/flesh/flesh_impact_bullet1.wav"
-		"wave"		"~physics/flesh/flesh_impact_bullet2.wav"
-		"wave"		"~physics/flesh/flesh_impact_bullet3.wav"
-		"wave"		"~physics/flesh/flesh_impact_bullet4.wav"
-		"wave"		"~physics/flesh/flesh_impact_bullet5.wav"
+		"wave"		"physics/flesh/flesh_impact_bullet1.wav"
+		"wave"		"physics/flesh/flesh_impact_bullet2.wav"
+		"wave"		"physics/flesh/flesh_impact_bullet3.wav"
+		"wave"		"physics/flesh/flesh_impact_bullet4.wav"
+		"wave"		"physics/flesh/flesh_impact_bullet5.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -123,21 +142,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.4"
 	"pitch"		"96,104"
-	"wave"		"~physics/plastic/plastic_box_scrape_smooth_loop2.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/plastic/plastic_box_scrape_smooth_loop2.wav"
 }
 
 "Default.ScrapeRough"
@@ -145,21 +150,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/plastic/plastic_box_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/plastic/plastic_box_scrape_smooth_loop1.wav"
 }
 
 "Default.ImpactSoft"
@@ -169,79 +160,9 @@
 	"volume"		"0.6"
 	"rndwave"
 	{
-		"wave"		"~physics/plastic/plastic_box_impact_soft2.wav"
-		"wave"		"~physics/plastic/plastic_box_impact_soft3.wav"
-		"wave"		"~physics/plastic/plastic_box_impact_soft4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-"Default.ImpactSoftGloves"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"		"115"
-	"volume"		"0.06"
-	"rndwave"
-	{
-		"wave"		"~physics\concrete\concrete_impact_bullet1.wav"
-		"wave"		"~physics\concrete\concrete_impact_bullet2.wav"
-		"wave"		"~physics\concrete\concrete_impact_bullet3.wav"
-		"wave"		"~physics\concrete\concrete_impact_bullet4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-"Concrete.ImpactSoftGloves"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"		"115"
-	"volume"		"0.06"
-	"rndwave"
-	{
-		"wave"		"~physics\concrete\concrete_impact_bullet1.wav"
-		"wave"		"~physics\concrete\concrete_impact_bullet2.wav"
-		"wave"		"~physics\concrete\concrete_impact_bullet3.wav"
-		"wave"		"~physics\concrete\concrete_impact_bullet4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/plastic/plastic_box_impact_soft2.wav"
+		"wave"		"physics/plastic/plastic_box_impact_soft3.wav"
+		"wave"		"physics/plastic/plastic_box_impact_soft4.wav"
 	}
 }
 
@@ -252,66 +173,82 @@
 	"volume"		"0.6"
 	"rndwave"
 	{
-		"wave"		"~physics/plastic/plastic_box_impact_hard1.wav"
-		"wave"		"~physics/plastic/plastic_box_impact_hard2.wav"
-		"wave"		"~physics/plastic/plastic_box_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/plastic/plastic_box_impact_hard1.wav"
+		"wave"		"physics/plastic/plastic_box_impact_hard2.wav"
+		"wave"		"physics/plastic/plastic_box_impact_hard3.wav"
 	}
 }
 
-
-"SolidMetal.ImpactHard"
+"SolidMetal.StepLeft"
 {
+	"channel"       "CHAN_BODY"
+
 	"soundlevel"  		"SNDLVL_90dB"
-	"pitch"		"95,100"
-	"volume"		"0.5, 1.0"
+	"pitch"			"95,105"
+	"volume"		"1.0"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/metal_vent_impact_01.wav"
-		"wave"		"~physics/metal/metal_vent_impact_02.wav"
-		"wave"		"~physics/metal/metal_vent_impact_03.wav"
-		"wave"		"~physics/metal/metal_vent_impact_04.wav"
-		"wave"		"~physics/metal/metal_vent_impact_05.wav"
-		"wave"		"~physics/metal/metal_vent_impact_06.wav"
-		"wave"		"~physics/metal/metal_vent_impact_07.wav"
+		"wave"		"player/footsteps/metal1.wav"
+		"wave"		"player/footsteps/metal3.wav"
+		"wave"		"player/footsteps/metal5.wav"
 	}
-	
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
-			
-			"volume_falloff"
-			{
-				"input_min" "120.0"	
-				"input_max" "1400.0"
-			}
-			
-			"distance_shutdown"
-			{
-				"input2" "1400.0"
-			}
+			"import_stack" "CS_update_footsteps"
 		}
+	}
+
+}
+
+"SolidMetal.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/metal2.wav"
+		"wave"		"player/footsteps/metal4.wav"
+		"wave"		"player/footsteps/metal6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+
+}
+
+"SolidMetal.ImpactHard"
+{
+	"soundlevel"  		"SNDLVL_NORM"
+	"pitch"		"95,100"
+	"volume"		"0.6"
+	"rndwave"
+	{
+		"wave"		"physics/metal/metal_solid_impact_hard1.wav"
+		"wave"		"physics/metal/metal_solid_impact_hard4.wav"
+		"wave"		"physics/metal/metal_solid_impact_hard5.wav"
 	}
 }
 
@@ -323,51 +260,9 @@
 	"volume"		"0.6"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/metal_solid_impact_soft1.wav"
-		"wave"		"~physics/metal/metal_solid_impact_soft2.wav"
-		"wave"		"~physics/metal/metal_solid_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-"SolidMetal.ImpactSoftGloves"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"		"115"
-	"volume"		"0.3"
-	"rndwave"
-	{
-		"wave"		"~player/footsteps/new/land_metal_barrel_01.wav"
-		"wave"		"~player/footsteps/new/land_metal_barrel_02.wav"
-		"wave"		"~player/footsteps/new/land_metal_barrel_03.wav"
-		"wave"		"~player/footsteps/new/land_metal_barrel_04.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/metal/metal_solid_impact_soft1.wav"
+		"wave"		"physics/metal/metal_solid_impact_soft2.wav"
+		"wave"		"physics/metal/metal_solid_impact_soft3.wav"
 	}
 }
 
@@ -376,21 +271,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"pitch"		"95,105"
 	"volume"		"0.5"
-	"wave"		"~physics/metal/metal_box_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/metal/metal_box_scrape_rough_loop1.wav"
 }
 
 "SolidMetal.ScrapeSmooth"
@@ -398,36 +279,20 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"pitch"		"95,105"
 	"volume"		"0.5"
-	"wave"		"~physics/metal/metal_box_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/metal/metal_box_scrape_smooth_loop1.wav"
 }
 
 "SolidMetal.BulletImpact"
 {
 	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"			"100"
-	"volume"			"0.5"
+	"pitch"			"PITCH_NORM"
+	"volume"		"0.7"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/bullet_metal_solid_01.wav"
-		"wave"		"~physics/metal/bullet_metal_solid_02.wav"
-		"wave"		"~physics/metal/bullet_metal_solid_03.wav"
-		"wave"		"~physics/metal/bullet_metal_solid_04.wav"
-		"wave"		"~physics/metal/bullet_metal_solid_05.wav"
-		"wave"		"~physics/metal/bullet_metal_solid_06.wav"
+		"wave"		"physics/metal/metal_solid_impact_bullet1.wav"
+		"wave"		"physics/metal/metal_solid_impact_bullet2.wav"
+		"wave"		"physics/metal/metal_solid_impact_bullet3.wav"
+		"wave"		"physics/metal/metal_solid_impact_bullet4.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -442,128 +307,208 @@
 			"import_stack" "CS_update_rics"
 		}
 	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
 
 }
 
-"Shield.BulletImpact"
+// "SolidMetal.Strain"
+// {
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "pitch"			"PITCH_NORM"
+	// "volume"		"0.7"
+	// "rndwave"
+	// {
+		// "wave"		"physics/metal/metal_solid_strain1.wav"
+		// "wave"		"physics/metal/metal_solid_strain4.wav"
+		// "wave"		"physics/metal/metal_solid_strain5.wav"
+	// }
+// }
+
+"Metalgrate.StepLeft"
 {
-	"soundlevel"  		"SNDLVL_90db"
-	"pitch"			"100, 101"
-	"volume"			"0.8"
-	"delay_msec" 	"70"
+	"channel"       "CHAN_BODY"
+
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"		"1.0"
 	"rndwave"
 	{
-		"wave"		"~)physics/shield/bullet_hit_shield_01.wav"
-		"wave"		"~)physics/shield/bullet_hit_shield_02.wav"
-		"wave"		"~)physics/shield/bullet_hit_shield_03.wav"
-		"wave"		"~)physics/shield/bullet_hit_shield_04.wav"
-		"wave"		"~)physics/shield/bullet_hit_shield_05.wav"
-		"wave"		"~)physics/shield/bullet_hit_shield_06.wav"
-		"wave"		"~)physics/shield/bullet_hit_shield_07.wav"
+		"wave"		"player/footsteps/metalgrate1.wav"
+		"wave"		"player/footsteps/metalgrate2.wav"
+		"wave"		"player/footsteps/metalgrate5.wav"
+
+		
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
 	}
 
 }
 
-"MetalVehicle.BulletImpact"
+"Metalgrate.StepRight"
 {
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"			"100"
-	"volume"			"0.8"
+	"channel"       "CHAN_BODY"
+
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"		"1.0"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/bullet_metal_auto_01.wav"
-		"wave"		"~physics/metal/bullet_metal_auto_02.wav"
-		"wave"		"~physics/metal/bullet_metal_auto_03.wav"
-		"wave"		"~physics/metal/bullet_metal_auto_04.wav"
-		"wave"		"~physics/metal/bullet_metal_auto_05.wav"
+		"wave"		"player/footsteps/metalgrate3.wav"
+		"wave"		"player/footsteps/metalgrate4.wav"
+		"wave"		"player/footsteps/metalgrate6.wav"
+		
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_bullet_impact"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_rics"
-		}
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 
 }
 
-"MetalBarrel.BulletImpact"
+"Snow.StepLeft"
 {
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"			"100"
-	"volume"			"0.8"
+	"channel"       "CHAN_BODY"
+
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"		"1.0"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/bullet_metal_barrel_01.wav"
-		"wave"		"~physics/metal/bullet_metal_barrel_02.wav"
-		"wave"		"~physics/metal/bullet_metal_barrel_03.wav"
-		"wave"		"~physics/metal/bullet_metal_barrel_04.wav"
-		"wave"		"~physics/metal/bullet_metal_barrel_05.wav"
+		"wave"		"player/footsteps/snow1.wav"
+		"wave"		"player/footsteps/snow2.wav"
+		"wave"		"player/footsteps/snow3.wav"
+		
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_bullet_impact"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_rics"
-		}
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 
 }
 
+"Snow.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/snow4.wav"
+		"wave"		"player/footsteps/snow5.wav"
+		"wave"		"player/footsteps/snow6.wav"
+		
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+
+}
+
+"Dirt.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/dirt1.wav"
+		"wave"		"player/footsteps/dirt3.wav"
+		"wave"		"player/footsteps/dirt5.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Dirt.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/dirt2.wav"
+		"wave"		"player/footsteps/dirt4.wav"
+		"wave"		"player/footsteps/dirt6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 
 "Dirt.Impact"
@@ -571,21 +516,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.6"
 	"pitch"		"98,100"
-	"wave"		"~physics/surfaces/sand_impact_bullet2.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/surfaces/sand_impact_bullet2.wav"
 }
 
 "Dirt.Scrape"
@@ -593,21 +524,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"95,100"
-	"wave"		"~physics/cardboard/cardboard_box_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/cardboard/cardboard_box_scrape_rough_loop1.wav"
 }
 
 "Dirt.BulletImpact"
@@ -617,10 +534,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"		"~physics/surfaces/sand_impact_bullet1.wav"
-		"wave"		"~physics/surfaces/sand_impact_bullet2.wav"
-		"wave"		"~physics/surfaces/sand_impact_bullet3.wav"
-		"wave"		"~physics/surfaces/sand_impact_bullet4.wav"
+		"wave"		"physics/surfaces/sand_impact_bullet1.wav"
+		"wave"		"physics/surfaces/sand_impact_bullet2.wav"
+		"wave"		"physics/surfaces/sand_impact_bullet3.wav"
+		"wave"		"physics/surfaces/sand_impact_bullet4.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -638,7 +555,179 @@
 
 }
 
+"Mud.StepLeft"
+{
+	"channel"       "CHAN_BODY"
 
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"0.6"
+	"pitch"			"90,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/mud1.wav"
+		"wave"		"player/footsteps/mud3.wav"
+		"wave"		"player/footsteps/mud5.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Mud.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"0.6"
+	"pitch"			"90,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/mud2.wav"
+		"wave"		"player/footsteps/mud4.wav"
+		"wave"		"player/footsteps/mud6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"SlipperySlime.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"0.6"
+	"pitch"			"90,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/mud1.wav"
+		"wave"		"player/footsteps/mud3.wav"
+		"wave"		"player/footsteps/mud5.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"SlipperySlime.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"0.6"
+	"pitch"			"90,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/mud2.wav"
+		"wave"		"player/footsteps/mud4.wav"
+		"wave"		"player/footsteps/mud6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Grass.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/grass1.wav"
+		"wave"		"player/footsteps/grass3.wav"
+		"wave"		"player/footsteps/grass5.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Grass.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/grass2.wav"
+		"wave"		"player/footsteps/grass4.wav"
+		"wave"		"player/footsteps/grass6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "MetalGrate.ImpactHard"
 {
@@ -647,23 +736,9 @@
 	"pitch"		"95,100"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/metal_grate_impact_hard1.wav"
-		"wave"		"~physics/metal/metal_grate_impact_hard2.wav"
-		"wave"		"~physics/metal/metal_grate_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/metal/metal_grate_impact_hard1.wav"
+		"wave"		"physics/metal/metal_grate_impact_hard2.wav"
+		"wave"		"physics/metal/metal_grate_impact_hard3.wav"
 	}
 }
 
@@ -674,23 +749,9 @@
 	"pitch"		"95,100"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/metal_grate_impact_soft1.wav"
-		"wave"		"~physics/metal/metal_grate_impact_soft2.wav"
-		"wave"		"~physics/metal/metal_grate_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/metal/metal_grate_impact_soft1.wav"
+		"wave"		"physics/metal/metal_grate_impact_soft2.wav"
+		"wave"		"physics/metal/metal_grate_impact_soft3.wav"
 	}
 }
 
@@ -699,21 +760,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"95,100"
-	"wave"		"~physics/metal/metal_box_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/metal/metal_box_scrape_rough_loop1.wav"
 }
 
 "MetalGrate.ScrapeSmooth"
@@ -721,21 +768,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"95,100"
-	"wave"		"~physics/metal/metal_box_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/metal/metal_box_scrape_smooth_loop1.wav"
 }
 
 "MetalGrate.BulletImpact"
@@ -745,9 +778,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/metal_sheet_impact_bullet1.wav"
-		"wave"		"~physics/metal/metal_sheet_impact_bullet2.wav"
-		"wave"		"~physics/metal/metal_solid_impact_bullet2.wav"
+		"wave"		"physics/metal/metal_sheet_impact_bullet1.wav"
+		"wave"		"physics/metal/metal_sheet_impact_bullet2.wav"
+		"wave"		"physics/metal/metal_solid_impact_bullet2.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -765,6 +798,62 @@
 
 }
 
+"MetalVent.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/duct2.wav"
+		"wave"		"player/footsteps/duct4.wav"
+		"wave"		"player/footsteps/duct6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"MetalVent.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/duct1.wav"
+		"wave"		"player/footsteps/duct3.wav"
+		"wave"		"player/footsteps/duct5.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "MetalVent.ImpactHard"
 {
@@ -773,26 +862,70 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/metal_sheet_impact_hard6.wav"
-		"wave"		"~physics/metal/metal_sheet_impact_hard7.wav"
-		"wave"		"~physics/metal/metal_sheet_impact_hard8.wav"
+		"wave"		"physics/metal/metal_sheet_impact_hard6.wav"
+		"wave"		"physics/metal/metal_sheet_impact_hard7.wav"
+		"wave"		"physics/metal/metal_sheet_impact_hard8.wav"
 	}
-	
+}
+
+
+"Tile.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/tile1.wav"
+		"wave"		"player/footsteps/tile3.wav"
+		"wave"		"player/footsteps/tile5.wav"
+	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 }
 
+"Tile.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/tile2.wav"
+		"wave"		"player/footsteps/tile4.wav"
+		"wave"		"player/footsteps/tile6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "Tile.BulletImpact"
 {
@@ -801,10 +934,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/surfaces/tile_impact_bullet1.wav"
-		"wave"	"~physics/surfaces/tile_impact_bullet2.wav"
-		"wave"	"~physics/surfaces/tile_impact_bullet3.wav"
-		"wave"	"~physics/surfaces/tile_impact_bullet4.wav"	
+		"wave"	"physics/surfaces/tile_impact_bullet1.wav"
+		"wave"	"physics/surfaces/tile_impact_bullet2.wav"
+		"wave"	"physics/surfaces/tile_impact_bullet3.wav"
+		"wave"	"physics/surfaces/tile_impact_bullet4.wav"	
 	}	
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -823,6 +956,65 @@
 }
 
 
+
+"Water.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		".5"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/slosh2.wav"
+		"wave"		"player/footsteps/slosh4.wav"
+		"wave"		"player/footsteps/slosh6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Water.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		".5"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/slosh1.wav"
+		"wave"		"player/footsteps/slosh3.wav"
+		"wave"		"player/footsteps/slosh5.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
 "Water.BulletImpact"
 {
 	"soundlevel"  		"SNDLVL_NORM"
@@ -830,9 +1022,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~#physics/surfaces/underwater_impact_bullet1.wav"
-		"wave"	"~#physics/surfaces/underwater_impact_bullet2.wav"
-		"wave"	"~#physics/surfaces/underwater_impact_bullet3.wav"
+		"wave"	"#physics/surfaces/underwater_impact_bullet1.wav"
+		"wave"	"#physics/surfaces/underwater_impact_bullet2.wav"
+		"wave"	"#physics/surfaces/underwater_impact_bullet3.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -857,9 +1049,9 @@
 	"pitch"			"95,105"
 	"rndwave"
 	{
-		"wave"	"~#physics/surfaces/underwater_impact_bullet1.wav"
-		"wave"	"~#physics/surfaces/underwater_impact_bullet2.wav"
-		"wave"	"~#physics/surfaces/underwater_impact_bullet3.wav"
+		"wave"	"#physics/surfaces/underwater_impact_bullet1.wav"
+		"wave"	"#physics/surfaces/underwater_impact_bullet2.wav"
+		"wave"	"#physics/surfaces/underwater_impact_bullet3.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -890,23 +1082,9 @@
 
 	"rndwave"
 	{
-		"wave"	"~ambient/water/water_splash1.wav"
-		"wave"	"~ambient/water/water_splash2.wav"
-		"wave"	"~ambient/water/water_splash3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"ambient/water/water_splash1.wav"
+		"wave"	"ambient/water/water_splash2.wav"
+		"wave"	"ambient/water/water_splash3.wav"
 	}
 }
 
@@ -917,21 +1095,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"pitch"	"PITCH_NORM"
 
-	"wave"	"~player/pl_wade1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"	"player/pl_wade1.wav"
 }
 
 "BaseEntity.ExitWater"
@@ -941,77 +1105,237 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"pitch"	"PITCH_NORM"
 
-	"wave"	"~player/pl_wade2.wav"
-	
+	"wave"	"player/pl_wade2.wav"
+}
+
+"Wade.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"0.5"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/wade1.wav"
+		"wave"		"player/footsteps/wade3.wav"
+		"wave"		"player/footsteps/wade5.wav"
+	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Wade.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"0.5"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/wade2.wav"
+		"wave"		"player/footsteps/wade4.wav"
+		"wave"		"player/footsteps/wade6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 }
 
 
-
-
-"Glass.ImpactHard"
+"Ladder.StepLeft"
 {
-	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"0.4, 0.6"
-	"pitch"			"98, 102"
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_impact_hard1.wav"
-		"wave"	"~physics/glass/glass_impact_hard2.wav"
-		"wave"	"~physics/glass/glass_impact_hard3.wav"
+		"wave"		"player/footsteps/ladder1.wav"
+		"wave"		"player/footsteps/ladder3.wav"
+		"wave"		"player/footsteps/ladder5.wav"
 	}
-	
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
+	}
+}
+
+"Ladder.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/ladder2.wav"
+		"wave"		"player/footsteps/ladder4.wav"
+		"wave"		"player/footsteps/ladder6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Ladder.WoodStepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"		"SNDLVL_75dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/wood1.wav"
+		"wave"		"player/footsteps/wood3.wav"
+		"wave"		"player/footsteps/wood5.wav"
+	}
+}
+
+"Ladder.WoodStepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"		"SNDLVL_75dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/wood2.wav"
+		"wave"		"player/footsteps/wood4.wav"
+		"wave"		"player/footsteps/wood6.wav"
+	}
+}
+"Glass.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/gravel1.wav"
+		"wave"		"player/footsteps/gravel3.wav"
+		"wave"		"player/footsteps/gravel5.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Glass.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/gravel2.wav"
+		"wave"		"player/footsteps/gravel4.wav"
+		"wave"		"player/footsteps/gravel6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+
+"Glass.ImpactHard"
+{
+	"soundlevel"  		"SNDLVL_NORM"
+	"volume"		"0.5"
+	"pitch"			"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"	"physics/glass/glass_sheet_impact_hard1.wav"
+		"wave"	"physics/glass/glass_sheet_impact_hard2.wav"
+		"wave"	"physics/glass/glass_sheet_impact_hard3.wav"
 	}
 }
 
 "Glass.ImpactSoft"
 {
 	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"0.4, 0.6"
-	"pitch"			"98, 102"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_impact_soft1.wav"
-		"wave"	"~physics/glass/glass_impact_soft2.wav"
-		"wave"	"~physics/glass/glass_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_sheet_impact_soft1.wav"
+		"wave"	"physics/glass/glass_sheet_impact_soft2.wav"
+		"wave"	"physics/glass/glass_sheet_impact_soft3.wav"
 	}
 }
 
@@ -1022,10 +1346,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_impact_bullet1.wav"
-		"wave"	"~physics/glass/glass_impact_bullet2.wav"
-		"wave"	"~physics/glass/glass_impact_bullet3.wav"	
-		"wave"	"~physics/glass/glass_impact_bullet4.wav"
+		"wave"	"physics/glass/glass_impact_bullet1.wav"
+		"wave"	"physics/glass/glass_impact_bullet2.wav"
+		"wave"	"physics/glass/glass_impact_bullet3.wav"	
+		"wave"	"physics/glass/glass_impact_bullet4.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -1040,20 +1364,6 @@
 			"import_stack" "CS_update_rics"
 		}
 	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
 
 }
 
@@ -1065,23 +1375,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_sheet_impact_hard1.wav"
-		"wave"	"~physics/glass/glass_sheet_impact_hard2.wav"
-		"wave"	"~physics/glass/glass_sheet_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_sheet_impact_hard1.wav"
+		"wave"	"physics/glass/glass_sheet_impact_hard2.wav"
+		"wave"	"physics/glass/glass_sheet_impact_hard3.wav"
 	}
 }
 
@@ -1092,23 +1388,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_sheet_impact_soft1.wav"
-		"wave"	"~physics/glass/glass_sheet_impact_soft2.wav"
-		"wave"	"~physics/glass/glass_sheet_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_sheet_impact_soft1.wav"
+		"wave"	"physics/glass/glass_sheet_impact_soft2.wav"
+		"wave"	"physics/glass/glass_sheet_impact_soft3.wav"
 	}
 }
 
@@ -1119,24 +1401,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_strain1.wav"
-		"wave"	"~physics/glass/glass_strain2.wav"
-		"wave"	"~physics/glass/glass_strain3.wav"
-		"wave"	"~physics/glass/glass_strain4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_strain1.wav"
+		"wave"	"physics/glass/glass_strain2.wav"
+		"wave"	"physics/glass/glass_strain3.wav"
+		"wave"	"physics/glass/glass_strain4.wav"
 	}
 }
 
@@ -1147,23 +1415,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_sheet_break1.wav"
-		"wave"	"~physics/glass/glass_sheet_break2.wav"
-		"wave"	"~physics/glass/glass_sheet_break3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_sheet_break1.wav"
+		"wave"	"physics/glass/glass_sheet_break2.wav"
+		"wave"	"physics/glass/glass_sheet_break3.wav"
 	}
 }
 
@@ -1175,89 +1429,35 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_pottery_break1.wav"
-		"wave"	"~physics/glass/glass_pottery_break2.wav"
-		"wave"	"~physics/glass/glass_pottery_break3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_pottery_break1.wav"
+		"wave"	"physics/glass/glass_pottery_break2.wav"
+		"wave"	"physics/glass/glass_pottery_break3.wav"
 	}
 }
 
 "Pottery.ImpactHard"
 {
 	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"0.2, 0.6"
-	"pitch"			"97, 100"
+	"volume"		"0.5"
+	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/pottery_impact_01.wav"
-		"wave"	"~physics/glass/pottery_impact_02.wav"
-		"wave"	"~physics/glass/pottery_impact_03.wav"
-		"wave"	"~physics/glass/pottery_impact_04.wav"
-		"wave"	"~physics/glass/pottery_impact_05.wav"
-		"wave"	"~physics/glass/pottery_impact_06.wav"
-		"wave"	"~physics/glass/pottery_impact_07.wav"
-		"wave"	"~physics/glass/pottery_impact_08.wav"
-		"wave"	"~physics/glass/pottery_impact_09.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_impact_hard1.wav"
+		"wave"	"physics/glass/glass_impact_hard2.wav"
+		"wave"	"physics/glass/glass_impact_hard3.wav"
 	}
 }
 
 "Pottery.ImpactSoft"
 {
 	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"0.2, 0.3"
-	"pitch"			"100, 101"
+	"volume"		"0.4"
+	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/pottery_impact_01.wav"
-		"wave"	"~physics/glass/pottery_impact_02.wav"
-		"wave"	"~physics/glass/pottery_impact_03.wav"
-		"wave"	"~physics/glass/pottery_impact_04.wav"
-		"wave"	"~physics/glass/pottery_impact_05.wav"
-		"wave"	"~physics/glass/pottery_impact_06.wav"
-		"wave"	"~physics/glass/pottery_impact_07.wav"
-		"wave"	"~physics/glass/pottery_impact_08.wav"
-		"wave"	"~physics/glass/pottery_impact_09.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_impact_soft1.wav"
+		"wave"	"physics/glass/glass_impact_soft2.wav"
+		"wave"	"physics/glass/glass_impact_soft3.wav"
 	}
 }
 
@@ -1268,9 +1468,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_pottery_break1.wav"
-		"wave"	"~physics/glass/glass_pottery_break2.wav"
-		"wave"	"~physics/glass/glass_pottery_break3.wav"
+		"wave"	"physics/glass/glass_pottery_break1.wav"
+		"wave"	"physics/glass/glass_pottery_break2.wav"
+		"wave"	"physics/glass/glass_pottery_break3.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -1297,14 +1497,14 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_impact_bullet1.wav"
-		"wave"	"~physics/glass/glass_impact_bullet2.wav"
-		"wave"	"~physics/metal/metal_computer_impact_bullet1.wav"
-		"wave"	"~physics/metal/metal_computer_impact_bullet2.wav"
-		"wave"	"~physics/metal/metal_computer_impact_bullet3.wav"
-		"wave"	"~physics/plastic/plastic_box_impact_bullet1.wav"
-		"wave"	"~physics/plastic/plastic_box_impact_bullet2.wav"
-		"wave"	"~physics/plastic/plastic_box_impact_bullet3.wav"
+		"wave"	"physics/glass/glass_impact_bullet1.wav"
+		"wave"	"physics/glass/glass_impact_bullet2.wav"
+		"wave"	"physics/metal/metal_computer_impact_bullet1.wav"
+		"wave"	"physics/metal/metal_computer_impact_bullet2.wav"
+		"wave"	"physics/metal/metal_computer_impact_bullet3.wav"
+		"wave"	"physics/plastic/plastic_box_impact_bullet1.wav"
+		"wave"	"physics/plastic/plastic_box_impact_bullet2.wav"
+		"wave"	"physics/plastic/plastic_box_impact_bullet3.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -1329,23 +1529,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/metal_computer_impact_hard1.wav"
-		"wave"	"~physics/metal/metal_computer_impact_hard2.wav"
-		"wave"	"~physics/metal/metal_computer_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/metal_computer_impact_hard1.wav"
+		"wave"	"physics/metal/metal_computer_impact_hard2.wav"
+		"wave"	"physics/metal/metal_computer_impact_hard3.wav"
 	}
 }
 
@@ -1356,107 +1542,70 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/metal_computer_impact_soft1.wav"
-		"wave"	"~physics/metal/metal_computer_impact_soft2.wav"
-		"wave"	"~physics/metal/metal_computer_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/metal_computer_impact_soft1.wav"
+		"wave"	"physics/metal/metal_computer_impact_soft2.wav"
+		"wave"	"physics/metal/metal_computer_impact_soft3.wav"
 	}
 }
 
-"WeaponMagazine.ImpactHard"
+
+"Concrete.StepLeft"
 {
-	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"0.5"
-	"pitch"			"PITCH_NORM"
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  	"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/weapon_impact_soft1.wav"
-		"wave"	"~physics/metal/weapon_impact_soft2.wav"
-		"wave"	"~physics/metal/weapon_impact_soft3.wav"
+		"wave"		"player/footsteps/concrete1.wav"
+		"wave"		"player/footsteps/concrete3.wav"
+		"wave"		"player/footsteps/concrete5.wav"
 	}
-	
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 }
 
-"WeaponMagazine.ImpactSoft"
+"Concrete.StepRight"
 {
-	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"0.5"
-	"pitch"			"PITCH_NORM"
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  	"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/weapon_impact_soft1.wav"
-		"wave"	"~physics/metal/weapon_impact_soft2.wav"
-		"wave"	"~physics/metal/weapon_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-"WeaponMagazine.BulletImpact"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"0.6"
-	"pitch"			"PITCH_NORM"
-	"rndwave"
-	{
-		"wave"	"~physics/metal/metal_computer_impact_bullet1.wav"
-		"wave"	"~physics/metal/metal_computer_impact_bullet2.wav"
-		"wave"	"~physics/metal/metal_computer_impact_bullet3.wav"
+		"wave"		"player/footsteps/concrete2.wav"
+		"wave"		"player/footsteps/concrete4.wav"
+		"wave"		"player/footsteps/concrete6.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_bullet_impact"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_rics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
-
 }
-
 
 "Concrete.BulletImpact"
 {
@@ -1465,10 +1614,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"		"~physics/concrete/concrete_impact_bullet1.wav"
-		"wave"		"~physics/concrete/concrete_impact_bullet2.wav"
-		"wave"		"~physics/concrete/concrete_impact_bullet3.wav"
-		"wave"		"~physics/concrete/concrete_impact_bullet4.wav"
+		"wave"		"physics/concrete/concrete_impact_bullet1.wav"
+		"wave"		"physics/concrete/concrete_impact_bullet2.wav"
+		"wave"		"physics/concrete/concrete_impact_bullet3.wav"
+		"wave"		"physics/concrete/concrete_impact_bullet4.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -1493,23 +1642,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"		"~physics/concrete/concrete_impact_hard1.wav"
-		"wave"		"~physics/concrete/concrete_impact_hard2.wav"
-		"wave"		"~physics/concrete/concrete_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/concrete/concrete_impact_hard1.wav"
+		"wave"		"physics/concrete/concrete_impact_hard2.wav"
+		"wave"		"physics/concrete/concrete_impact_hard3.wav"
 	}
 }
 
@@ -1520,23 +1655,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"		"~physics/concrete/concrete_impact_soft1.wav"
-		"wave"		"~physics/concrete/concrete_impact_soft2.wav"
-		"wave"		"~physics/concrete/concrete_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/concrete/concrete_impact_soft1.wav"
+		"wave"		"physics/concrete/concrete_impact_soft2.wav"
+		"wave"		"physics/concrete/concrete_impact_soft3.wav"
 	}
 }
 
@@ -1546,21 +1667,7 @@
 	"volume"		"0.5"
 	"pitch"			"PITCH_NORM"
 	
-	"wave"		"~physics/concrete/concrete_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/concrete/concrete_scrape_smooth_loop1.wav"
 }
 
 "Concrete.ScrapeRough"
@@ -1569,21 +1676,7 @@
 	"volume"		"0.5"
 	"pitch"			"PITCH_NORM"
 	
-	"wave"		"~physics/concrete/rock_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/concrete/rock_scrape_rough_loop1.wav"
 }
 
 "Rock.ImpactHard"
@@ -1593,23 +1686,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"		"~physics/concrete/rock_impact_hard4.wav"
-		"wave"		"~physics/concrete/rock_impact_hard5.wav"
-		"wave"		"~physics/concrete/rock_impact_hard6.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/concrete/rock_impact_hard4.wav"
+		"wave"		"physics/concrete/rock_impact_hard5.wav"
+		"wave"		"physics/concrete/rock_impact_hard6.wav"
 	}
 }
 
@@ -1620,54 +1699,11 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"		"~physics/concrete/rock_impact_soft1.wav"
-		"wave"		"~physics/concrete/rock_impact_soft2.wav"
-		"wave"		"~physics/concrete/rock_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/concrete/rock_impact_soft1.wav"
+		"wave"		"physics/concrete/rock_impact_soft2.wav"
+		"wave"		"physics/concrete/rock_impact_soft3.wav"
 	}
 }
-
-"Rock.ImpactSoftGloves"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"0.06"
-	"pitch"			"100"
-	"rndwave"
-	{
-		"wave"		"~physics\concrete\concrete_impact_bullet1.wav"
-		"wave"		"~physics\concrete\concrete_impact_bullet2.wav"
-		"wave"		"~physics\concrete\concrete_impact_bullet3.wav"
-		"wave"		"~physics\concrete\concrete_impact_bullet4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
 
 
 "Boulder.ScrapeSmooth"
@@ -1676,21 +1712,7 @@
 	"volume"		"0.4"
 	"pitch"			"80"
 	
-	"wave"		"~physics/concrete/rock_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/concrete/rock_scrape_rough_loop1.wav"
 }
 
 "Boulder.ScrapeRough"
@@ -1699,21 +1721,7 @@
 	"volume"		"0.6"
 	"pitch"			"95"
 	
-	"wave"		"~physics/concrete/concrete_block_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/concrete/concrete_block_scrape_rough_loop1.wav"
 }
 
 "Boulder.ImpactSoft"
@@ -1723,23 +1731,9 @@
 	"pitch"			"90"
 	"rndwave"
 	{
-		"wave"		"~physics/concrete/rock_impact_hard1.wav"
-		"wave"		"~physics/concrete/rock_impact_hard2.wav"
-		"wave"		"~physics/concrete/rock_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/concrete/rock_impact_hard1.wav"
+		"wave"		"physics/concrete/rock_impact_hard2.wav"
+		"wave"		"physics/concrete/rock_impact_hard3.wav"
 	}
 }
 
@@ -1748,21 +1742,14 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.85"
 	"pitch"			"PITCH_NORM"
+//	"rndwave"
+	// {
+		// "wave"		"physics/concrete/boulder_impact_hard1.wav"
+		// "wave"		"physics/concrete/boulder_impact_hard2.wav"
+		// "wave"		"physics/concrete/boulder_impact_hard3.wav"
+		// "wave"		"physics/concrete/boulder_impact_hard4.wav"
+	// }
 	"wave" "common/null.wav"	
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
 }
 
 "Concrete_Block.ImpactHard"
@@ -1770,22 +1757,131 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.6"
 	"pitch"			"PITCH_NORM"
+//	"rndwave"
+	// {
+		// "wave"		"physics/concrete/concrete_block_impact_hard1.wav"
+		// "wave"		"physics/concrete/concrete_block_impact_hard2.wav"
+		// "wave"		"physics/concrete/concrete_block_impact_hard3.wav"
+	// }
 	"wave" "common/null.wav"	
-	
+
+}
+
+
+"Gravel.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/gravel1.wav"
+		"wave"		"player/footsteps/gravel3.wav"
+		"wave"		"player/footsteps/gravel5.wav"
+	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
+}
 
+"Gravel.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/gravel2.wav"
+		"wave"		"player/footsteps/gravel4.wav"
+		"wave"		"player/footsteps/gravel6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"ChainLink.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/chainlink1.wav"
+		"wave"		"player/footsteps/chainlink3.wav"
+		"wave"		"player/footsteps/chainlink5.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"ChainLink.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/chainlink2.wav"
+		"wave"		"player/footsteps/chainlink4.wav"
+		"wave"		"player/footsteps/chainlink6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
 }
 
 "ChainLink.ScrapeRough"
@@ -1793,21 +1889,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"95,100"
-	"wave"		"~physics/metal/metal_chainlink_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/metal/metal_chainlink_scrape_rough_loop1.wav"
 }
 
 "ChainLink.ScrapeSmooth"
@@ -1815,21 +1897,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.2"
 	"pitch"		"95,100"
-	"wave"		"~physics/metal/metal_chainlink_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/metal/metal_chainlink_scrape_rough_loop1.wav"
 }
 
 "ChainLink.ImpactHard"
@@ -1839,23 +1907,9 @@
 	"pitch"		"95,100"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/metal_chainlink_impact_hard1.wav"
-		"wave"		"~physics/metal/metal_chainlink_impact_hard2.wav"
-		"wave"		"~physics/metal/metal_chainlink_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/metal/metal_chainlink_impact_hard1.wav"
+		"wave"		"physics/metal/metal_chainlink_impact_hard2.wav"
+		"wave"		"physics/metal/metal_chainlink_impact_hard3.wav"
 	}
 }
 
@@ -1866,23 +1920,9 @@
 	"pitch"		"95,100"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/metal_chainlink_impact_soft1.wav"
-		"wave"		"~physics/metal/metal_chainlink_impact_soft2.wav"
-		"wave"		"~physics/metal/metal_chainlink_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/metal/metal_chainlink_impact_soft1.wav"
+		"wave"		"physics/metal/metal_chainlink_impact_soft2.wav"
+		"wave"		"physics/metal/metal_chainlink_impact_soft3.wav"
 	}
 }
 
@@ -1893,10 +1933,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"		"~player/footsteps/chainlink1.wav"
-		"wave"		"~physics/metal/metal_chainlink_impact_hard2.wav"
-		"wave"		"~player/footsteps/chainlink3.wav"
-		"wave"		"~physics/metal/metal_chainlink_impact_hard3.wav"
+		"wave"		"player/footsteps/chainlink1.wav"
+		"wave"		"physics/metal/metal_chainlink_impact_hard2.wav"
+		"wave"		"player/footsteps/chainlink3.wav"
+		"wave"		"physics/metal/metal_chainlink_impact_hard3.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -1914,6 +1954,21 @@
 
 }
 
+// "Chain.ScrapeRough"
+// {
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "volume"		"0.5"
+	// "pitch"		"95,100"
+	// "wave"		"physics/metal/chain_scrape_rough_loop1.wav"
+// }
+
+// "Chain.ScrapeSmooth"
+// {
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "volume"		"0.2"
+	// "pitch"		"95,100"
+	// "wave"		"physics/metal/chain_scrape_rough_loop1.wav"
+// }
 
 "Chain.ImpactHard"
 {
@@ -1922,25 +1977,23 @@
 	"pitch"		"95,100"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/chain_impact_hard1.wav"
-		"wave"		"~physics/metal/chain_impact_hard2.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/metal/chain_impact_hard1.wav"
+		"wave"		"physics/metal/chain_impact_hard2.wav"
 	}
 }
 
+// "Chain.ImpactSoft"
+// {
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "volume"		"0.6"
+	// "pitch"		"95,100"
+	// "rndwave"
+	// {
+		// "wave"		"physics/metal/chain_impact_soft1.wav"
+		// "wave"		"physics/metal/chain_impact_soft2.wav"
+		// "wave"		"physics/metal/chain_impact_soft3.wav"
+	// }
+// }
 
 "Chain.BulletImpact"
 {
@@ -1949,8 +2002,8 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/chain_impact_hard1.wav"
-		"wave"		"~physics/metal/chain_impact_hard2.wav"
+		"wave"		"physics/metal/chain_impact_hard1.wav"
+		"wave"		"physics/metal/chain_impact_hard2.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -1968,6 +2021,61 @@
 
 }
 
+"Flesh.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"0.3"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"	"physics/flesh/flesh_impact_hard1.wav"
+		"wave"	"physics/body/body_medium_impact_soft3.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Flesh.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"0.3"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"	"physics/flesh/flesh_impact_hard2.wav"
+		"wave"	"physics/body/body_medium_impact_soft4.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "Flesh.ImpactSoft"
 {
@@ -1976,54 +2084,11 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/body/body_medium_impact_soft1.wav"
-		"wave"	"~physics/body/body_medium_impact_soft2.wav"
-		"wave"	"~physics/body/body_medium_impact_soft5.wav"
-		"wave"	"~physics/body/body_medium_impact_soft6.wav"
-		"wave"	"~physics/body/body_medium_impact_soft7.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-"Flesh.ImpactSoftGloves"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"1.0"
-	"pitch"			"98, 103"
-	"rndwave"
-	{
-		"wave"	"~physics\body\body_impact_fists_01.wav"
-		"wave"	"~physics\body\body_impact_fists_02.wav"
-		"wave"	"~physics\body\body_impact_fists_03.wav"
-		"wave"	"~physics\body\body_impact_fists_04.wav"
-		"wave"	"~physics\body\body_impact_fists_05.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/body/body_medium_impact_soft1.wav"
+		"wave"	"physics/body/body_medium_impact_soft2.wav"
+		"wave"	"physics/body/body_medium_impact_soft5.wav"
+		"wave"	"physics/body/body_medium_impact_soft6.wav"
+		"wave"	"physics/body/body_medium_impact_soft7.wav"
 	}
 }
 
@@ -2036,84 +2101,11 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/body/body_medium_impact_soft1.wav"
-		"wave"	"~physics/body/body_medium_impact_soft2.wav"
-		"wave"	"~physics/body/body_medium_impact_soft5.wav"
-		"wave"	"~physics/body/body_medium_impact_soft6.wav"
-		"wave"	"~physics/body/body_medium_impact_soft7.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-"Flesh.ImpactGloves"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"0.2, 0.5"
-	"pitch"			"98, 102"
-	"rndwave"
-	{
-		"wave"	"~physics/flesh/fist_hit_01.wav"
-		"wave"	"~physics/flesh/fist_hit_02.wav"
-		"wave"	"~physics/flesh/fist_hit_03.wav"
-		"wave"	"~physics/flesh/fist_hit_04.wav"
-		"wave"	"~physics/flesh/fist_hit_05.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-"Gloves.Swish"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"0.1, 0.3"
-	"pitch"			"98, 102"
-	"rndwave"
-	{
-		"wave"	")physics/flesh/fist_swing_01.wav"
-		"wave"	")physics/flesh/fist_swing_02.wav"
-		"wave"	")physics/flesh/fist_swing_03.wav"
-		"wave"	")physics/flesh/fist_swing_04.wav"
-		"wave"	")physics/flesh/fist_swing_05.wav"
-		"wave"	")physics/flesh/fist_swing_05.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/body/body_medium_impact_soft1.wav"
+		"wave"	"physics/body/body_medium_impact_soft2.wav"
+		"wave"	"physics/body/body_medium_impact_soft5.wav"
+		"wave"	"physics/body/body_medium_impact_soft6.wav"
+		"wave"	"physics/body/body_medium_impact_soft7.wav"
 	}
 }
 
@@ -2122,21 +2114,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"			"PITCH_NORM"
-	"wave"		"~physics/body/body_medium_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/body/body_medium_scrape_rough_loop1.wav"
 }
 
 
@@ -2145,21 +2123,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.35"
 	"pitch"			"PITCH_NORM"
-	"wave"		"~physics/body/body_medium_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/body/body_medium_scrape_smooth_loop1.wav"
 }
 
 
@@ -2170,23 +2134,9 @@
 	"pitch"			"100"
 	"rndwave"
 	{
-		"wave"	"~physics/body/body_medium_strain1.wav"
-		"wave"	"~physics/body/body_medium_strain2.wav"
-		"wave"	"~physics/body/body_medium_strain3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/body/body_medium_strain1.wav"
+		"wave"	"physics/body/body_medium_strain2.wav"
+		"wave"	"physics/body/body_medium_strain3.wav"
 	}
 }
 
@@ -2198,23 +2148,9 @@
 	"pitch"			"100"
 	"rndwave"
 	{
-		"wave"	"~physics/body/body_medium_break2.wav"
-		"wave"	"~physics/body/body_medium_break3.wav"
-		"wave"	"~physics/body/body_medium_break4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/body/body_medium_break2.wav"
+		"wave"	"physics/body/body_medium_break3.wav"
+		"wave"	"physics/body/body_medium_break4.wav"
 	}
 }
 
@@ -2225,24 +2161,10 @@
 	"pitch"			"100"
 	"rndwave"
 	{
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard1.wav"
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard2.wav"
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard3.wav"
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/flesh/flesh_squishy_impact_hard1.wav"
+		"wave"	"physics/flesh/flesh_squishy_impact_hard2.wav"
+		"wave"	"physics/flesh/flesh_squishy_impact_hard3.wav"
+		"wave"	"physics/flesh/flesh_squishy_impact_hard4.wav"
 	}
 }
 
@@ -2253,24 +2175,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~player/footsteps/sand1.wav"
-		"wave"	"~player/footsteps/sand2.wav"
-		"wave"	"~player/footsteps/sand3.wav"
-		"wave"	"~player/footsteps/sand4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"player/footsteps/sand1.wav"
+		"wave"	"player/footsteps/sand2.wav"
+		"wave"	"player/footsteps/sand3.wav"
+		"wave"	"player/footsteps/sand4.wav"
 	}
 }
 
@@ -2281,10 +2189,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/surfaces/sand_impact_bullet1.wav"
-		"wave"	"~physics/surfaces/sand_impact_bullet2.wav"
-		"wave"	"~physics/surfaces/sand_impact_bullet3.wav"
-		"wave"	"~physics/surfaces/sand_impact_bullet4.wav"
+		"wave"	"physics/surfaces/sand_impact_bullet1.wav"
+		"wave"	"physics/surfaces/sand_impact_bullet2.wav"
+		"wave"	"physics/surfaces/sand_impact_bullet3.wav"
+		"wave"	"physics/surfaces/sand_impact_bullet4.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -2299,6 +2207,7 @@
 			"import_stack" "CS_update_rics"
 		}
 	}
+
 }
 
 "Carpet.Scrape"
@@ -2306,19 +2215,65 @@
 	"pitch"			"PITCH_NORM"
 	"volume"		"0.5"
 	"soundlevel"  		"SNDLVL_NORM"
-	"wave"		"~physics/flesh/flesh_scrape_rough_loop.wav"
-	
+	"wave"		"physics/flesh/flesh_scrape_rough_loop.wav"
+}
+
+
+
+"Sand.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/sand1.wav"
+		"wave"		"player/footsteps/sand3.wav"
+		"wave"		"player/footsteps/sand5.wav"
+	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Sand.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/sand2.wav"
+		"wave"		"player/footsteps/sand4.wav"
+		"wave"		"player/footsteps/sand6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 }
@@ -2331,10 +2286,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/surfaces/sand_impact_bullet1.wav"
-		"wave"	"~physics/surfaces/sand_impact_bullet2.wav"
-		"wave"	"~physics/surfaces/sand_impact_bullet3.wav"
-		"wave"	"~physics/surfaces/sand_impact_bullet4.wav"
+		"wave"	"physics/surfaces/sand_impact_bullet1.wav"
+		"wave"	"physics/surfaces/sand_impact_bullet2.wav"
+		"wave"	"physics/surfaces/sand_impact_bullet3.wav"
+		"wave"	"physics/surfaces/sand_impact_bullet4.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -2362,24 +2317,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard1.wav"
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard2.wav"
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard3.wav"
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/flesh/flesh_squishy_impact_hard1.wav"
+		"wave"	"physics/flesh/flesh_squishy_impact_hard2.wav"
+		"wave"	"physics/flesh/flesh_squishy_impact_hard3.wav"
+		"wave"	"physics/flesh/flesh_squishy_impact_hard4.wav"
 	}
 }
 
@@ -2390,10 +2331,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard1.wav"
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard2.wav"
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard3.wav"
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard4.wav"
+		"wave"	"physics/flesh/flesh_squishy_impact_hard1.wav"
+		"wave"	"physics/flesh/flesh_squishy_impact_hard2.wav"
+		"wave"	"physics/flesh/flesh_squishy_impact_hard3.wav"
+		"wave"	"physics/flesh/flesh_squishy_impact_hard4.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -2416,21 +2357,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"			"PITCH_NORM"
-	"wave"	"~physics/flesh/flesh_squishy_impact_hard4.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"	"physics/flesh/flesh_squishy_impact_hard4.wav"
 }
 
 
@@ -2441,8 +2368,8 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/metal_sheet_impact_bullet1.wav"
-		"wave"		"~physics/metal/metal_sheet_impact_bullet2.wav"
+		"wave"		"physics/metal/metal_sheet_impact_bullet1.wav"
+		"wave"		"physics/metal/metal_sheet_impact_bullet2.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -2465,7 +2392,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.7"
 	"pitch"			"PITCH_NORM"
-	"wave"		"~doors/heavy_metal_stop1.wav"
+	"wave"		"doors/heavy_metal_stop1.wav"
 
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -2482,6 +2409,61 @@
 	}
 }
 
+"GlassBottle.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"0.2"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"physics/glass/glass_impact_soft1.wav"
+		"wave"		"physics/glass/glass_impact_soft2.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"GlassBottle.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"0.2"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"physics/glass/glass_impact_soft2.wav"
+		"wave"		"physics/glass/glass_impact_soft3.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "GlassBottle.ImpactHard"
 {
@@ -2490,23 +2472,9 @@
 	"pitch"	"95,100"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_bottle_impact_hard1.wav"
-		"wave"	"~physics/glass/glass_bottle_impact_hard2.wav"
-		"wave"	"~physics/glass/glass_bottle_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_bottle_impact_hard1.wav"
+		"wave"	"physics/glass/glass_bottle_impact_hard2.wav"
+		"wave"	"physics/glass/glass_bottle_impact_hard3.wav"
 	}
 }
 
@@ -2517,23 +2485,9 @@
 	"pitch"	"95,100"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_impact_soft1.wav"
-		"wave"	"~physics/glass/glass_impact_soft2.wav"
-		"wave"	"~physics/glass/glass_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_impact_soft1.wav"
+		"wave"	"physics/glass/glass_impact_soft2.wav"
+		"wave"	"physics/glass/glass_impact_soft3.wav"
 	}
 }
 
@@ -2544,8 +2498,8 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_bottle_break1.wav"
-		"wave"	"~physics/glass/glass_bottle_break2.wav"
+		"wave"	"physics/glass/glass_bottle_break1.wav"
+		"wave"	"physics/glass/glass_bottle_break2.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -2570,23 +2524,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_bottle_impact_hard1.wav"
-		"wave"	"~physics/glass/glass_bottle_impact_hard2.wav"
-		"wave"	"~physics/glass/glass_bottle_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_bottle_impact_hard1.wav"
+		"wave"	"physics/glass/glass_bottle_impact_hard2.wav"
+		"wave"	"physics/glass/glass_bottle_impact_hard3.wav"
 	}
 }
 
@@ -2597,23 +2537,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_impact_soft1.wav"
-		"wave"	"~physics/glass/glass_impact_soft2.wav"
-		"wave"	"~physics/glass/glass_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_impact_soft1.wav"
+		"wave"	"physics/glass/glass_impact_soft2.wav"
+		"wave"	"physics/glass/glass_impact_soft3.wav"
 	}
 }
 
@@ -2624,22 +2550,8 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_bottle_break1.wav"
-		"wave"	"~physics/glass/glass_bottle_break2.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_bottle_break1.wav"
+		"wave"	"physics/glass/glass_bottle_break2.wav"
 	}
 }
 
@@ -2651,21 +2563,13 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.6"
 	"pitch"		"98,100"
+//	"rndwave"
+	// {
+		// "wave"	"physics/metal/metal_canister_impact_hard1.wav"
+		// "wave"	"physics/metal/metal_canister_impact_hard2.wav"
+		// "wave"	"physics/metal/metal_canister_impact_hard3.wav"
+	// }
 	"wave" "common/null.wav"	
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
 
 }
 
@@ -2674,21 +2578,13 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.45"
 	"pitch"		"98,100"
+	// "rndwave"
+	// {
+		// "wave"	"physics/metal/metal_canister_impact_soft1.wav"
+		// "wave"	"physics/metal/metal_canister_impact_soft2.wav"
+		// "wave"	"physics/metal/metal_canister_impact_soft3.wav"
+	// }
 	"wave" "common/null.wav"	
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
 }
 
 "Canister.ScrapeRough"
@@ -2696,21 +2592,8 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"			"PITCH_NORM"
+	// "wave"	"physics/metal/canister_scrape_rough_loop1.wav"
 	"wave" "common/null.wav"	
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
 }
 
 "Canister.ScrapeSmooth"
@@ -2718,23 +2601,17 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.45"
 	"pitch"			"PITCH_NORM"
+	// "wave"	"physics/metal/canister_scrape_smooth_loop1.wav"
 	"wave" "common/null.wav"	
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
 }
 
+// "Canister.Roll"
+// {
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "volume"		"0.5"
+	// "pitch"			"PITCH_NORM"
+	// "wave"	"physics/metal/canister_roll_loop1.wav"
+// }
 
 "Metal_Barrel.ImpactHard"
 {
@@ -2743,23 +2620,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/metal_barrel_impact_hard1.wav"
-		"wave"	"~physics/metal/metal_barrel_impact_hard2.wav"
-		"wave"	"~physics/metal/metal_barrel_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/metal_barrel_impact_hard1.wav"
+		"wave"	"physics/metal/metal_barrel_impact_hard2.wav"
+		"wave"	"physics/metal/metal_barrel_impact_hard3.wav"
 	}
 }
 
@@ -2770,24 +2633,10 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/metal_barrel_impact_soft1.wav"
-		"wave"	"~physics/metal/metal_barrel_impact_soft2.wav"
-		"wave"	"~physics/metal/metal_barrel_impact_soft3.wav"
-		"wave"	"~physics/metal/metal_barrel_impact_hard7.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/metal_barrel_impact_soft1.wav"
+		"wave"	"physics/metal/metal_barrel_impact_soft2.wav"
+		"wave"	"physics/metal/metal_barrel_impact_soft3.wav"
+		"wave"	"physics/metal/metal_barrel_impact_hard7.wav"
 	}
 }
 
@@ -2799,10 +2648,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/metal_sheet_impact_bullet1.wav"
-		"wave"	"~physics/metal/metal_sheet_impact_bullet2.wav"
-		"wave"	"~physics/metal/metal_solid_impact_bullet2.wav"
-		"wave"	"~physics/metal/metal_solid_impact_bullet3.wav"
+		"wave"	"physics/metal/metal_sheet_impact_bullet1.wav"
+		"wave"	"physics/metal/metal_sheet_impact_bullet2.wav"
+		"wave"	"physics/metal/metal_solid_impact_bullet2.wav"
+		"wave"	"physics/metal/metal_solid_impact_bullet3.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -2821,6 +2670,13 @@
 }
 
 
+// "Metal_Barrel.Roll"
+// {
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "volume"		"0.2"
+	// "pitch"			"PITCH_NORM"
+	// "wave"	"physics/metal/canister_roll_loop1.wav"
+// }
 
 
 "Roller.Impact"
@@ -2830,24 +2686,10 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/metal_solid_impact_bullet1.wav"
-		"wave"	"~physics/metal/metal_solid_impact_bullet2.wav"
-		"wave"	"~physics/metal/metal_solid_impact_bullet3.wav"
-		"wave"	"~physics/metal/metal_solid_impact_bullet4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/metal_solid_impact_bullet1.wav"
+		"wave"	"physics/metal/metal_solid_impact_bullet2.wav"
+		"wave"	"physics/metal/metal_solid_impact_bullet3.wav"
+		"wave"	"physics/metal/metal_solid_impact_bullet4.wav"
 	}
 }
 
@@ -2858,23 +2700,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/soda_can_impact_hard1.wav"
-		"wave"	"~physics/metal/soda_can_impact_hard2.wav"
-		"wave"	"~physics/metal/soda_can_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/soda_can_impact_hard1.wav"
+		"wave"	"physics/metal/soda_can_impact_hard2.wav"
+		"wave"	"physics/metal/soda_can_impact_hard3.wav"
 	}
 }
 
@@ -2885,23 +2713,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/soda_can_impact_soft1.wav"
-		"wave"	"~physics/metal/soda_can_impact_soft2.wav"
-		"wave"	"~physics/metal/soda_can_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/soda_can_impact_soft1.wav"
+		"wave"	"physics/metal/soda_can_impact_soft2.wav"
+		"wave"	"physics/metal/soda_can_impact_soft3.wav"
 	}
 }
 
@@ -2912,9 +2726,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/soda_can_impact_hard1.wav"
-		"wave"	"~physics/metal/soda_can_impact_hard2.wav"
-		"wave"	"~physics/metal/soda_can_impact_hard3.wav"
+		"wave"	"physics/metal/soda_can_impact_hard1.wav"
+		"wave"	"physics/metal/soda_can_impact_hard2.wav"
+		"wave"	"physics/metal/soda_can_impact_hard3.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -2937,21 +2751,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.4"
 	"pitch"		"98,100"
-	"wave"	"~physics/metal/soda_can_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"	"physics/metal/soda_can_scrape_rough_loop1.wav"
 }
 
 "Popcan.ScrapeSmooth"
@@ -2959,21 +2759,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.3"
 	"pitch"		"130,140"
-	"wave"	"~physics/plastic/plastic_box_scrape_smooth_loop2.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"	"physics/plastic/plastic_box_scrape_smooth_loop2.wav"
 }
 
 "Paintcan.ImpactHard"
@@ -2983,23 +2769,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/paintcan_impact_hard1.wav"
-		"wave"	"~physics/metal/paintcan_impact_hard2.wav"
-		"wave"	"~physics/metal/paintcan_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/paintcan_impact_hard1.wav"
+		"wave"	"physics/metal/paintcan_impact_hard2.wav"
+		"wave"	"physics/metal/paintcan_impact_hard3.wav"
 	}
 }
 
@@ -3010,23 +2782,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/paintcan_impact_soft1.wav"
-		"wave"	"~physics/metal/paintcan_impact_soft2.wav"
-		"wave"	"~physics/metal/paintcan_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/paintcan_impact_soft1.wav"
+		"wave"	"physics/metal/paintcan_impact_soft2.wav"
+		"wave"	"physics/metal/paintcan_impact_soft3.wav"
 	}
 }
 
@@ -3035,21 +2793,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.4"
 	"pitch"		"98,100"
-	"wave"	"~physics/metal/paintcan_roll_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"	"physics/metal/paintcan_roll_loop1.wav"
 }
 
 "Papercup.Impact"
@@ -3059,23 +2803,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/cardboard/cardboard_cup_impact_hard1.wav"
-		"wave"	"~physics/cardboard/cardboard_cup_impact_hard2.wav"
-		"wave"	"~physics/cardboard/cardboard_cup_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/cardboard/cardboard_cup_impact_hard1.wav"
+		"wave"	"physics/cardboard/cardboard_cup_impact_hard2.wav"
+		"wave"	"physics/cardboard/cardboard_cup_impact_hard3.wav"
 	}
 }
 
@@ -3086,26 +2816,69 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/cardboard/cardboard_cup_impact_hard1.wav"
-		"wave"	"~physics/cardboard/cardboard_cup_impact_hard2.wav"
-		"wave"	"~physics/cardboard/cardboard_cup_impact_hard3.wav"
+		"wave"	"physics/cardboard/cardboard_cup_impact_hard1.wav"
+		"wave"	"physics/cardboard/cardboard_cup_impact_hard2.wav"
+		"wave"	"physics/cardboard/cardboard_cup_impact_hard3.wav"
 	}
-	
+}
+
+"ceiling_tile.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete1.wav"
+		"wave"		"player/footsteps/concrete3.wav"
+		"wave"		"player/footsteps/concrete5.wav"
+	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 }
 
+"ceiling_tile.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete2.wav"
+		"wave"		"player/footsteps/concrete4.wav"
+		"wave"		"player/footsteps/concrete6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "ceiling_tile.BulletImpact"
 {
@@ -3114,9 +2887,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/plaster/ceiling_tile_impact_bullet1.wav"
-		"wave"	"~physics/plaster/ceiling_tile_impact_bullet2.wav"
-		"wave"	"~physics/plaster/ceiling_tile_impact_bullet3.wav"
+		"wave"	"physics/plaster/ceiling_tile_impact_bullet1.wav"
+		"wave"	"physics/plaster/ceiling_tile_impact_bullet2.wav"
+		"wave"	"physics/plaster/ceiling_tile_impact_bullet3.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -3138,21 +2911,13 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.6"
 	"pitch"		"98,100"
+	// "rndwave"
+	// {
+		// "wave"	"physics/plaster/ceiling_tile_impact_soft1.wav"
+		// "wave"	"physics/plaster/ceiling_tile_impact_soft2.wav"
+		// "wave"	"physics/plaster/ceiling_tile_impact_soft3.wav"
+	// }
 	"wave" "common/null.wav"	
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
 }
 
 
@@ -3161,23 +2926,13 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.7"
 	"pitch"		"98,100"
-	"wave" "common/null.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-
-
+	// "rndwave"
+	// {
+		// "wave"	"physics/plaster/ceiling_tile_impact_hard1.wav"
+		// "wave"	"physics/plaster/ceiling_tile_impact_hard2.wav"
+		// "wave"	"physics/plaster/ceiling_tile_impact_hard3.wav"
+	// }
+	"wave" "common/null.wav"	
 }
 
 "ceiling_tile.ScrapeRough"
@@ -3185,21 +2940,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/plaster/ceiling_tile_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/plaster/ceiling_tile_scrape_smooth_loop1.wav"
 }
 
 "ceiling_tile.ScrapeSmooth"
@@ -3207,21 +2948,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/plaster/ceiling_tile_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/plaster/ceiling_tile_scrape_smooth_loop1.wav"
 }
 
 "ceiling_tile.Break"
@@ -3229,19 +2956,69 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.8"
 	"pitch"		"98,100"
-	"wave" "common/null.wav"
+	// "rndwave"
+	// {
+		// "wave"	"physics/plaster/ceilingtile_break1.wav"
+		// "wave"	"physics/plaster/ceilingtile_break2.wav"
+	// }
+	"wave" "common/null.wav"	
+}
 
+
+"drywall.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete1.wav"
+		"wave"		"player/footsteps/concrete3.wav"
+		"wave"		"player/footsteps/concrete5.wav"
+	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"drywall.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete2.wav"
+		"wave"		"player/footsteps/concrete4.wav"
+		"wave"		"player/footsteps/concrete6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 }
@@ -3254,23 +3031,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/plaster/drywall_impact_soft1.wav"
-		"wave"	"~physics/plaster/drywall_impact_soft2.wav"
-		"wave"	"~physics/plaster/drywall_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/plaster/drywall_impact_soft1.wav"
+		"wave"	"physics/plaster/drywall_impact_soft2.wav"
+		"wave"	"physics/plaster/drywall_impact_soft3.wav"
 	}
 }
 
@@ -3282,23 +3045,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/plaster/drywall_impact_hard1.wav"
-		"wave"	"~physics/plaster/drywall_impact_hard2.wav"
-		"wave"	"~physics/plaster/drywall_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/plaster/drywall_impact_hard1.wav"
+		"wave"	"physics/plaster/drywall_impact_hard2.wav"
+		"wave"	"physics/plaster/drywall_impact_hard3.wav"
 	}
 }
 
@@ -3309,9 +3058,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/metal_barrel_sand_impact_bullet1.wav"
-		"wave"		"~physics/metal/metal_barrel_sand_impact_bullet2.wav"
-		"wave"		"~physics/metal/metal_barrel_sand_impact_bullet3.wav"
+		"wave"		"physics/metal/metal_barrel_sand_impact_bullet1.wav"
+		"wave"		"physics/metal/metal_barrel_sand_impact_bullet2.wav"
+		"wave"		"physics/metal/metal_barrel_sand_impact_bullet3.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -3335,23 +3084,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/plaster/drywall_impact_hard1.wav"
-		"wave"	"~physics/plaster/drywall_impact_hard2.wav"
-		"wave"	"~physics/plaster/drywall_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/plaster/drywall_impact_hard1.wav"
+		"wave"	"physics/plaster/drywall_impact_hard2.wav"
+		"wave"	"physics/plaster/drywall_impact_hard3.wav"
 	}
 }
 
@@ -3362,23 +3097,9 @@
 	"pitch"		"95,100"
 	"rndwave"
 	{
-		"wave"		"~physics/metal/metal_grate_impact_soft1.wav"
-		"wave"		"~physics/metal/metal_grate_impact_soft2.wav"
-		"wave"		"~physics/metal/metal_grate_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics/metal/metal_grate_impact_soft1.wav"
+		"wave"		"physics/metal/metal_grate_impact_soft2.wav"
+		"wave"		"physics/metal/metal_grate_impact_soft3.wav"
 	}
 }
 
@@ -3395,24 +3116,10 @@
 
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_crate_break1.wav"
-		"wave"	"~physics/wood/wood_crate_break2.wav"
-		"wave"	"~physics/wood/wood_crate_break3.wav"
-		"wave"	"~physics/wood/wood_crate_break4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_crate_break1.wav"
+		"wave"	"physics/wood/wood_crate_break2.wav"
+		"wave"	"physics/wood/wood_crate_break3.wav"
+		"wave"	"physics/wood/wood_crate_break4.wav"
 	}
 }
 
@@ -3424,21 +3131,7 @@
 
 	"rndwave"
 	{
-		"wave"	"~physics/flesh/flesh_bloody_break.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/flesh/flesh_bloody_break.wav"
 	}
 }
 
@@ -3450,50 +3143,21 @@
 
 	"rndwave"
 	{
-		"wave"	"~ambient/energy/spark5.wav"
-		"wave"	"~ambient/energy/spark6.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"ambient/energy/spark5.wav"
+		"wave"	"ambient/energy/spark6.wav"
 	}
 }
 
 "Breakable.Metal"
 {
-	"channel"	"CHAN_STATIC"
+	"channel"	"CHAN_VOICE"
 	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"0.7"
+	"volume"		"1.0"
 	"soundlevel"  		"SNDLVL_85dB"
 	"rndwave"
 	{
-		"wave"		"~)survival\container_death_01.wav"
-		"wave"		"~)survival\container_death_02.wav"
-		"wave"		"~)survival\container_death_03.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	")physics/metal/metal_box_break1.wav"
+		"wave"	")physics/metal/metal_box_break2.wav"
 	}
 }
 
@@ -3505,23 +3169,9 @@
 
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_largesheet_break1.wav"
-		"wave"	"~physics/glass/glass_largesheet_break2.wav"
-		"wave"	"~physics/glass/glass_largesheet_break3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_largesheet_break1.wav"
+		"wave"	"physics/glass/glass_largesheet_break2.wav"
+		"wave"	"physics/glass/glass_largesheet_break3.wav"
 	}
 }
 
@@ -3533,22 +3183,8 @@
 
 	"rndwave"
 	{
-		"wave"	"~physics/concrete/concrete_break2.wav"
-		"wave"	"~physics/concrete/concrete_break3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/concrete/concrete_break2.wav"
+		"wave"	"physics/concrete/concrete_break3.wav"
 	}
 }
 
@@ -3560,22 +3196,8 @@
 
 	"rndwave"
 	{
-		"wave"	"~physics/plaster/ceilingtile_break1.wav"
-		"wave"	"~physics/plaster/ceilingtile_break2.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/plaster/ceilingtile_break1.wav"
+		"wave"	"physics/plaster/ceilingtile_break2.wav"
 	}
 }
 
@@ -3585,24 +3207,10 @@
 	"volume"		"0.7"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_plank_break1.wav"
-		"wave"	"~physics/wood/wood_plank_break2.wav"
-		"wave"	"~physics/wood/wood_plank_break3.wav"
-		"wave"	"~physics/wood/wood_plank_break4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_plank_break1.wav"
+		"wave"	"physics/wood/wood_plank_break2.wav"
+		"wave"	"physics/wood/wood_plank_break3.wav"
+		"wave"	"physics/wood/wood_plank_break4.wav"
 	}
 }
 
@@ -3612,23 +3220,9 @@
 	"volume"		"0.7"
 	"rndwave"
 	{
-		"wave"	"~physics/body/body_medium_break2.wav"
-		"wave"	"~physics/body/body_medium_break3.wav"
-		"wave"	"~physics/body/body_medium_break4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/body/body_medium_break2.wav"
+		"wave"	"physics/body/body_medium_break3.wav"
+		"wave"	"physics/body/body_medium_break4.wav"
 	}
 }
 
@@ -3639,22 +3233,8 @@
 	"soundlevel"  		"SNDLVL_85dB"
 	"rndwave"
 	{
-		"wave"	"~)physics/metal/metal_box_break1.wav"
-		"wave"	"~)physics/metal/metal_box_break2.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	")physics/metal/metal_box_break1.wav"
+		"wave"	")physics/metal/metal_box_break2.wav"
 	}
 }
 
@@ -3664,22 +3244,8 @@
 	"volume"		"0.7"
 	"rndwave"
 	{
-		"wave"	"~physics/concrete/concrete_break2.wav"
+		"wave"	"physics/concrete/concrete_break2.wav"
 
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
 	}
 }
 
@@ -3689,23 +3255,9 @@
 	"volume"		"0.7"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_cup_break1.wav"
-		"wave"	"~physics/glass/glass_cup_break2.wav"
-		"wave"	"~physics/glass/glass_bottle_break2.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_cup_break1.wav"
+		"wave"	"physics/glass/glass_cup_break2.wav"
+		"wave"	"physics/glass/glass_bottle_break2.wav"
 	}
 }
 
@@ -3718,22 +3270,8 @@
 
 	"rndwave"
 	{
-		"wave"	"~ambient/energy/spark5.wav"
-		"wave"	"~ambient/energy/spark6.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"ambient/energy/spark5.wav"
+		"wave"	"ambient/energy/spark6.wav"
 	}
 }
 
@@ -3746,23 +3284,9 @@
 	"volume"	"0.8"
 	"rndwave"
 	{
-		"wave"	"~physics/glass/glass_impact_hard1.wav"
-		"wave"	"~physics/glass/glass_impact_hard2.wav"
-		"wave"	"~physics/glass/glass_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/glass/glass_impact_hard1.wav"
+		"wave"	"physics/glass/glass_impact_hard2.wav"
+		"wave"	"physics/glass/glass_impact_hard3.wav"
 	}
 }
 
@@ -3772,23 +3296,9 @@
 	"volume"	"0.8"
 	"rndwave"
 	{
-		"wave" "~physics/metal/metal_box_impact_hard1.wav"
-		"wave" "~physics/metal/metal_box_impact_hard2.wav"
-		"wave" "~physics/metal/metal_box_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave" "physics/metal/metal_box_impact_hard1.wav"
+		"wave" "physics/metal/metal_box_impact_hard2.wav"
+		"wave" "physics/metal/metal_box_impact_hard3.wav"
 	}
 }
 
@@ -3798,24 +3308,10 @@
 	"volume"	"0.8"
 	"rndwave"
 	{
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard1.wav"
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard2.wav"
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard3.wav"
-		"wave"	"~physics/flesh/flesh_squishy_impact_hard4.wav"	
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/flesh/flesh_squishy_impact_hard1.wav"
+		"wave"	"physics/flesh/flesh_squishy_impact_hard2.wav"
+		"wave"	"physics/flesh/flesh_squishy_impact_hard3.wav"
+		"wave"	"physics/flesh/flesh_squishy_impact_hard4.wav"	
 	}
 }
 
@@ -3825,75 +3321,33 @@
 	"volume"	"0.8"
 	"rndwave"
 	{
-		"wave" "~physics/wood/wood_plank_impact_hard1.wav"
-		"wave" "~physics/wood/wood_plank_impact_hard2.wav"
-		"wave" "~physics/wood/wood_plank_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave" "physics/wood/wood_plank_impact_hard1.wav"
+		"wave" "physics/wood/wood_plank_impact_hard2.wav"
+		"wave" "physics/wood/wood_plank_impact_hard3.wav"
 	}
 }
 
 "Bounce.Shrapnel"
 {
 	"pitch"		"90,124"
-	"volume"	"0.4"
+	"volume"	"0.8"
 	"rndwave"
 	{
-		"wave"		"~weapons/fx/rics/ric3.wav"
-		"wave"		"~weapons/fx/rics/ric4.wav"
-		"wave"		"~weapons/fx/rics/ric5.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"weapons/fx/rics/ric3.wav"
+		"wave"		"weapons/fx/rics/ric4.wav"
+		"wave"		"weapons/fx/rics/ric5.wav"
 	}
 }
 
 "Bounce.ShotgunShell"
 {
 	"pitch"		"PITCH_NORM"
-	"volume"	"0.1"
+	"volume"	"0.5"
 	"rndwave"
 	{
-		"wave" "~weapons/fx/tink/shotgun_shell1.wav"
-		"wave" "~weapons/fx/tink/shotgun_shell2.wav"
-		"wave" "~weapons/fx/tink/shotgun_shell3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave" "weapons/fx/tink/shotgun_shell1.wav"
+		"wave" "weapons/fx/tink/shotgun_shell2.wav"
+		"wave" "weapons/fx/tink/shotgun_shell3.wav"
 	}
 }
 
@@ -3903,23 +3357,9 @@
 	"volume"	"0.8"
 	"rndwave"
 	{
-		"wave" "~player/pl_shell1.wav"
-		"wave" "~player/pl_shell2.wav"
-		"wave" "~player/pl_shell3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave" "player/pl_shell1.wav"
+		"wave" "player/pl_shell2.wav"
+		"wave" "player/pl_shell3.wav"
 	}
 }
 
@@ -3929,21 +3369,7 @@
 	"volume"	"0.8"
 	"rndwave"
 	{
-		"wave"	"~physics/concrete/concrete_break2.wav"	
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/concrete/concrete_break2.wav"	
 	}
 }
 
@@ -3952,33 +3378,69 @@
 	"channel"	"CHAN_WEAPON"
 	"volume"	"1"
 	"soundlevel"  		"SNDLVL_NORM"
-	
+
+	"wave"	"physics/metal/metal_popcan_impact_hard1.wav"
+	"wave"	"physics/metal/metal_popcan_impact_hard2.wav"
+	"wave"	"physics/metal/metal_popcan_impact_hard3.wav"
+}
+
+// cardboard material - full physics implementation
+
+"Cardboard.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"			"0.5"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/metal_popcan_impact_hard1.wav"
-		"wave"	"~physics/metal/metal_popcan_impact_hard2.wav"
-		"wave"	"~physics/metal/metal_popcan_impact_hard3.wav"	
+		"wave"		"physics/cardboard/cardboard_box_impact_soft1.wav"
+		"wave"		"physics/cardboard/cardboard_box_impact_soft2.wav"
 	}
-
-	
-	
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 }
 
-// cardboard material - full physics implementation
+"Cardboard.StepRight"
+{
+	"channel"       "CHAN_BODY"
 
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"			"0.5"
+	"rndwave"
+	{
+		"wave"		"physics/cardboard/cardboard_box_impact_soft3.wav"
+		"wave"		"physics/cardboard/cardboard_box_impact_soft4.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "Cardboard.ImpactSoft"
 {
@@ -3988,27 +3450,13 @@
 	"volume"	"0.6"
 	"rndwave"
 	{
-		"wave" "~physics/cardboard/cardboard_box_impact_soft1.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_soft2.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_soft3.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_soft4.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_soft5.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_soft6.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_soft7.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave" "physics/cardboard/cardboard_box_impact_soft1.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_soft2.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_soft3.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_soft4.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_soft5.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_soft6.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_soft7.wav"
 	}
 }
 
@@ -4020,27 +3468,13 @@
 	"volume"	"0.8"
 	"rndwave"
 	{
-		"wave" "~physics/cardboard/cardboard_box_impact_hard1.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_hard2.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_hard3.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_hard4.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_hard5.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_hard6.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_hard7.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave" "physics/cardboard/cardboard_box_impact_hard1.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_hard2.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_hard3.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_hard4.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_hard5.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_hard6.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_hard7.wav"
 	}
 }
 
@@ -4052,11 +3486,11 @@
 	"volume"	"1.0"
 	"rndwave"
 	{
-		"wave" "~physics/cardboard/cardboard_box_impact_bullet1.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_bullet2.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_bullet3.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_bullet4.wav"
-		"wave" "~physics/cardboard/cardboard_box_impact_bullet5.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_bullet1.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_bullet2.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_bullet3.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_bullet4.wav"
+		"wave" "physics/cardboard/cardboard_box_impact_bullet5.wav"
 		
 	}
 	"soundentry_version" "2"
@@ -4074,6 +3508,19 @@
 	}
 }
 
+// "Cardboard.Strain"
+// {
+	// "channel"		"CHAN_BODY"
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "pitch"		"PITCH_NORM"
+	// "volume"	"0.8"
+	// "rndwave"
+	// {
+		// "wave" "physics/cardboard/cardboard_box_strain1.wav"
+		// "wave" "physics/cardboard/cardboard_box_strain2.wav"
+		// "wave" "physics/cardboard/cardboard_box_strain3.wav"
+	// }
+// }
 
 "Cardboard.Break"
 {
@@ -4081,23 +3528,28 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
 	"volume"	"0.8"
+	// "rndwave"
+	// {
+		// "wave" "physics/cardboard/cardboard_box_break1.wav"
+		// "wave" "physics/cardboard/cardboard_box_break2.wav"
+		// "wave" "physics/cardboard/cardboard_box_break3.wav"
+	// }
 	"wave" "common/null.wav"	
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
 }
 
+// "Cardboard.Shake"
+// {
+	// "channel"		"CHAN_BODY"
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "pitch"		"PITCH_NORM"
+	// "volume"	"0.6"
+	// "rndwave"
+	// {
+		// "wave" "physics/cardboard/cardboard_box_shake1.wav"
+		// "wave" "physics/cardboard/cardboard_box_shake2.wav"
+		// "wave" "physics/cardboard/cardboard_box_shake3.wav"
+	// }
+// }
 
 "Cardboard.ScrapeSmooth"
 {
@@ -4106,21 +3558,7 @@
 	"pitch"		"96,104"
 	"volume"	"0.55"
 
-	"wave" "~physics/cardboard/cardboard_box_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave" "physics/cardboard/cardboard_box_scrape_smooth_loop1.wav"
 }
 
 "Cardboard.ScrapeRough"
@@ -4130,25 +3568,66 @@
 	"pitch"		"96,104"
 	"volume"	"0.35"
 
-	"wave" "~physics/cardboard/cardboard_box_scrape_rough_loop1.wav"
-	
+	"wave" "physics/cardboard/cardboard_box_scrape_rough_loop1.wav"
+}
+
+// plastic barrel material - full physics implementation
+
+"Plastic_Barrel.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"			"0.5"
+	"rndwave"
+	{
+		"wave"		"physics/plastic/plastic_barrel_impact_soft1.wav"
+		"wave"		"physics/plastic/plastic_barrel_impact_soft2.wav"
+	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 }
 
-// plastic barrel material - full physics implementation
+"Plastic_Barrel.StepRight"
+{
+	"channel"       "CHAN_BODY"
 
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"			"0.5"
+	"rndwave"
+	{
+		"wave"		"physics/plastic/plastic_barrel_impact_soft3.wav"
+		"wave"		"physics/plastic/plastic_barrel_impact_soft4.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "Plastic_Barrel.ImpactSoft"
 {
@@ -4158,26 +3637,12 @@
 	"volume"	"0.6"
 	"rndwave"
 	{
-		"wave" "~physics/plastic/plastic_barrel_impact_soft1.wav"
-		"wave" "~physics/plastic/plastic_barrel_impact_soft2.wav"
-		"wave" "~physics/plastic/plastic_barrel_impact_soft3.wav"
-		"wave" "~physics/plastic/plastic_barrel_impact_soft4.wav"
-		"wave" "~physics/plastic/plastic_barrel_impact_soft5.wav"
-		"wave" "~physics/plastic/plastic_barrel_impact_soft6.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave" "physics/plastic/plastic_barrel_impact_soft1.wav"
+		"wave" "physics/plastic/plastic_barrel_impact_soft2.wav"
+		"wave" "physics/plastic/plastic_barrel_impact_soft3.wav"
+		"wave" "physics/plastic/plastic_barrel_impact_soft4.wav"
+		"wave" "physics/plastic/plastic_barrel_impact_soft5.wav"
+		"wave" "physics/plastic/plastic_barrel_impact_soft6.wav"
 	}
 }
 
@@ -4189,24 +3654,10 @@
 	"volume"	"0.8"
 	"rndwave"
 	{
-		"wave" "~physics/plastic/plastic_barrel_impact_hard1.wav"
-		"wave" "~physics/plastic/plastic_barrel_impact_hard2.wav"
-		"wave" "~physics/plastic/plastic_barrel_impact_hard3.wav"
-		"wave" "~physics/plastic/plastic_barrel_impact_hard4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave" "physics/plastic/plastic_barrel_impact_hard1.wav"
+		"wave" "physics/plastic/plastic_barrel_impact_hard2.wav"
+		"wave" "physics/plastic/plastic_barrel_impact_hard3.wav"
+		"wave" "physics/plastic/plastic_barrel_impact_hard4.wav"
 	}
 }
 
@@ -4218,9 +3669,9 @@
 	"volume"	"1.0"
 	"rndwave"
 	{
-		"wave" "~physics/plastic/plastic_barrel_impact_bullet1.wav"
-		"wave" "~physics/plastic/plastic_barrel_impact_bullet2.wav"
-		"wave" "~physics/plastic/plastic_barrel_impact_bullet3.wav"
+		"wave" "physics/plastic/plastic_barrel_impact_bullet1.wav"
+		"wave" "physics/plastic/plastic_barrel_impact_bullet2.wav"
+		"wave" "physics/plastic/plastic_barrel_impact_bullet3.wav"
 		
 	}
 	"soundentry_version" "2"
@@ -4238,6 +3689,19 @@
 	}
 }
 
+// "Plastic_Barrel.Strain"
+// {
+	// "channel"		"CHAN_BODY"
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "pitch"		"PITCH_NORM"
+	// "volume"	"0.8"
+	// "rndwave"
+	// {
+		// "wave" "physics/plastic/plastic_barrel_strain1.wav"
+		// "wave" "physics/plastic/plastic_barrel_strain2.wav"
+		// "wave" "physics/plastic/plastic_barrel_strain3.wav"
+	// }
+// }
 
 "Plastic_Barrel.Break"
 {
@@ -4245,21 +3709,12 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"pitch"		"96,104"
 	"volume"	"1.0"
+//	"rndwave"
+//	{
+		// "wave" "physics/plastic/plastic_barrel_break1.wav"
+		// "wave" "physics/plastic/plastic_barrel_break2.wav"
+	// }
 	"wave" "common/null.wav"	
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
 
 }
 
@@ -4271,21 +3726,7 @@
 	"pitch"		"96,104"
 	"volume"	"0.55"
 
-	"wave" "~physics/plastic/plastic_barrel_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave" "physics/plastic/plastic_barrel_scrape_smooth_loop1.wav"
 }
 
 "Plastic_Barrel.ScrapeRough"
@@ -4295,25 +3736,79 @@
 	"pitch"		"96,104"
 	"volume"	"0.35"
 
-	"wave" "~physics/plastic/plastic_barrel_scrape_rough_loop1.wav"
-	
+	"wave" "physics/plastic/plastic_barrel_scrape_rough_loop1.wav"
+}
+
+// "Plastic_Barrel.Roll"
+// {
+	// "channel"		"CHAN_BODY"
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "pitch"		"PITCH_NORM"
+	// "volume"	"0.4"
+
+	// "wave" "physics/plastic/plastic_barrel_roll_loop1.wav"
+// }
+
+
+// plastic box material - full physics implementation
+
+"Plastic_Box.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"			"0.3"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete1.wav"
+		"wave"		"player/footsteps/concrete3.wav"
+		"wave"		"player/footsteps/concrete5.wav"
+	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 }
 
+"Plastic_Box.StepRight"
+{
+	"channel"       "CHAN_BODY"
 
-// plastic box material - full physics implementation
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"			"0.3"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete2.wav"
+		"wave"		"player/footsteps/concrete4.wav"
+		"wave"		"player/footsteps/concrete6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "Plastic_Box.ImpactSoft"
 {
@@ -4323,24 +3818,10 @@
 	"volume"	"0.6"
 	"rndwave"
 	{
-		"wave" "~physics/plastic/plastic_box_impact_soft1.wav"
-		"wave" "~physics/plastic/plastic_box_impact_soft2.wav"
-		"wave" "~physics/plastic/plastic_box_impact_soft3.wav"
-		"wave" "~physics/plastic/plastic_box_impact_soft4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave" "physics/plastic/plastic_box_impact_soft1.wav"
+		"wave" "physics/plastic/plastic_box_impact_soft2.wav"
+		"wave" "physics/plastic/plastic_box_impact_soft3.wav"
+		"wave" "physics/plastic/plastic_box_impact_soft4.wav"
 	}
 }
 
@@ -4352,24 +3833,10 @@
 	"volume"	"0.8"
 	"rndwave"
 	{
-		"wave" "~physics/plastic/plastic_box_impact_hard1.wav"
-		"wave" "~physics/plastic/plastic_box_impact_hard2.wav"
-		"wave" "~physics/plastic/plastic_box_impact_hard3.wav"
-		"wave" "~physics/plastic/plastic_box_impact_hard4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave" "physics/plastic/plastic_box_impact_hard1.wav"
+		"wave" "physics/plastic/plastic_box_impact_hard2.wav"
+		"wave" "physics/plastic/plastic_box_impact_hard3.wav"
+		"wave" "physics/plastic/plastic_box_impact_hard4.wav"
 	}
 }
 
@@ -4381,11 +3848,11 @@
 	"volume"	"1.0"
 	"rndwave"
 	{
-		"wave" "~physics/plastic/plastic_box_impact_bullet1.wav"
-		"wave" "~physics/plastic/plastic_box_impact_bullet2.wav"
-		"wave" "~physics/plastic/plastic_box_impact_bullet3.wav"
-		"wave" "~physics/plastic/plastic_box_impact_bullet4.wav"
-		"wave" "~physics/plastic/plastic_box_impact_bullet5.wav"	
+		"wave" "physics/plastic/plastic_box_impact_bullet1.wav"
+		"wave" "physics/plastic/plastic_box_impact_bullet2.wav"
+		"wave" "physics/plastic/plastic_box_impact_bullet3.wav"
+		"wave" "physics/plastic/plastic_box_impact_bullet4.wav"
+		"wave" "physics/plastic/plastic_box_impact_bullet5.wav"	
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -4403,27 +3870,32 @@
 
 }
 
+// "Plastic_Box.Strain"
+// {
+	// "channel"		"CHAN_BODY"
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "pitch"		"PITCH_NORM"
+	// "volume"	"0.8"
+	// "rndwave"
+	// {
+		// "wave" "physics/plastic/plastic_box_strain1.wav"
+		// "wave" "physics/plastic/plastic_box_strain2.wav"
+		// "wave" "physics/plastic/plastic_box_strain3.wav"
+	// }
+// }
+
 "Plastic_Box.Break"
 {
 	"channel"		"CHAN_BODY"
 	"soundlevel"  		"SNDLVL_NORM"
 	"pitch"		"96,104"
 	"volume"	"1.0"
+	// "rndwave"
+	// {
+		// "wave" "physics/plastic/plastic_box_break1.wav"
+		// "wave" "physics/plastic/plastic_box_break2.wav"
+	// }
 	"wave" "common/null.wav"	
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
 }
 
 
@@ -4434,21 +3906,7 @@
 	"pitch"		"96,104"
 	"volume"	"0.55"
 
-	"wave" "~physics/plastic/plastic_box_scrape_smooth_loop2.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave" "physics/plastic/plastic_box_scrape_smooth_loop2.wav"
 }
 
 "Plastic_Box.ScrapeRough"
@@ -4458,26 +3916,70 @@
 	"pitch"		"96,104"
 	"volume"	"0.35"
 
-	"wave" "~physics/plastic/plastic_box_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave" "physics/plastic/plastic_box_scrape_rough_loop1.wav"
 }
 
 
 
 // rubber matt & rubber tire material 
+
+"Rubber.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"			"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete1.wav"
+		"wave"		"player/footsteps/concrete3.wav"
+		"wave"		"player/footsteps/concrete5.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Rubber.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"			"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete1.wav"
+		"wave"		"player/footsteps/concrete3.wav"
+		"wave"		"player/footsteps/concrete5.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "Rubber.BulletImpact"
 {
@@ -4485,7 +3987,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"pitch"		"90,96"
 	"volume"	"0.7"
-	"wave" "~physics/rubber/rubber_tire_impact_bullet1.wav"
+	"wave" "physics/rubber/rubber_tire_impact_bullet1.wav"
 
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -4509,21 +4011,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"pitch"		"PITCH_NORM"
 	"volume"	"0.4"
-	"wave" "~physics/rubber/rubber_tire_impact_soft1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave" "physics/rubber/rubber_tire_impact_soft1.wav"
 }
 
 "Rubber.ImpactHard"
@@ -4533,21 +4021,7 @@
 	"pitch"		"PITCH_NORM"
 	"volume"	"0.5"
 
-	"wave" "~physics/rubber/rubber_tire_impact_hard3.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave" "physics/rubber/rubber_tire_impact_hard3.wav"
 }
 
 "Rubber_Tire.ImpactSoft"
@@ -4558,23 +4032,9 @@
 	"volume"	"0.6"
 	"rndwave"
 	{
-		"wave" "~physics/rubber/rubber_tire_impact_soft1.wav"
-		"wave" "~physics/rubber/rubber_tire_impact_soft2.wav"
-		"wave" "~physics/rubber/rubber_tire_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave" "physics/rubber/rubber_tire_impact_soft1.wav"
+		"wave" "physics/rubber/rubber_tire_impact_soft2.wav"
+		"wave" "physics/rubber/rubber_tire_impact_soft3.wav"
 	}
 }
 
@@ -4586,23 +4046,9 @@
 	"volume"	"0.8"
 	"rndwave"
 	{
-		"wave" "~physics/rubber/rubber_tire_impact_hard1.wav"
-		"wave" "~physics/rubber/rubber_tire_impact_hard2.wav"
-		"wave" "~physics/rubber/rubber_tire_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave" "physics/rubber/rubber_tire_impact_hard1.wav"
+		"wave" "physics/rubber/rubber_tire_impact_hard2.wav"
+		"wave" "physics/rubber/rubber_tire_impact_hard3.wav"
 	}
 }
 
@@ -4614,9 +4060,9 @@
 	"volume"	"1.0"
 	"rndwave"
 	{
-		"wave" "~physics/rubber/rubber_tire_impact_bullet1.wav"
-		"wave" "~physics/rubber/rubber_tire_impact_bullet2.wav"
-		"wave" "~physics/rubber/rubber_tire_impact_bullet3.wav"
+		"wave" "physics/rubber/rubber_tire_impact_bullet1.wav"
+		"wave" "physics/rubber/rubber_tire_impact_bullet2.wav"
+		"wave" "physics/rubber/rubber_tire_impact_bullet3.wav"
 		
 	}
 	"soundentry_version" "2"
@@ -4635,7 +4081,77 @@
 
 }
 
+// "Rubber_Tire.Strain"
+// {
+	// "channel"		"CHAN_BODY"
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "pitch"		"PITCH_NORM"
+	// "volume"	"0.8"
+	// "rndwave"
+	// {
+		// "wave" "physics/rubber/rubber_tire_strain1.wav"
+		// "wave" "physics/rubber/rubber_tire_strain2.wav"
+		// "wave" "physics/rubber/rubber_tire_strain3.wav"
+	// }
+// }
+
 // hard metal grenade
+
+"Grenade.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"			"0.3"
+	"rndwave"
+	{
+		"wave"	"physics/metal/metal_grenade_impact_soft2.wav"
+		"wave"	"physics/metal/metal_grenade_impact_soft3.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Grenade.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"pitch"			"95,105"
+	"volume"			"0.3"
+	"rndwave"
+	{
+		"wave"	"physics/metal/metal_grenade_impact_soft1.wav"
+		"wave"	"physics/metal/metal_grenade_impact_soft2.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "Grenade.ImpactHard"
 {
@@ -4644,23 +4160,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/metal_grenade_impact_hard1.wav"
-		"wave"	"~physics/metal/metal_grenade_impact_hard2.wav"
-		"wave"	"~physics/metal/metal_grenade_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/metal_grenade_impact_hard1.wav"
+		"wave"	"physics/metal/metal_grenade_impact_hard2.wav"
+		"wave"	"physics/metal/metal_grenade_impact_hard3.wav"
 	}
 }
 
@@ -4671,23 +4173,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/metal_grenade_impact_soft1.wav"
-		"wave"	"~physics/metal/metal_grenade_impact_soft2.wav"
-		"wave"	"~physics/metal/metal_grenade_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/metal_grenade_impact_soft1.wav"
+		"wave"	"physics/metal/metal_grenade_impact_soft2.wav"
+		"wave"	"physics/metal/metal_grenade_impact_soft3.wav"
 	}
 }
 
@@ -4696,21 +4184,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.4"
 	"pitch"			"96,104"
-	"wave"			"~physics/metal/metal_grenade_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"			"physics/metal/metal_grenade_scrape_rough_loop1.wav"
 }
 
 "Grenade.ScrapeSmooth"
@@ -4718,21 +4192,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.3"
 	"pitch"			"96,104"
-	"wave"			"~physics/metal/metal_grenade_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"			"physics/metal/metal_grenade_scrape_smooth_loop1.wav"
 }
 
 "Grenade.Roll"
@@ -4740,21 +4200,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.4"
 	"pitch"			"PITCH_NORM"
-	"wave"			"~physics/metal/metal_grenade_roll_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"			"physics/metal/metal_grenade_roll_loop1.wav"
 }
 
 // generic wood
@@ -4768,9 +4214,9 @@
 	"pitch"			"95,105"
 	"rndwave"
 	{
-		"wave"		"~player/footsteps/wood1.wav"
-		"wave"		"~player/footsteps/wood3.wav"
-		"wave"		"~player/footsteps/wood5.wav"
+		"wave"		"player/footsteps/wood1.wav"
+		"wave"		"player/footsteps/wood3.wav"
+		"wave"		"player/footsteps/wood5.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -4797,9 +4243,9 @@
 	"pitch"			"95,105"
 	"rndwave"
 	{
-		"wave"		"~player/footsteps/wood2.wav"
-		"wave"		"~player/footsteps/wood4.wav"
-		"wave"		"~player/footsteps/wood6.wav"
+		"wave"		"player/footsteps/wood2.wav"
+		"wave"		"player/footsteps/wood4.wav"
+		"wave"		"player/footsteps/wood6.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -4824,11 +4270,11 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_solid_impact_bullet1.wav"
-		"wave"	"~physics/wood/wood_solid_impact_bullet2.wav"
-		"wave"	"~physics/wood/wood_solid_impact_bullet3.wav"
-		"wave"	"~physics/wood/wood_solid_impact_bullet4.wav"
-		"wave"	"~physics/wood/wood_solid_impact_bullet5.wav"
+		"wave"	"physics/wood/wood_solid_impact_bullet1.wav"
+		"wave"	"physics/wood/wood_solid_impact_bullet2.wav"
+		"wave"	"physics/wood/wood_solid_impact_bullet3.wav"
+		"wave"	"physics/wood/wood_solid_impact_bullet4.wav"
+		"wave"	"physics/wood/wood_solid_impact_bullet5.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -4853,53 +4299,9 @@
 	"pitch"		"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_plank_impact_soft1.wav"
-		"wave"	"~physics/wood/wood_box_impact_soft1.wav"
-		"wave"	"~physics/wood/wood_solid_impact_soft2.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-"Wood.ImpactSoftGloves"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"0.1"
-	"pitch"		"130, 150"
-	"rndwave"
-	{
-		"wave"		"~player/footsteps/new/land_basket_01.wav"
-		//"wave"		"~player/footsteps/new/land_basket_02.wav"
-		//"wave"		"~player/footsteps/new/land_basket_03.wav"
-		"wave"		"~player/footsteps/new/wood_10.wav"
-		"wave"		"~player/footsteps/new/wood_12.wav"
-		"wave"		"~player/footsteps/new/wood_14.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_plank_impact_soft1.wav"
+		"wave"	"physics/wood/wood_box_impact_soft1.wav"
+		"wave"	"physics/wood/wood_solid_impact_soft2.wav"
 	}
 }
 
@@ -4912,23 +4314,9 @@
 
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_box_impact_hard1.wav"
-		"wave"	"~physics/wood/wood_box_impact_hard2.wav"
-		"wave"	"~physics/wood/wood_box_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_box_impact_hard1.wav"
+		"wave"	"physics/wood/wood_box_impact_hard2.wav"
+		"wave"	"physics/wood/wood_box_impact_hard3.wav"
 	}
 }
 
@@ -4937,21 +4325,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/wood/wood_solid_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/wood/wood_solid_scrape_rough_loop1.wav"
 }
 
 "Wood.ScrapeSmooth"
@@ -4959,21 +4333,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/wood/wood_plank_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/wood/wood_plank_scrape_smooth_loop1.wav"
 }
 
 "Wood.Break"
@@ -4983,15 +4343,86 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_plank_break2.wav"
-		"wave"	"~physics/wood/wood_plank_break3.wav"
-		"wave"	"~physics/wood/wood_plank_break4.wav"
+		"wave"	"physics/wood/wood_plank_break2.wav"
+		"wave"	"physics/wood/wood_plank_break3.wav"
+		"wave"	"physics/wood/wood_plank_break4.wav"
 	}
 }
 
+// "Wood.Strain"
+// {
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "volume"		"0.6"
+	// "pitch"		"98,100"
+	// "rndwave"
+	// {
+		// "wave"	"physics/wood/wood_strain5.wav"
+		// "wave"	"physics/wood/wood_strain6.wav"
+		// "wave"	"physics/wood/wood_strain7.wav"
+		// "wave"	"physics/wood/wood_strain8.wav"
+	// }
+// }
+
+
 // wood box - small crate
 
+"Wood_Box.StepLeft"
+{
+	"channel"       "CHAN_BODY"
 
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete1.wav"
+		"wave"		"player/footsteps/concrete3.wav"
+		"wave"		"player/footsteps/concrete5.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Wood_Box.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete2.wav"
+		"wave"		"player/footsteps/concrete4.wav"
+		"wave"		"player/footsteps/concrete6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "Wood_Box.BulletImpact"
 {
@@ -5000,10 +4431,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_box_impact_bullet1.wav"
-		"wave"	"~physics/wood/wood_box_impact_bullet2.wav"
-		"wave"	"~physics/wood/wood_box_impact_bullet3.wav"
-		"wave"	"~physics/wood/wood_box_impact_bullet4.wav"
+		"wave"	"physics/wood/wood_box_impact_bullet1.wav"
+		"wave"	"physics/wood/wood_box_impact_bullet2.wav"
+		"wave"	"physics/wood/wood_box_impact_bullet3.wav"
+		"wave"	"physics/wood/wood_box_impact_bullet4.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -5028,23 +4459,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_box_impact_soft1.wav"
-		"wave"	"~physics/wood/wood_box_impact_soft2.wav"
-		"wave"	"~physics/wood/wood_box_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_box_impact_soft1.wav"
+		"wave"	"physics/wood/wood_box_impact_soft2.wav"
+		"wave"	"physics/wood/wood_box_impact_soft3.wav"
 	}
 }
 
@@ -5056,23 +4473,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_box_impact_hard4.wav"
-		"wave"	"~physics/wood/wood_box_impact_hard5.wav"
-		"wave"	"~physics/wood/wood_box_impact_hard6.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_box_impact_hard4.wav"
+		"wave"	"physics/wood/wood_box_impact_hard5.wav"
+		"wave"	"physics/wood/wood_box_impact_hard6.wav"
 	}
 }
 
@@ -5081,21 +4484,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/wood/wood_box_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/wood/wood_box_scrape_rough_loop1.wav"
 }
 
 "Wood_Box.ScrapeSmooth"
@@ -5103,21 +4492,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/wood/wood_box_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/wood/wood_box_scrape_smooth_loop1.wav"
 }
 
 "Wood_Box.Break"
@@ -5125,26 +4500,87 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.8"
 	"pitch"		"98,100"
-
+// 	"rndwave"
+// 	{
+// 		"wave"	"physics/wood/wood_box_break1.wav"
+// 		"wave"	"physics/wood/wood_box_break2.wav"
+// 	}
 	"wave" "common/null.wav"	
-	
+}
+
+// "Wood_Box.Strain"
+// {
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "volume"		"0.6"
+	// "pitch"		"98,100"
+	// "rndwave"
+	// {
+		// "wave"	"physics/wood/wood_strain1.wav"
+		// "wave"	"physics/wood/wood_strain6.wav"
+		// "wave"	"physics/wood/wood_strain7.wav"
+	// }
+// }
+
+// wood crate - large crate
+
+"Wood_Crate.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete1.wav"
+		"wave"		"player/footsteps/concrete3.wav"
+		"wave"		"player/footsteps/concrete5.wav"
+	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 }
 
+"Wood_Crate.StepRight"
+{
+	"channel"       "CHAN_BODY"
 
-// wood crate - large crate
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete2.wav"
+		"wave"		"player/footsteps/concrete4.wav"
+		"wave"		"player/footsteps/concrete6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
 
 "Wood_Crate.ImpactSoft"
 {
@@ -5153,23 +4589,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_crate_impact_soft1.wav"
-		"wave"	"~physics/wood/wood_crate_impact_soft2.wav"
-		"wave"	"~physics/wood/wood_crate_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_crate_impact_soft1.wav"
+		"wave"	"physics/wood/wood_crate_impact_soft2.wav"
+		"wave"	"physics/wood/wood_crate_impact_soft3.wav"
 	}
 }
 
@@ -5180,22 +4602,8 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_crate_impact_hard4.wav"
-		"wave"	"~physics/wood/wood_crate_impact_hard5.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_crate_impact_hard4.wav"
+		"wave"	"physics/wood/wood_crate_impact_hard5.wav"
 	}
 }
 
@@ -5204,21 +4612,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/wood/wood_crate_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/wood/wood_crate_scrape_rough_loop1.wav"
 }
 
 "Wood_Crate.ScrapeSmooth"
@@ -5226,21 +4620,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/wood/wood_box_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/wood/wood_box_scrape_smooth_loop1.wav"
 }
 
 "Wood_Crate.Break"
@@ -5250,27 +4630,26 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_crate_break1.wav"
-		"wave"	"~physics/wood/wood_crate_break2.wav"
-		"wave"	"~physics/wood/wood_crate_break3.wav"
-		"wave"	"~physics/wood/wood_crate_break4.wav"
-		"wave"	"~physics/wood/wood_crate_break5.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_crate_break1.wav"
+		"wave"	"physics/wood/wood_crate_break2.wav"
+		"wave"	"physics/wood/wood_crate_break3.wav"
+		"wave"	"physics/wood/wood_crate_break4.wav"
+		"wave"	"physics/wood/wood_crate_break5.wav"
 	}
 }
+
+// "Wood_Crate.Strain"
+// {
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "volume"		"0.6"
+	// "pitch"		"94,98"
+	// "rndwave"
+	// {
+		// "wave"	"physics/wood/wood_strain3.wav"
+		// "wave"	"physics/wood/wood_strain6.wav"
+		// "wave"	"physics/wood/wood_strain8.wav"
+	// }
+// }
 
 // wood plank
 
@@ -5282,10 +4661,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_box_impact_bullet1.wav"
-		"wave"	"~physics/wood/wood_box_impact_bullet2.wav"
-		"wave"	"~physics/wood/wood_box_impact_bullet3.wav"
-		"wave"	"~physics/wood/wood_box_impact_bullet4.wav"
+		"wave"	"physics/wood/wood_box_impact_bullet1.wav"
+		"wave"	"physics/wood/wood_box_impact_bullet2.wav"
+		"wave"	"physics/wood/wood_box_impact_bullet3.wav"
+		"wave"	"physics/wood/wood_box_impact_bullet4.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -5310,53 +4689,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_plank_impact_soft1.wav"
-		"wave"	"~physics/wood/wood_plank_impact_soft2.wav"
-		"wave"	"~physics/wood/wood_plank_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-"Wood_Plank.ImpactSoftGloves"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"volume"		"0.1"
-	"pitch"		"130, 150"
-	"rndwave"
-	{
-		"wave"		"~player/footsteps/new/land_basket_01.wav"
-		//"wave"		"~player/footsteps/new/land_basket_02.wav"
-		//"wave"		"~player/footsteps/new/land_basket_03.wav"
-		"wave"		"~player/footsteps/new/wood_10.wav"
-		"wave"		"~player/footsteps/new/wood_12.wav"
-		"wave"		"~player/footsteps/new/wood_14.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_plank_impact_soft1.wav"
+		"wave"	"physics/wood/wood_plank_impact_soft2.wav"
+		"wave"	"physics/wood/wood_plank_impact_soft3.wav"
 	}
 }
 
@@ -5368,25 +4703,11 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_plank_impact_hard1.wav"
-		"wave"	"~physics/wood/wood_plank_impact_hard2.wav"
-		"wave"	"~physics/wood/wood_plank_impact_hard3.wav"
-		"wave"	"~physics/wood/wood_plank_impact_hard4.wav"
-		"wave"	"~physics/wood/wood_plank_impact_hard5.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_plank_impact_hard1.wav"
+		"wave"	"physics/wood/wood_plank_impact_hard2.wav"
+		"wave"	"physics/wood/wood_plank_impact_hard3.wav"
+		"wave"	"physics/wood/wood_plank_impact_hard4.wav"
+		"wave"	"physics/wood/wood_plank_impact_hard5.wav"
 	}
 }
 
@@ -5395,21 +4716,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/wood/wood_plank_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/wood/wood_plank_scrape_rough_loop1.wav"
 }
 
 "Wood_Plank.ScrapeSmooth"
@@ -5417,21 +4724,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/wood/wood_plank_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/wood/wood_plank_scrape_smooth_loop1.wav"
 }
 
 "Wood_Plank.Break"
@@ -5441,26 +4734,26 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_plank_break1.wav"
-		"wave"	"~physics/wood/wood_plank_break2.wav"
-		"wave"	"~physics/wood/wood_plank_break3.wav"
-		"wave"	"~physics/wood/wood_plank_break4.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_plank_break1.wav"
+		"wave"	"physics/wood/wood_plank_break2.wav"
+		"wave"	"physics/wood/wood_plank_break3.wav"
+		"wave"	"physics/wood/wood_plank_break4.wav"
 	}
 }
+
+// "Wood_Plank.Strain"
+// {
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "volume"		"0.6"
+	// "pitch"		"98,100"
+	// "rndwave"
+	// {
+		// "wave"	"physics/wood/wood_strain1.wav"
+		// "wave"	"physics/wood/wood_strain2.wav"
+		// "wave"	"physics/wood/wood_strain4.wav"
+		// "wave"	"physics/wood/wood_strain7.wav"
+	// }
+// }
 
 // wood solid - small 6x6 or larger post
 
@@ -5472,11 +4765,11 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_solid_impact_bullet1.wav"
-		"wave"	"~physics/wood/wood_solid_impact_bullet2.wav"
-		"wave"	"~physics/wood/wood_solid_impact_bullet3.wav"
-		"wave"	"~physics/wood/wood_solid_impact_bullet4.wav"
-		"wave"	"~physics/wood/wood_solid_impact_bullet5.wav"
+		"wave"	"physics/wood/wood_solid_impact_bullet1.wav"
+		"wave"	"physics/wood/wood_solid_impact_bullet2.wav"
+		"wave"	"physics/wood/wood_solid_impact_bullet3.wav"
+		"wave"	"physics/wood/wood_solid_impact_bullet4.wav"
+		"wave"	"physics/wood/wood_solid_impact_bullet5.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -5501,23 +4794,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_solid_impact_soft1.wav"
-		"wave"	"~physics/wood/wood_solid_impact_soft2.wav"
-		"wave"	"~physics/wood/wood_solid_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_solid_impact_soft1.wav"
+		"wave"	"physics/wood/wood_solid_impact_soft2.wav"
+		"wave"	"physics/wood/wood_solid_impact_soft3.wav"
 	}
 }
 
@@ -5529,23 +4808,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_solid_impact_hard1.wav"
-		"wave"	"~physics/wood/wood_solid_impact_hard2.wav"
-		"wave"	"~physics/wood/wood_solid_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_solid_impact_hard1.wav"
+		"wave"	"physics/wood/wood_solid_impact_hard2.wav"
+		"wave"	"physics/wood/wood_solid_impact_hard3.wav"
 	}
 }
 
@@ -5554,21 +4819,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/wood/wood_solid_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/wood/wood_solid_scrape_rough_loop1.wav"
 }
 
 "Wood_Solid.ScrapeSmooth"
@@ -5576,21 +4827,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/wood/wood_plank_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/wood/wood_plank_scrape_smooth_loop1.wav"
 }
 
 "Wood_Solid.Break"
@@ -5600,25 +4837,23 @@
 	"pitch"		"90,98"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_plank_break1.wav"
-		"wave"	"~physics/wood/wood_plank_break3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_plank_break1.wav"
+		"wave"	"physics/wood/wood_plank_break3.wav"
 	}
 }
 
+// "Wood_Solid.Strain"
+// {
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "volume"		"0.6"
+	// "pitch"		"90,98"
+	// "rndwave"
+	// {
+		// "wave"	"physics/wood/wood_strain1.wav"
+		// "wave"	"physics/wood/wood_strain5.wav"
+		// "wave"	"physics/wood/wood_strain8.wav"
+	// }
+// }
 
 // wood furniture - chairs, small tables
 
@@ -5630,22 +4865,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_furniture_impact_soft1.wav"
-		"wave"	"~physics/wood/wood_furniture_impact_soft2.wav"
-		"wave"	"~physics/wood/wood_furniture_impact_soft3.wav"
-	}
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_furniture_impact_soft1.wav"
+		"wave"	"physics/wood/wood_furniture_impact_soft2.wav"
+		"wave"	"physics/wood/wood_furniture_impact_soft3.wav"
 	}
 }
 
@@ -5656,26 +4878,84 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_furniture_break1.wav"
-		"wave"	"~physics/wood/wood_furniture_break2.wav"
+		"wave"	"physics/wood/wood_furniture_break1.wav"
+		"wave"	"physics/wood/wood_furniture_break2.wav"
+	}
+}
+
+// "Wood_Furniture.Strain"
+// {
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "volume"		"0.6"
+	// "pitch"		"100,104"
+	// "rndwave"
+	// {
+		// "wave"	"physics/wood/wood_strain4.wav"
+		// "wave"	"physics/wood/wood_strain5.wav"
+		// "wave"	"physics/wood/wood_strain6.wav"
+		// "wave"	"physics/wood/wood_strain7.wav"
+	// }
+// }
+
+// wood panel - plywood panel sheet
+
+"Wood_Panel.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/woodpanel1.wav"
+		"wave"		"player/footsteps/woodpanel3.wav"
+		"wave"		"player/footsteps/woodpanel5.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 }
 
+"Wood_Panel.StepRight"
+{
+	"channel"       "CHAN_BODY"
 
-// wood panel - plywood panel sheet
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/woodpanel2.wav"
+		"wave"		"player/footsteps/woodpanel4.wav"
+		"wave"		"player/footsteps/woodpanel6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "Wood_Panel.BulletImpact"
 {
@@ -5684,10 +4964,10 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_box_impact_bullet1.wav"
-		"wave"	"~physics/wood/wood_box_impact_bullet2.wav"
-		"wave"	"~physics/wood/wood_box_impact_bullet3.wav"
-		"wave"	"~physics/wood/wood_box_impact_bullet4.wav"
+		"wave"	"physics/wood/wood_box_impact_bullet1.wav"
+		"wave"	"physics/wood/wood_box_impact_bullet2.wav"
+		"wave"	"physics/wood/wood_box_impact_bullet3.wav"
+		"wave"	"physics/wood/wood_box_impact_bullet4.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -5712,23 +4992,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_box_impact_soft1.wav"
-		"wave"	"~physics/wood/wood_crate_impact_soft2.wav"
-		"wave"	"~physics/wood/wood_box_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_box_impact_soft1.wav"
+		"wave"	"physics/wood/wood_crate_impact_soft2.wav"
+		"wave"	"physics/wood/wood_box_impact_soft3.wav"
 	}
 }
 
@@ -5740,22 +5006,8 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/wood/wood_crate_impact_hard2.wav"
-		"wave"	"~physics/wood/wood_crate_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/wood/wood_crate_impact_hard2.wav"
+		"wave"	"physics/wood/wood_crate_impact_hard3.wav"
 	}
 }
 
@@ -5764,21 +5016,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/wood/wood_box_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/wood/wood_box_scrape_rough_loop1.wav"
 }
 
 "Wood_Panel.ScrapeSmooth"
@@ -5786,21 +5024,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/wood/wood_box_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/wood/wood_box_scrape_smooth_loop1.wav"
 }
 
 "Wood_Panel.Break"
@@ -5808,26 +5032,89 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.8"
 	"pitch"		"98,100"
+// 	"rndwave"
+// 	{
+// 		"wave"	"physics/wood/wood_panel_break1.wav"
+// 		"wave"	"physics/wood/wood_box_break1.wav"
+// 	}
 	"wave" "common/null.wav"	
-	
+
+}
+
+// "Wood_Panel.Strain"
+// {
+	// "soundlevel"  		"SNDLVL_NORM"
+	// "volume"		"0.6"
+	// "pitch"		"98,100"
+	// "rndwave"
+	// {
+		// "wave"	"physics/wood/wood_strain1.wav"
+		// "wave"	"physics/wood/wood_strain2.wav"
+		// "wave"	"physics/wood/wood_strain3.wav"
+		// "wave"	"physics/wood/wood_strain4.wav"
+	// }
+// }
+
+
+// metal box - smaller metal box (< 2' width/height/depth)
+
+"Metal_Box.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete1.wav"
+		"wave"		"player/footsteps/concrete3.wav"
+		"wave"		"player/footsteps/concrete5.wav"
+	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
-
 }
 
+"Metal_Box.StepRight"
+{
+	"channel"       "CHAN_BODY"
 
-// metal box - smaller metal box (< 2' width/height/depth)
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/concrete2.wav"
+		"wave"		"player/footsteps/concrete4.wav"
+		"wave"		"player/footsteps/concrete6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
 
 "Metal_Box.BulletImpact"
 {
@@ -5836,9 +5123,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/metal_box_impact_bullet1.wav"
-		"wave"	"~physics/metal/metal_box_impact_bullet2.wav"
-		"wave"	"~physics/metal/metal_box_impact_bullet3.wav"
+		"wave"	"physics/metal/metal_box_impact_bullet1.wav"
+		"wave"	"physics/metal/metal_box_impact_bullet2.wav"
+		"wave"	"physics/metal/metal_box_impact_bullet3.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -5863,23 +5150,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/metal_box_impact_soft1.wav"
-		"wave"	"~physics/metal/metal_box_impact_soft2.wav"
-		"wave"	"~physics/metal/metal_box_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/metal_box_impact_soft1.wav"
+		"wave"	"physics/metal/metal_box_impact_soft2.wav"
+		"wave"	"physics/metal/metal_box_impact_soft3.wav"
 	}
 }
 
@@ -5891,23 +5164,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/metal_box_impact_hard1.wav"
-		"wave"	"~physics/metal/metal_box_impact_hard2.wav"
-		"wave"	"~physics/metal/metal_box_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/metal_box_impact_hard1.wav"
+		"wave"	"physics/metal/metal_box_impact_hard2.wav"
+		"wave"	"physics/metal/metal_box_impact_hard3.wav"
 	}
 }
 
@@ -5916,21 +5175,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/metal/metal_box_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/metal/metal_box_scrape_rough_loop1.wav"
 }
 
 "Metal_Box.ScrapeSmooth"
@@ -5938,21 +5183,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.5"
 	"pitch"		"96,104"
-	"wave"		"~physics/metal/metal_box_scrape_smooth_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/metal/metal_box_scrape_smooth_loop1.wav"
 }
 
 "Metal_Box.Break"
@@ -5963,22 +5194,8 @@
 	"soundlevel"  		"SNDLVL_85dB"
 	"rndwave"
 	{
-		"wave"	"~)physics/metal/metal_box_break1.wav"
-		"wave"	"~)physics/metal/metal_box_break2.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	")physics/metal/metal_box_break1.wav"
+		"wave"	")physics/metal/metal_box_break2.wav"
 	}
 }
 
@@ -5989,28 +5206,67 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/metal_box_strain1.wav"
-		"wave"	"~physics/metal/metal_box_strain2.wav"
-		"wave"	"~physics/metal/metal_box_strain3.wav"
-		"wave"	"~physics/metal/metal_box_strain4.wav"
+		"wave"	"physics/metal/metal_box_strain1.wav"
+		"wave"	"physics/metal/metal_box_strain2.wav"
+		"wave"	"physics/metal/metal_box_strain3.wav"
+		"wave"	"physics/metal/metal_box_strain4.wav"
 	}
-	
+}
+
+// weapon body
+
+"weapon.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"wave"		"physics/metal/weapon_footstep1.wav"
+
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 }
 
-// weapon body
+
+"weapon.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"wave"		"physics/metal/weapon_footstep2.wav"
+
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+
 "weapon.ImpactSoft"
 {
 	"soundlevel"  		"SNDLVL_NORM"
@@ -6018,23 +5274,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/weapon_impact_soft1.wav"
-		"wave"	"~physics/metal/weapon_impact_soft2.wav"
-		"wave"	"~physics/metal/weapon_impact_soft3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/weapon_impact_soft1.wav"
+		"wave"	"physics/metal/weapon_impact_soft2.wav"
+		"wave"	"physics/metal/weapon_impact_soft3.wav"
 	}
 }
 
@@ -6046,23 +5288,9 @@
 	"pitch"		"98,100"
 	"rndwave"
 	{
-		"wave"	"~physics/metal/weapon_impact_hard1.wav"
-		"wave"	"~physics/metal/weapon_impact_hard2.wav"
-		"wave"	"~physics/metal/weapon_impact_hard3.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"	"physics/metal/weapon_impact_hard1.wav"
+		"wave"	"physics/metal/weapon_impact_hard2.wav"
+		"wave"	"physics/metal/weapon_impact_hard3.wav"
 	}
 }
 
@@ -6073,9 +5301,9 @@
 	"pitch"			"PITCH_NORM"
 	"rndwave"
 	{
-		"wave"	"~physics/plastic/plastic_box_impact_bullet5.wav"
-		"wave"	"~physics/metal/metal_computer_impact_bullet3.wav"
-		"wave"	"~physics/metal/metal_computer_impact_bullet1.wav"
+		"wave"	"physics/plastic/plastic_box_impact_bullet5.wav"
+		"wave"	"physics/metal/metal_computer_impact_bullet3.wav"
+		"wave"	"physics/metal/metal_computer_impact_bullet1.wav"
 	}
 	"soundentry_version" "2"
 	"operator_stacks"
@@ -6098,21 +5326,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.4"
 	"pitch"		"75,85"
-	"wave"		"~physics/metal/soda_can_scrape_rough_loop1.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/metal/soda_can_scrape_rough_loop1.wav"
 }
 
 "weapon.ScrapeSmooth"
@@ -6120,21 +5334,7 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"		"0.4"
 	"pitch"		"96,104"
-	"wave"		"~physics/plastic/plastic_box_scrape_smooth_loop2.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
+	"wave"		"physics/plastic/plastic_box_scrape_smooth_loop2.wav"
 }
 
 "Metal.SawbladeStick"
@@ -6142,20 +5342,73 @@
 	"soundlevel"  		"SNDLVL_NORM"
 	"volume"			"1.0"
 	"pitch"			"98,104"
+	
+	// "rndwave"
+	// {
+		// "wave"		"physics/metal/sawblade_stick1.wav"
+		// "wave"		"physics/metal/sawblade_stick2.wav"
+		// "wave"		"physics/metal/sawblade_stick3.wav"
+	// }
 
 	"wave" "common/null.wav"	
-	
+}
+
+
+
+"Foliage.StepLeft"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/foliage1.wav"
+		"wave"		"player/footsteps/foliage3.wav"
+		"wave"		"player/footsteps/foliage5.wav"
+	}
 	"soundentry_version" "2"
 	"operator_stacks"
 	{
 		"start_stack"
 		{
-			"import_stack" "CS_limit_physics_start"
+			
+			"import_stack" "CS_limit_footsteps_start"
 		}
 
 		"update_stack"
 		{
-			"import_stack" "CS_update_physics"
+			"import_stack" "CS_update_footsteps"
+		}
+	}
+}
+
+"Foliage.StepRight"
+{
+	"channel"       "CHAN_BODY"
+
+	"soundlevel"  		"SNDLVL_90dB"
+	"volume"		"1.0"
+	"pitch"			"95,105"
+	"rndwave"
+	{
+		"wave"		"player/footsteps/foliage2.wav"
+		"wave"		"player/footsteps/foliage4.wav"
+		"wave"		"player/footsteps/foliage6.wav"
+	}
+	"soundentry_version" "2"
+	"operator_stacks"
+	{
+		"start_stack"
+		{
+			
+			"import_stack" "CS_limit_footsteps_start"
+		}
+
+		"update_stack"
+		{
+			"import_stack" "CS_update_footsteps"
 		}
 	}
 }
@@ -6168,375 +5421,10 @@
 	
 	"rndwave"
 	{
-		"wave"		"~physics\metal\radio_impact_lg_01.wav"
-		"wave"		"~physics\metal\radio_impact_lg_02.wav"
-		"wave"		"~physics\metal\radio_impact_lg_03.wav"
-		"wave"		"~physics\metal\radio_impact_lg_04.wav"
-		"wave"		"~physics\metal\radio_impact_lg_05.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
+		"wave"		"physics\metal\radio_impact_lg_01.wav"
+		"wave"		"physics\metal\radio_impact_lg_02.wav"
+		"wave"		"physics\metal\radio_impact_lg_03.wav"
+		"wave"		"physics\metal\radio_impact_lg_04.wav"
+		"wave"		"physics\metal\radio_impact_lg_05.wav"
 	}
 }
-
-"ATV_impact_medium"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"volume"			"0.3, 0.5"
-	"pitch"			"95,105"
-	
-	"wave"		"~physics\concrete\boulder_impact_hard4.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-
-}
-
-"DogTags.Impact"
-{
-	"soundlevel"  		"SNDLVL_70dB"
-	"pitch"		"98, 102"
-	"volume"		"0.6, 1.0"
-	
-	"wave"		"~physics/metal/playertag_drop_01.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-"DogTags.Pickup"
-{
-	"soundlevel"  		"SNDLVL_70dB"
-	"pitch"		"100"
-	"volume"		"0.6"
-	
-	"wave"		"~physics/metal/playertag_pickup_01.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-"DogTags.PickupDeny"
-{
-	"soundlevel"  		"SNDLVL_70dB"
-	"pitch"		"100"
-	"volume"		"0.6"
-	
-	"wave"		"~physics/metal/playertags_pickup_deny.wav"
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-
-"Silent.BulletImpact"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"			"PITCH_NORM"
-	"volume"		"0.01"
-	"wave" "common/null.wav"
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_bullet_impact"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_rics"
-		}
-	}
-
-}
-
-"Silent.ScrapeSmooth"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"			"PITCH_NORM"
-	"volume"		"0.01"
-	"wave" "common/null.wav"
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-
-}
-
-"Silent.ScrapeRough"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"			"PITCH_NORM"
-	"volume"		"0.01"
-	"wave" "common/null.wav"
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-
-}
-
-"Silent.ImpactSoft"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"			"PITCH_NORM"
-	"volume"		"0.01"
-	"wave" "common/null.wav"
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-
-}
-
-
-"Silent.ImpactHard"
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"			"PITCH_NORM"
-	"volume"		"0.01"
-	"wave" "common/null.wav"
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-
-}
-
-Silent.Land
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"			"PITCH_NORM"
-	"volume"		"0.01"
-	"wave" "common/null.wav"
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-Silent.Breakable
-{
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"			"PITCH_NORM"
-	"volume"		"0.01"
-	"wave" "common/null.wav"
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-// soccerball
-
-"Ball.BulletImpact"
-{
-	"channel"		"CHAN_STATIC"
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"		"100"
-	"volume"	"1"
-	//"wave" "~physics/rubber/rubber_tire_impact_bullet1.wav"
-	
-	"rndwave"
-	{
-		"wave"		"~physics\rubber\ball_impact_a_01.wav"
-		"wave"		"~physics\rubber\ball_impact_a_02.wav"
-		"wave"		"~physics\rubber\ball_impact_a_03.wav"
-		"wave"		"~physics\rubber\ball_impact_a_04.wav"
-		"wave"		"~physics\rubber\ball_impact_a_05.wav"
-		"wave"		"~physics\rubber\ball_impact_a_06.wav"
-	}
-
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_bullet_impact"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_rics"
-		}
-	}
-}
-
-
-"Ball.ImpactSoft"
-{
-	"channel"		"CHAN_STATIC"
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"		"PITCH_NORM"
-	"volume"	"0.2"
-	//"wave" "~physics/rubber/rubber_tire_impact_soft1.wav"
-	
-	"rndwave"
-	{
-		"wave"		"~physics\rubber\ball_impact_a_01.wav"
-		"wave"		"~physics\rubber\ball_impact_a_02.wav"
-		"wave"		"~physics\rubber\ball_impact_a_03.wav"
-		"wave"		"~physics\rubber\ball_impact_a_04.wav"
-		"wave"		"~physics\rubber\ball_impact_a_05.wav"
-		"wave"		"~physics\rubber\ball_impact_a_06.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-"Ball.ImpactHard"
-{
-	"channel"		"CHAN_STATIC"
-	"soundlevel"  		"SNDLVL_NORM"
-	"pitch"		"PITCH_NORM"
-	"volume"	"1"
-
-	//"wave" "~physics/rubber/rubber_tire_impact_hard3.wav"
-	"rndwave"
-	{
-		"wave"		"~physics\rubber\ball_impact_a_01.wav"
-		"wave"		"~physics\rubber\ball_impact_a_02.wav"
-		"wave"		"~physics\rubber\ball_impact_a_03.wav"
-		"wave"		"~physics\rubber\ball_impact_a_04.wav"
-		"wave"		"~physics\rubber\ball_impact_a_05.wav"
-		"wave"		"~physics\rubber\ball_impact_a_06.wav"
-	}
-	
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_limit_physics_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_physics"
-		}
-	}
-}
-
-

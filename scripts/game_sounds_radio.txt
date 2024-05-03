@@ -5,7 +5,7 @@
 	"channel"	"CHAN_STATIC"
 	"volume"	"1.0"
 	"soundlevel"	"SNDLVL_GUNFIRE"
-	"wave"		"+radio/bombpl.wav"
+	"wave"		"radio/bombpl.wav"
 }
 
 "Event.BombDefused"
@@ -13,46 +13,7 @@
 	"channel"	"CHAN_STATIC"
 	"volume"	"1.0"
 	"soundlevel"	"SNDLVL_GUNFIRE"
-	"wave"		"+radio/bombdef.wav"
-}
-
-"Event.BombDefused_Legacy1"
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	"0.5"
-	"soundlevel"	"SNDLVL_GUNFIRE"
-	"rndwave"
-	{
-				"wave"		"+radio/legacy_yesss.wav"
-				"wave"		"+radio/legacy_yesss2.wav"
-				"wave"		"+radio/legacy_whoo.wav"
-	}
-}
-
-"Event.BombDefused_Legacy2"
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	"0.5"
-	"soundlevel"	"SNDLVL_GUNFIRE"
-	"rndwave"
-	{
-				"wave"		"+radio/legacy_thats_the_way.wav"
-				"wave"		"+radio/legacy_yea_baby.wav"
-				"wave"		"+radio/legacy_way_to_be_team.wav"
-	}
-}
-
-"Event.BombDefused_Legacy3"
-{
-	"channel"	"CHAN_STATIC"
-	"volume"	"0.5"
-	"soundlevel"	"SNDLVL_GUNFIRE"
-	"rndwave"
-	{
-				"wave"		"+radio/legacy_this_is_my_house.wav"
-				"wave"		"+radio/legacy_very_nice.wav"
-				"wave"		"+radio/legacy_who_wants_some.wav"
-	}
+	"wave"		"radio/bombdef.wav"
 }
 
 "Event.HostageTouched"
@@ -60,7 +21,7 @@
 	"channel"	"CHAN_STATIC"
 	"volume"	"1.0"
 	"soundlevel"	"SNDLVL_GUNFIRE"
-	"wave"		"+radio/hostagecompromised.wav"
+	"wave"		"radio/hostagecompromised.wav"
 }
 
 "Event.CTWin"
@@ -68,7 +29,7 @@
 	"channel"	"CHAN_STATIC"
 	"volume"	"1.0"
 	"soundlevel"	"SNDLVL_GUNFIRE"
-	"wave"		"+radio/ctwin.wav"
+	"wave"		"radio/ctwin.wav"
 }
 
 "Event.TERWin"
@@ -76,7 +37,7 @@
 	"channel"	"CHAN_STATIC"
 	"volume"	"1.0"
 	"soundlevel"	"SNDLVL_GUNFIRE"
-	"wave"		"+radio/terwin.wav"
+	"wave"		"radio/terwin.wav"
 }
 
 "Event.RoundDraw"
@@ -84,7 +45,7 @@
 	"channel"	"CHAN_STATIC"
 	"volume"	"1.0"
 	"soundlevel"	"SNDLVL_GUNFIRE"
-	"wave"		"+radio/rounddraw.wav"
+	"wave"		"radio/rounddraw.wav"
 }
 
 "Event.HostageRescued"
@@ -92,7 +53,7 @@
 	"channel"	"CHAN_STATIC"
 	"volume"	"1.0"
 	"soundlevel"	"SNDLVL_GUNFIRE"
-	"wave"		"+radio/rescued.wav"
+	"wave"		"radio/rescued.wav"
 }
 
 "Event.HostageKilled"
@@ -100,99 +61,5 @@
 	"channel"	"CHAN_STATIC"
 	"volume"	"1.0"
 	"soundlevel"	"SNDLVL_GUNFIRE"
-	"wave"		"+radio/hosdown.wav"
-}
-
-"Survival.RadioCutoff"
-{
-	"channel"		"CHAN_STATIC"
-	"soundlevel"		"SNDLVL_97dB"
-	"volume"			"0.7"
-	"rndwave"
-	{
-		"wave"		"~radio/radio_cutoff_01.wav"
-		"wave"		"~radio/radio_cutoff_02.wav"
-		"wave"		"~radio/radio_cutoff_03.wav"
-		"wave"		"~radio/radio_cutoff_04.wav"
-		"wave"		"~radio/radio_cutoff_05.wav"
-	}
-}
-
-"Survival.HostageRescued"
-{
-	"channel"		"CHAN_STATIC"
-	"volume"		"0.5"
-	"pitch"			"PITCH_NORM"
-	"soundlevel"  		"SNDLVL_30dB"	
-	
-	//"wave"		"~radio/rescued.wav"
-	"wave"		"`radio/rescued.wav"
-
-	"soundentry_version" "2"
-	"operator_stacks"
-	{
-		"start_stack"
-		{
-			"import_stack" "CS_distance_weapon_start"
-		}
-
-		"update_stack"
-		{
-			"import_stack" "CS_update_weapon"
-			
-			"volume_xfade_end_dist"
-			{
-				"input2" "1500"
-			}
-			
-			"mixer"
-			{
-				"mixgroup" "Weapons1"
-			}
-			// 35m 
-			"volume_falloff"
-			{
-				"input_max" "10"
-				"input_curve_amount" "2.0"
-			}
-			"volume_distance_xfade"
-			{
-				"input_map_min" "0.0"
-				"input_map_max" "1.0"
-			}
-		}
-	}
-	
-}
-
-"temp.HelpDrop"
-{
-		"channel"		"CHAN_VOICE"
-		"volume"	"1"
-		"soundlevel" "0"
-		"wave"		"+player\vo\temp\HelpDrop.wav"
-}
-
-"temp.Sorry02"
-{
-		"channel"		"CHAN_VOICE"
-		"volume"	"1"
-		"soundlevel" "0"
-		"wave"		"+player\vo\temp\Sorry02.wav"
-}
-
-"temp.Sorry03"
-{
-		"channel"		"CHAN_VOICE"
-		"volume"	"1"
-		"soundlevel" "0"
-		"wave"		"+player\vo\temp\Sorry03.wav"
-}
-
-"temp.Sorry12"
-{
-		"channel"		"CHAN_VOICE"
-		"volume"	"1"
-		"soundlevel" "0"
-		"wave"		"+player\vo\temp\Sorry12.wav"
+	"wave"		"radio/hosdown.wav"
 }
